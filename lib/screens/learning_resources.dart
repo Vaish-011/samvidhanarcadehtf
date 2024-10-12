@@ -23,16 +23,18 @@ class LearningResourcesPage extends StatelessWidget {
             stops: [0.0, 0.33, 0.67, 1.0],
           ),
         ),
-        child: GridView.count(
-          crossAxisCount: 2,
-          padding: EdgeInsets.all(16),
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
-          children: [
-            _buildCard(context, 'YouTube Links'),
-            _buildCard(context, 'Podcast Links'),
-            _buildCard(context, 'Case Studies'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(20.0), // Space from the edges
+          child: Column(
+            children: [
+              SizedBox(height: 20), // Space from the top
+              Expanded(child: _buildCard(context, 'YouTube Links')),
+              SizedBox(height: 20), // Space between cards
+              Expanded(child: _buildCard(context, 'Podcast Links')),
+              SizedBox(height: 20), // Space between cards
+              Expanded(child: _buildCard(context, 'Case Studies')),
+            ],
+          ),
         ),
       ),
     );
@@ -53,7 +55,7 @@ class LearningResourcesPage extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 24, // Increased font size for better visibility
               fontWeight: FontWeight.bold,
               color: Colors.black, // Dark color for text
             ),

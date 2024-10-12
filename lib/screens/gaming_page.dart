@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'gaming_page_folder/games_children.dart';
+// Import the pages for Games for Adults and Constitutional Quest
+import 'gaming_page_folder/games_adult.dart'; // Make sure to create this file
+import 'gaming_page_folder/constitutional_quest.dart'; // Make sure to create this file
 
 class GamingPage extends StatelessWidget {
   @override
@@ -23,25 +27,45 @@ class GamingPage extends StatelessWidget {
             stops: [0.0, 0.33, 0.67, 1.0],
           ),
         ),
-        child: GridView.count(
-          crossAxisCount: 2,
-          padding: EdgeInsets.all(16),
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
-          children: [
-            _buildCard(context, 'Games for Children'),
-            _buildCard(context, 'Games for Adults'),
-            _buildCard(context, 'Constitutional Quest'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(20.0), // Space from the edges
+          child: Column(
+            children: [
+              SizedBox(height: 20), // Space from the top
+              Expanded(
+                child: _buildCard(
+                  context,
+                  'Games for Children',
+                  GamesChildren(), // Pass the GamesChildren page here
+                ),
+              ),
+              SizedBox(height: 20), // Space between cards
+              Expanded(
+                child: _buildCard(
+                  context,
+                  'Games for Adults',
+                  GamesAdult(), // Pass the GamesAdult page here
+                ),
+              ),
+              SizedBox(height: 20), // Space between cards
+              Expanded(
+                child: _buildCard(
+                  context,
+                  'Constitutional Quest',
+                  ConstitutionalQuest(), // Pass the ConstitutionalQuest page here
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildCard(BuildContext context, String title) {
+  Widget _buildCard(BuildContext context, String title, Widget page) {
     return GestureDetector(
       onTap: () {
-        // Add respective navigation logic here
+        Navigator.push(context, MaterialPageRoute(builder: (context) => page));
       },
       child: Card(
         elevation: 4, // Add elevation for visual interest
@@ -53,7 +77,7 @@ class GamingPage extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 24, // Increased font size for better visibility
               fontWeight: FontWeight.bold,
               color: Colors.black, // Dark color for text
             ),
