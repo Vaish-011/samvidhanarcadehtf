@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'chess_logic.dart';
 import 'quiz_screen.dart';
 import 'dart:math';
@@ -7,7 +6,7 @@ import 'dart:math';
 class ChessBoardWidget extends StatelessWidget {
   final ChessBoard board;
 
-  ChessBoardWidget({required this.board});
+  const ChessBoardWidget({Key? key, required this.board}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +32,9 @@ class ChessBoardWidget extends StatelessWidget {
                 builder: (context) {
                   return QuizScreen(
                     onCorrectAnswer: () {
-                      if (board.validMoves[y][x] && board.board[y][x] != ChessPiece.empty) {
-                        // Perform the capture if the move leads to a capture
+                      if (board.validMoves[y][x] && piece != ChessPiece.empty) {
                         board.capture(board.selectedPieceX!, board.selectedPieceY!, x, y);
                       } else {
-                        // Move the piece if it's a normal move
                         board.movePiece(board.selectedPieceX!, board.selectedPieceY!, x, y);
                       }
                       // Handle correct answer
@@ -105,5 +102,6 @@ void disableRandomValidMove(ChessBoard board) {
     board.validMoves[randomMove.y][randomMove.x] = false;
     // Mark this move as restricted
     board.restrictedMove[randomMove.y][randomMove.x] = true;
+    board.notifyListeners(); // Notify listeners about the change
   }
 }
