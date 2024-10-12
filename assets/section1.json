@@ -1,0 +1,54 @@
+[
+  {
+    "levelNumber": 1,
+    "questions": [
+      {
+        "question": "India is a Union of _____.",
+        "options": ["Continents", "States", "Countries", "Cities"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which schedule of the Constitution specifies the States and territories of India?",
+        "options": ["First Schedule", "Second Schedule", "Third Schedule", "Fourth Schedule"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Who has the power to admit new States into the Union of India?",
+        "options": ["The President", "Parliament", "The Prime Minister", "Supreme Court"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which part of the Constitution talks about the Union and its territory?",
+        "options": ["Part I", "Part II", "Part III", "Part IV"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What can Parliament do under Article 3?",
+        "options": ["Form a new State", "Alter the name of a State", "Alter the boundaries of a State", "All of the above"],
+        "correctAnswer": 3
+      }
+
+
+    ]
+  },
+  {
+    "levelNumber": 2,
+    "questions": [
+      {
+        "question": "The First Schedule of the Constitution relates to ",
+        "options": ["Distribution of powers", "Union and State territories", "Fundamental Rights", "National emergencies"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Can Parliament change the boundaries of existing States?",
+        "options": ["Yes, by law", "No, it is fixed", "Only after 20 years", "Only after 10 years"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Can Parliament change the boundaries of existing States?",
+        "options": ["Yes, by law", "No, it is fixed", "Only after 20 years", "Only after 10 years"],
+        "correctAnswer": 0
+      }
+    ]
+  }
+]

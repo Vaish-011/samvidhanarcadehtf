@@ -3,6 +3,7 @@ import 'gaming_page_folder/games_children.dart';
 // Import the pages for Games for Adults and Constitutional Quest
 import 'gaming_page_folder/games_adult.dart'; // Make sure to create this file
 import 'gaming_page_folder/constitutional_quest.dart'; // Make sure to create this file
+import 'level_screen.dart';
 
 class GamingPage extends StatelessWidget {
   @override
@@ -52,7 +53,7 @@ class GamingPage extends StatelessWidget {
                 child: _buildCard(
                   context,
                   'Constitutional Quest',
-                  ConstitutionalQuest(), // Pass the ConstitutionalQuest page here
+                  LevelScreen(), // Pass the ConstitutionalQuest page here
                 ),
               ),
             ],
