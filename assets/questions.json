@@ -1,0 +1,150 @@
+[
+  {
+    "question": "Match Article 1 with its description.",
+    "article": "Article 1: Name and territory of the Union.",
+    "options": [
+      { "text": "India, that is Bharat, shall be a Union of States comprising the territories of the States, Union territories specified in the First Schedule, and such other territories as may be acquired.", "isCorrect": true },
+      { "text": "India is a federal state where territories are independent and do not form part of any Union.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 2 with its description.",
+    "article": "Article 2: Admission or establishment of new States.",
+    "options": [
+      { "text": "Parliament may, by law, admit into the Union, or establish, new States on such terms and conditions as it thinks fit.", "isCorrect": true },
+      { "text": "The President of India has the exclusive power to create new States without the approval of Parliament.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 3 with its description.",
+    "article": "Article 3: Formation of new States and alteration of areas, boundaries or names of existing States.",
+    "options": [
+      { "text": "Parliament may, by law, form a new State by separating territory from any State, increasing the area of any State, or altering the boundaries or names of existing States, provided the President recommends the Bill.", "isCorrect": true },
+      { "text": "The Prime Minister has the authority to change the boundaries of any State without consulting Parliament.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match the provisions regarding amendments under Articles 2 and 3.",
+    "article": "Laws made under Articles 2 and 3.",
+    "options": [
+      { "text": "Any law made under Articles 2 and 3 shall provide for the amendment of the First and Fourth Schedules and include necessary supplemental and consequential provisions, without being deemed an amendment of the Constitution under Article 368.", "isCorrect": true },
+      { "text": "Laws made under Articles 2 and 3 automatically amend the Constitution and do not require any additional provisions.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 4 with its description.",
+    "article": "Article 4: Laws made under Articles 2 and 3 to provide for amendments.",
+    "options": [
+      { "text": "Any law made under Articles 2 and 3 must contain provisions for amending the First and Fourth Schedules and may include supplemental, incidental, and consequential matters, and is not considered an amendment of the Constitution under Article 368.", "isCorrect": true },
+      { "text": "Laws made under Articles 2 and 3 are treated as constitutional amendments and require a two-thirds majority in Parliament.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 5 with its description.",
+    "article": "Article 5: Citizenship at the commencement of the Constitution.",
+    "options": [
+      { "text": "At the commencement of the Constitution, every person who is or who is deemed to be a citizen of India shall be a citizen of India.", "isCorrect": true },
+      { "text": "Only individuals born in India after the Constitution came into effect are considered citizens of India.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 6 with its description.",
+    "article": "Article 6: Rights of citizenship of certain persons who have migrated to India from Pakistan.",
+    "options": [
+      { "text": "A person who migrated to India from Pakistan is deemed a citizen if he or his parents or grandparents were born in India, and he has been ordinarily resident in India since migration or registered as a citizen if migrated after July 19, 1948.", "isCorrect": true },
+      { "text": "Only individuals who have lived in India for more than ten years are eligible for citizenship under Article 6.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 7 with its description.",
+    "article": "Article 7: Rights of citizenship of certain migrants to Pakistan.",
+    "options": [
+      { "text": "A person who migrated from India to Pakistan after March 1, 1947, shall not be deemed a citizen of India unless they returned under a permit for resettlement, in which case they are treated as having migrated to India after July 19, 1948.", "isCorrect": true },
+      { "text": "Individuals who migrated to Pakistan before March 1, 1947, are automatically citizens of India.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 8 with its description.",
+    "article": "Article 8: Rights of citizenship of certain persons of Indian origin residing outside India.",
+    "options": [
+      { "text": "Any person of Indian origin, or whose parents or grandparents were born in India, and who resides outside India, shall be deemed a citizen if registered by Indian diplomatic representatives.", "isCorrect": true },
+      { "text": "Only individuals born in India are eligible for citizenship, regardless of their parents' or grandparents' status.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 9 with its description.",
+    "article": "Article 9: Persons voluntarily acquiring citizenship of a foreign State not to be citizens.",
+    "options": [
+      { "text": "No person shall be a citizen of India if they have voluntarily acquired citizenship of any foreign State, regardless of their status under Articles 5, 6, or 8.", "isCorrect": true },
+      { "text": "Individuals can retain their Indian citizenship even after acquiring citizenship of a foreign country.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 10 with its description.",
+    "article": "Article 10: Continuance of the rights of citizenship.",
+    "options": [
+      { "text": "Every person who is or is deemed to be a citizen of India under the provisions of this Part shall continue to be a citizen, subject to laws made by Parliament.", "isCorrect": true },
+      { "text": "Citizenship rights are revoked automatically if the government decides to change any laws regarding citizenship.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 11 with its description.",
+    "article": "Article 11: Parliament to regulate the right of citizenship by law.",
+    "options": [
+      { "text": "Parliament has the authority to make laws regarding the acquisition and termination of citizenship and other related matters.", "isCorrect": true },
+      { "text": "Citizenship cannot be regulated or changed by any legislative body in India.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 12 with its description.",
+    "article": "Article 12: Definition.",
+    "options": [
+      { "text": "In this Part, 'the State' refers to the Government and Parliament of India, the Governments and Legislatures of the States, and local authorities under the control of the Government of India.", "isCorrect": true },
+      { "text": "'The State' only includes the central government and excludes any local or state governments.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 13 with its description.",
+    "article": "Article 13: Laws inconsistent with or in derogation of the fundamental rights.",
+    "options": [
+      { "text": "Any law that is inconsistent with the provisions of fundamental rights shall be void, and the State cannot make laws that take away or abridge these rights.", "isCorrect": true },
+      { "text": "All laws, regardless of their compatibility with fundamental rights, remain valid and enforceable in India.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 14 with its description.",
+    "article": "Article 14: Equality before law.",
+    "options": [
+      { "text": "The State shall not deny any person equality before the law or equal protection of the laws within the territory of India.", "isCorrect": true },
+      { "text": "Only citizens of India are entitled to equality before the law, while non-citizens can be treated differently.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 15 with its description.",
+    "article": "Article 15: Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.",
+    "options": [
+      { "text": "The State shall not discriminate against any citizen on grounds of religion, race, caste, sex, place of birth, or any of them.", "isCorrect": true },
+      { "text": "Discrimination based on religion, race, caste, sex, or place of birth is permitted in certain circumstances by the State.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 16 with its description.",
+    "article": "Article 16: Equality of opportunity in matters of public employment.",
+    "options": [
+      { "text": "There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State, without discrimination on grounds of religion, race, caste, sex, descent, place of birth, or residence.", "isCorrect": true },
+      { "text": "Citizens can be discriminated against in public employment based on religion, race, caste, or sex if the State deems it necessary.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Match Article 17 with its description.",
+    "article": "Article 17: Abolition of Untouchability.",
+    "options": [
+      { "text": "Untouchability is abolished, and its practice in any form is forbidden, with enforcement of any disability arising from it being punishable by law.", "isCorrect": true },
+      { "text": "Untouchability is recognized as a social practice and cannot be abolished by law.", "isCorrect": false }
+    ]
+  }
+
+
+
+
+]

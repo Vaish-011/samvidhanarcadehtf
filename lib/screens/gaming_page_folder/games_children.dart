@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'games/matching_game.dart';
+// Import other game pages here if they exist
 
 class GamesChildren extends StatelessWidget {
   @override
@@ -30,19 +32,26 @@ class GamesChildren extends StatelessWidget {
           mainAxisSpacing: 16,
           children: [
             _buildCard(context, 'Matching Game', () {
-              // Navigate to Matching Game page
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MatchingGame()), // Navigate to Matching Game
+              );
             }),
             _buildCard(context, 'Crossword Game', () {
               // Navigate to Crossword Game page
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => CrosswordGame()));
             }),
             _buildCard(context, 'Puzzle Game', () {
               // Navigate to Puzzle Game page
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => PuzzleGame()));
             }),
             _buildCard(context, 'Drag and Drop Game', () {
               // Navigate to Drag and Drop Game page
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => DragAndDropGame()));
             }),
             _buildCard(context, 'Word Find Game', () {
               // Navigate to Word Find Game page
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => WordFindGame()));
             }),
           ],
         ),
@@ -50,9 +59,11 @@ class GamesChildren extends StatelessWidget {
     );
   }
 
-  Widget _buildCard(BuildContext context, String title, VoidCallback onTap) {
+  Widget _buildCard(BuildContext context, String title, Function onTap) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        onTap(); // Call the function provided for navigation
+      },
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(
