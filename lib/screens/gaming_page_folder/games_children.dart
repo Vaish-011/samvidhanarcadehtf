@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'games/matching_game.dart';
 import 'games/word_find_game.dart';
 import 'games/puzzle_game.dart';
+import 'games/crossword_game.dart';
 // Import other game pages here if they exist
 
 class GamesChildren extends StatelessWidget {
@@ -40,6 +41,10 @@ class GamesChildren extends StatelessWidget {
               );
             }),
             _buildCard(context, 'Crossword Game', () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CrosswordGame()), // Navigate to Matching Game
+              );
               // Navigate to Crossword Game page
               // Navigator.push(context, MaterialPageRoute(builder: (context) => CrosswordGame()));
             }),
@@ -50,6 +55,7 @@ class GamesChildren extends StatelessWidget {
               );
             }),
             _buildCard(context, 'Drag and Drop Game', () {
+
               // Navigate to Drag and Drop Game page
               // Navigator.push(context, MaterialPageRoute(builder: (context) => DragAndDropGame()));
             }),
