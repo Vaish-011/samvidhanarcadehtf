@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'games/matching_game.dart';
 import 'games/word_find_game.dart';
+import 'games/puzzle_game.dart';
 // Import other game pages here if they exist
 
 class GamesChildren extends StatelessWidget {
@@ -43,8 +44,10 @@ class GamesChildren extends StatelessWidget {
               // Navigator.push(context, MaterialPageRoute(builder: (context) => CrosswordGame()));
             }),
             _buildCard(context, 'Puzzle Game', () {
-              // Navigate to Puzzle Game page
-              // Navigator.push(context, MaterialPageRoute(builder: (context) => PuzzleGame()));
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PuzzleGame()), // Navigate to Matching Game
+              );
             }),
             _buildCard(context, 'Drag and Drop Game', () {
               // Navigate to Drag and Drop Game page
