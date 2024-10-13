@@ -33,15 +33,15 @@ class _MatchingGameState extends State<MatchingGame> {
     setState(() {
       if (isCorrect) {
         if (buttonIndex == 0) {
-          buttonAColor = Colors.green;
+          buttonAColor = Color(0xFFB39DDB); // Light purple
         } else {
-          buttonBColor = Colors.green;
+          buttonBColor = Color(0xFFB39DDB); // Light purple
         }
       } else {
         if (buttonIndex == 0) {
-          buttonAColor = Colors.red;
+          buttonAColor = Colors.redAccent; // Red for incorrect
         } else {
-          buttonBColor = Colors.red;
+          buttonBColor = Colors.redAccent;
         }
       }
     });
@@ -94,7 +94,7 @@ class _MatchingGameState extends State<MatchingGame> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Matching Game'),
-        backgroundColor: Color(0xFF00897B), // Dark Teal color for AppBar
+        backgroundColor: Color(0xFFB39DDB), // Light purple color for AppBar
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -102,10 +102,8 @@ class _MatchingGameState extends State<MatchingGame> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFFB2EBF2), // Light Blue
-              Color(0xFF80DEEA), // Medium Blue
-              Color(0xFF4DD0E1), // Teal
-              Color(0xFF26C6DA), // Darker Teal
+              Colors.white.withOpacity(0.9), // Soft white
+              Color(0xFFE1BEE7).withOpacity(0.8), // Lighter purple
             ],
           ),
         ),
@@ -115,43 +113,27 @@ class _MatchingGameState extends State<MatchingGame> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        spreadRadius: 3,
-                        blurRadius: 5,
-                      ),
-                    ],
+                // Question text
+                Text(
+                  currentQuestion['question'],
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF7B1FA2), // Darker purple for question text
                   ),
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        currentQuestion['question'],
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF00796B), // Darker Teal
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        currentQuestion['article'],
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFF004D40), // Dark Teal
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  currentQuestion['article'],
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey[800], // Dark grey for article text
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 30),
+                // Answer buttons
                 _buildAnswerButton(
                   text: currentQuestion['options'][0]['text'],
                   isCorrect: currentQuestion['options'][0]['isCorrect'],
@@ -167,7 +149,7 @@ class _MatchingGameState extends State<MatchingGame> {
                 ElevatedButton(
                   onPressed: nextQuestion,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF00897B), // Dark Teal
+                    backgroundColor: Color(0xFFB39DDB), // Light purple for Next Question button
                     minimumSize: Size(double.infinity, 50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -175,7 +157,7 @@ class _MatchingGameState extends State<MatchingGame> {
                   ),
                   child: const Text(
                     'Next Question',
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 18, color: Colors.white), // White text for visibility
                   ),
                 ),
               ],
@@ -191,7 +173,7 @@ class _MatchingGameState extends State<MatchingGame> {
     required bool isCorrect,
     required int buttonIndex,
   }) {
-    Color buttonColor = (buttonIndex == 0 ? buttonAColor : buttonBColor) ?? Color(0xFF4DD0E1);
+    Color buttonColor = (buttonIndex == 0 ? buttonAColor : buttonBColor) ?? Colors.white; // Default to white if no color
 
     return ElevatedButton(
       onPressed: () => checkAnswer(isCorrect, buttonIndex),
@@ -205,7 +187,7 @@ class _MatchingGameState extends State<MatchingGame> {
       ),
       child: Text(
         text,
-        style: TextStyle(fontSize: 18),
+        style: TextStyle(fontSize: 18, color: Colors.black), // Black text for readability
       ),
     );
   }

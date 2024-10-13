@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'games/ChessGame.dart';
-
-// Import other game pages here if they exist
+import 'games/ChessGame.dart'; // Import the Chess Game
 
 class GamesAdult extends StatelessWidget {
   @override
@@ -35,10 +33,13 @@ class GamesAdult extends StatelessWidget {
             _buildCard(context, 'CHESS GAME', () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ChessGame()), // Navigate to Matching Game
+                MaterialPageRoute(builder: (context) => ChessGame()), // Navigate to Chess Game
               );
             }),
-
+            _buildCard(context, 'HISTORICAL DECISION MAKING GAME', () {
+              // No navigation for this card
+              // You can add functionality here if desired (e.g., show info)
+            }),
           ],
         ),
       ),
