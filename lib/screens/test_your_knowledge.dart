@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quiz_selection_screen.dart';
 
 class TestYourKnowledgePage extends StatelessWidget {
   @override
@@ -30,7 +31,7 @@ class TestYourKnowledgePage extends StatelessWidget {
             children: [
               SizedBox(
                 height: 200, // Set a fixed height for the Quiz card
-                child: _buildCard(context, 'Quiz'),
+                child: _buildCard(context, 'Quiz', QuizSelectionScreen1()),
               ),
               SizedBox(height: 20), // Space between the cards
               SizedBox(
@@ -44,10 +45,15 @@ class TestYourKnowledgePage extends StatelessWidget {
     );
   }
 
-  Widget _buildCard(BuildContext context, String title) {
+  Widget _buildCard(BuildContext context, String title, [Widget? screen]) {
     return GestureDetector(
       onTap: () {
-        // Add respective navigation logic here
+        if (screen != null) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => screen),
+          );
+        }
       },
       child: Card(
         elevation: 4, // Add elevation for visual interest

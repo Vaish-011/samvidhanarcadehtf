@@ -1,0 +1,152 @@
+[
+  {
+    "question": "Which Article of the Constitution mentions the office of the President of India?",
+    "article": "",
+    "options": [
+      { "text": "Article 52", "isCorrect": true },
+      { "text": "Article 54", "isCorrect": false },
+      { "text": "Article 56", "isCorrect": false },
+      { "text": "Article 51", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "For how many years does the President of India hold office?",
+    "article": "",
+    "options": [
+      { "text": "4 years", "isCorrect": false },
+      { "text": "5 years", "isCorrect": true },
+      { "text": "6 years", "isCorrect": false },
+      { "text": "7 years", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article describes the qualifications for the election of the President of India?",
+    "article": "",
+    "options": [
+      { "text": "Article 58", "isCorrect": true },
+      { "text": "Article 60", "isCorrect": false },
+      { "text": "Article 61", "isCorrect": false },
+      { "text": "Article 62", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides the procedure for the impeachment of the President of India?",
+    "article": "",
+    "options": [
+      { "text": "Article 61", "isCorrect": true },
+      { "text": "Article 58", "isCorrect": false },
+      { "text": "Article 63", "isCorrect": false },
+      { "text": "Article 64", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article of the Constitution deals with the Vice President of India?",
+    "article": "",
+    "options": [
+      { "text": "Article 63", "isCorrect": true },
+      { "text": "Article 64", "isCorrect": false },
+      { "text": "Article 65", "isCorrect": false },
+      { "text": "Article 66", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article gives the Vice President the power to act as President during the President's absence?",
+    "article": "",
+    "options": [
+      { "text": "Article 65", "isCorrect": true },
+      { "text": "Article 63", "isCorrect": false },
+      { "text": "Article 64", "isCorrect": false },
+      { "text": "Article 66", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Under which Article is the Parliament empowered to make laws on the Union and Concurrent Lists?",
+    "article": "",
+    "options": [
+      { "text": "Article 246", "isCorrect": true },
+      { "text": "Article 250", "isCorrect": false },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 251", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article specifies the powers of the Parliament to make laws for implementing treaties?",
+    "article": "",
+    "options": [
+      { "text": "Article 253", "isCorrect": true },
+      { "text": "Article 251", "isCorrect": false },
+      { "text": "Article 250", "isCorrect": false },
+      { "text": "Article 252", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article empowers the Parliament to increase or decrease the area or boundaries of any State?",
+    "article": "",
+    "options": [
+      { "text": "Article 3", "isCorrect": true },
+      { "text": "Article 4", "isCorrect": false },
+      { "text": "Article 2", "isCorrect": false },
+      { "text": "Article 5", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article of the Constitution deals with the executive power of the Union?",
+    "article": "",
+    "options": [
+      { "text": "Article 53", "isCorrect": true },
+      { "text": "Article 52", "isCorrect": false },
+      { "text": "Article 54", "isCorrect": false },
+      { "text": "Article 55", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article of the Constitution mandates the establishment of the Supreme Court of India?",
+    "article": "",
+    "options": [
+      { "text": "Article 124", "isCorrect": true },
+      { "text": "Article 123", "isCorrect": false },
+      { "text": "Article 125", "isCorrect": false },
+      { "text": "Article 126", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the appointment of the Chief Justice of India?",
+    "article": "",
+    "options": [
+      { "text": "Article 124", "isCorrect": true },
+      { "text": "Article 125", "isCorrect": false },
+      { "text": "Article 126", "isCorrect": false },
+      { "text": "Article 127", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article of the Constitution provides for the appointment of the Attorney-General for India?",
+    "article": "",
+    "options": [
+      { "text": "Article 76", "isCorrect": true },
+      { "text": "Article 74", "isCorrect": false },
+      { "text": "Article 75", "isCorrect": false },
+      { "text": "Article 77", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article of the Constitution deals with the powers of the Supreme Court regarding enforcement of Fundamental Rights?",
+    "article": "",
+    "options": [
+      { "text": "Article 32", "isCorrect": true },
+      { "text": "Article 226", "isCorrect": false },
+      { "text": "Article 35", "isCorrect": false },
+      { "text": "Article 33", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article gives the Union Executive the power to issue ordinances when Parliament is not in session?",
+    "article": "",
+    "options": [
+      { "text": "Article 123", "isCorrect": true },
+      { "text": "Article 124", "isCorrect": false },
+      { "text": "Article 122", "isCorrect": false },
+      { "text": "Article 125", "isCorrect": false }
+    ]
+  }
+]
