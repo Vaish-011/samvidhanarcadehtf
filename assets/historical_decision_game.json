@@ -1,0 +1,117 @@
+{
+  "scenarios": [
+    {
+      "title": "The Bill of Rights Debate",
+      "description": "It's 1789. As a key advisor to the first Congress, you must decide whether to push for the Bill of Rights.",
+      "choices": [
+        {
+          "text": "Push for the Bill of Rights",
+          "outcome": "You successfully add the Bill of Rights, ensuring individual liberties are protected.",
+          "isCorrect": true
+        },
+        {
+          "text": "Ignore the Bill of Rights",
+          "outcome": "The Constitution is ratified without the Bill of Rights, leading to future controversies.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Civil Rights Era",
+      "description": "It's 1964. The President is considering signing the Civil Rights Act. As an advisor, you must weigh the impact on constitutional rights.",
+      "choices": [
+        {
+          "text": "Support the Civil Rights Act",
+          "outcome": "The act is signed, leading to significant progress in civil rights.",
+          "isCorrect": true
+        },
+        {
+          "text": "Oppose the Civil Rights Act",
+          "outcome": "The act is delayed, causing prolonged social unrest and criticism.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Modern Privacy Concerns",
+      "description": "It's 2024. The government is debating new surveillance laws. Your role is to advise on the balance between security and privacy.",
+      "choices": [
+        {
+          "text": "Support surveillance laws",
+          "outcome": "Increased security but potential privacy concerns arise.",
+          "isCorrect": false
+        },
+        {
+          "text": "Oppose surveillance laws",
+          "outcome": "Privacy is protected but security measures are less stringent.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "title": "The Louisiana Purchase Decision",
+      "description": "It's 1803. President Thomas Jefferson is considering the purchase of the Louisiana Territory from France. As an advisor, you must decide whether to support the purchase.",
+      "choices": [
+        {
+          "text": "Support the Purchase",
+          "outcome": "The purchase is approved, doubling the size of the United States and securing valuable resources and land.",
+          "isCorrect": true
+        },
+        {
+          "text": "Oppose the Purchase",
+          "outcome": "The purchase is halted, leaving the U.S. with limited expansion opportunities and missing out on valuable resources.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "The War of 1812 Strategy",
+      "description": "It's 1812. The U.S. is at war with Britain. As a military strategist, you must decide on a key strategy to win the war.",
+      "choices": [
+        {
+          "text": "Focus on Naval Battles",
+          "outcome": "Emphasize naval battles, which leads to notable victories on the seas but struggles on land.",
+          "isCorrect": false
+        },
+        {
+          "text": "Focus on Land Campaigns",
+          "outcome": "Concentrate on land campaigns, leading to significant battles but also suffering defeats at sea.",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "title": "The Emancipation Proclamation",
+      "description": "It's 1862. President Abraham Lincoln is deciding whether to issue the Emancipation Proclamation, which would declare the freedom of slaves in Confederate states. As an advisor, what will you recommend?",
+      "choices": [
+        {
+          "text": "Issue the Proclamation",
+          "outcome": "The proclamation is issued, shifting the focus of the Civil War to abolition and strengthening the Union's moral position.",
+          "isCorrect": true
+        },
+        {
+          "text": "Delay the Proclamation",
+          "outcome": "The proclamation is delayed, potentially prolonging the war and continuing the division between North and South.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "The New Deal",
+      "description": "It's 1933. President Franklin D. Roosevelt is considering implementing the New Deal to address the Great Depression. As an advisor, what will you recommend?",
+      "choices": [
+        {
+          "text": "Implement the New Deal",
+          "outcome": "The New Deal is implemented, providing immediate relief to millions and reforming the economy, but facing opposition from various quarters.",
+          "isCorrect": true
+        },
+        {
+          "text": "Delay the New Deal",
+          "outcome": "The New Deal is delayed, resulting in prolonged economic hardship and increased public unrest.",
+          "isCorrect": false
+        }
+      ]
+    }
+
+  ]
+}

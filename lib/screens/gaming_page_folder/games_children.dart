@@ -3,6 +3,8 @@ import 'games/matching_game.dart';
 import 'games/word_find_game.dart';
 import 'games/puzzle_game.dart';
 import 'games/crossword_game.dart';
+import 'games/drag_and_drop_game.dart';
+
 // Import other game pages here if they exist
 
 class GamesChildren extends StatelessWidget {
@@ -55,7 +57,10 @@ class GamesChildren extends StatelessWidget {
               );
             }),
             _buildCard(context, 'Drag and Drop Game', () {
-
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DragAndDropGame()), // Navigate to Matching Game
+              );
               // Navigate to Drag and Drop Game page
               // Navigator.push(context, MaterialPageRoute(builder: (context) => DragAndDropGame()));
             }),
