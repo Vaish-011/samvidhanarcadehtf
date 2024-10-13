@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'preamble_page.dart'; // Import the PreamblePage
 
 class AboutConstitutionPage extends StatelessWidget {
   @override
@@ -29,7 +30,7 @@ class AboutConstitutionPage extends StatelessWidget {
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
           children: [
-            _buildCard(context, 'Preamble'),
+            _buildCard(context, 'Preamble', PreamblePage()), // Pass the PreamblePage to the card
             _buildCard(context, 'Articles'),
             _buildCard(context, 'Schedules'),
             _buildCard(context, 'Amendments'),
@@ -39,10 +40,15 @@ class AboutConstitutionPage extends StatelessWidget {
     );
   }
 
-  Widget _buildCard(BuildContext context, String title) {
+  Widget _buildCard(BuildContext context, String title, [Widget? nextScreen]) {
     return GestureDetector(
       onTap: () {
-        // Add respective navigation logic here
+        if (nextScreen != null) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => nextScreen),
+          );
+        }
       },
       child: Card(
         elevation: 4,
