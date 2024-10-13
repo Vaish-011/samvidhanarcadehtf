@@ -15,7 +15,7 @@ Future<List<SectionModel>> loadSections() async {
 // Load questions from corresponding section-level JSON files
 Future<List<Question>> loadQuestions(String sectionFileName, int levelNumber) async {
   try {
-    String jsonString = await rootBundle.loadString('assets/$sectionFileName'); // Dynamically load the correct section file
+    String jsonString = await rootBundle.loadString('assets/section1.json'); // Dynamically load the correct section file
     List<dynamic> jsonResponse = json.decode(jsonString);
 
     // Find the questions for the specified level number
