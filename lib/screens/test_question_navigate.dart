@@ -4,7 +4,7 @@ import 'package:flutter/services.dart'; // For rootBundle to load the JSON file
 import 'result_screen.dart'; // Import the ResultScreen
 
 class MatchingGame extends StatefulWidget {
-  final String testFileName; // Receive quiz file name as a parameter
+  final String testFileName; // Receive test file name as a parameter
 
   const MatchingGame({Key? key, required this.testFileName}) : super(key: key);
 
@@ -30,7 +30,7 @@ class _MatchingGameState extends State<MatchingGame> {
   // Function to load the JSON file
   Future<void> _loadQuestions() async {
     try {
-      // Use widget.quizFileName to load the specific quiz file
+      // Use widget.testFileName to load the specific test file
       final String response = await rootBundle.loadString('assets/${widget.testFileName}');
       final data = await json.decode(response);
       setState(() {
@@ -93,43 +93,107 @@ class _MatchingGameState extends State<MatchingGame> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Test Game'), // Change the title here
+        backgroundColor: Color(0xFFB39DDB), // Match the AppBar color
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(currentQuestion['question']),
-            Text(currentQuestion['article']),
-            ElevatedButton(
-              onPressed: () => checkAnswer(currentQuestion['options'][0]['isCorrect']),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: buttonAColor, // Updated to backgroundColor
-              ),
-              child: Text(currentQuestion['options'][0]['text']),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.white.withOpacity(0.9), // Soft white
+              Color(0xFFE1BEE7).withOpacity(0.8), // Lighter purple
+            ],
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  currentQuestion['question'],
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF7B1FA2), // Darker purple for question text
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  currentQuestion['article'],
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey[800], // Dark grey for article text
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 20), // Adjusted spacing
+                // Answer buttons with a consistent style
+                ElevatedButton(
+                  onPressed: () => checkAnswer(currentQuestion['options'][0]['isCorrect']),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: buttonAColor ?? Colors.white,
+                    minimumSize: Size(double.infinity, 50), // Increased height for buttons
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Text(
+                    currentQuestion['options'][0]['text'],
+                    style: const TextStyle(fontSize: 16, color: Colors.black),
+                  ),
+                ),
+                SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: () => checkAnswer(currentQuestion['options'][1]['isCorrect']),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: buttonBColor ?? Colors.white,
+                    minimumSize: Size(double.infinity, 50), // Increased height for buttons
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Text(
+                    currentQuestion['options'][1]['text'],
+                    style: const TextStyle(fontSize: 16, color: Colors.black),
+                  ),
+                ),
+                SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: () => checkAnswer(currentQuestion['options'][2]['isCorrect']),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: buttonCColor ?? Colors.white,
+                    minimumSize: Size(double.infinity, 50), // Increased height for buttons
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Text(
+                    currentQuestion['options'][2]['text'],
+                    style: const TextStyle(fontSize: 16, color: Colors.black),
+                  ),
+                ),
+                SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: () => checkAnswer(currentQuestion['options'][3]['isCorrect']),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: buttonDColor ?? Colors.white,
+                    minimumSize: Size(double.infinity, 50), // Increased height for buttons
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Text(
+                    currentQuestion['options'][3]['text'],
+                    style: const TextStyle(fontSize: 16, color: Colors.black),
+                  ),
+                ),
+              ],
             ),
-            ElevatedButton(
-              onPressed: () => checkAnswer(currentQuestion['options'][1]['isCorrect']),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: buttonBColor, // Updated to backgroundColor
-              ),
-              child: Text(currentQuestion['options'][1]['text']),
-            ),
-            ElevatedButton(
-              onPressed: () => checkAnswer(currentQuestion['options'][2]['isCorrect']),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: buttonCColor, // Updated to backgroundColor
-              ),
-              child: Text(currentQuestion['options'][2]['text']),
-            ),
-            ElevatedButton(
-              onPressed: () => checkAnswer(currentQuestion['options'][3]['isCorrect']),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: buttonDColor, // Updated to backgroundColor
-              ),
-              child: Text(currentQuestion['options'][3]['text']),
-            ),
-            // Removed the Next Question button
-          ],
+          ),
         ),
       ),
     );
