@@ -1,0 +1,49 @@
+[
+  {
+    "question": "Which Article relates to the formation of new States?",
+    "article": "",
+    "options": [
+      { "text": "Article 3", "isCorrect": true },
+      { "text": "Article 2", "isCorrect": false },
+      { "text": "Article 4", "isCorrect": false },
+      { "text": "Article 5", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article specifies the powers of the Governor?",
+    "article": "",
+    "options": [
+      { "text": "Article 153", "isCorrect": true },
+      { "text": "Article 154", "isCorrect": false },
+      { "text": "Article 155", "isCorrect": false },
+      { "text": "Article 156", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article allows the President to impose President's Rule in a State?",
+    "article": "",
+    "options": [
+      { "text": "Article 356", "isCorrect": true },
+      { "text": "Article 355", "isCorrect": false },
+      { "text": "Article 354", "isCorrect": false },
+      { "text": "Article 357", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of the State Legislature?",
+    "article": "",
+    "options": [
+      { "text": "Article 168", "isCorrect": true },
+      { "text": "Article 169", "isCorrect": false },
+      { "text": "Article 170", "isCorrect": false },
+      { "text": "Article 171", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the composition of the Legislative Assembly?",
+    "article": "",
+    "options": [
+      { "text": "Article 170", "isCorrect": true },
+      { "text": "Article 171", "isCorrect": false },
+      { "text": "Article 172", "isCorrect": false },
+      { "text": "Article 173",

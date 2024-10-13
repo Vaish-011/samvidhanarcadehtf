@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quiz_selection_screen.dart';
-
+import 'test_selection_screen.dart';
 class TestYourKnowledgePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class TestYourKnowledgePage extends StatelessWidget {
               SizedBox(height: 20), // Space between the cards
               SizedBox(
                 height: 200, // Set a fixed height for the Test card
-                child: _buildCard(context, 'Test'),
+                child: _buildCard(context, 'Test',TestSelectionScreen()),
               ),
             ],
           ),

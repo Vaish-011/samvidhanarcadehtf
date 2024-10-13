@@ -1,0 +1,152 @@
+[
+  {
+    "question": "Which Article deals with the distribution of legislative powers between the Union and the States?",
+    "article": "",
+    "options": [
+      { "text": "Article 245", "isCorrect": true },
+      { "text": "Article 246", "isCorrect": false },
+      { "text": "Article 244", "isCorrect": false },
+      { "text": "Article 247", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article empowers Parliament to legislate on matters in the State List under certain circumstances?",
+    "article": "",
+    "options": [
+      { "text": "Article 249", "isCorrect": true },
+      { "text": "Article 250", "isCorrect": false },
+      { "text": "Article 251", "isCorrect": false },
+      { "text": "Article 252", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the resolution of disputes related to water between states?",
+    "article": "",
+    "options": [
+      { "text": "Article 262", "isCorrect": true },
+      { "text": "Article 261", "isCorrect": false },
+      { "text": "Article 263", "isCorrect": false },
+      { "text": "Article 264", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the administrative relations between the Union and the States?",
+    "article": "",
+    "options": [
+      { "text": "Article 256", "isCorrect": true },
+      { "text": "Article 257", "isCorrect": false },
+      { "text": "Article 258", "isCorrect": false },
+      { "text": "Article 259", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article empowers the Union to give directions to the States?",
+    "article": "",
+    "options": [
+      { "text": "Article 256", "isCorrect": true },
+      { "text": "Article 257", "isCorrect": false },
+      { "text": "Article 258", "isCorrect": false },
+      { "text": "Article 259", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the coordination between the Union and State governments?",
+    "article": "",
+    "options": [
+      { "text": "Article 263", "isCorrect": true },
+      { "text": "Article 261", "isCorrect": false },
+      { "text": "Article 262", "isCorrect": false },
+      { "text": "Article 264", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article allows Parliament to legislate on State List matters during emergencies?",
+    "article": "",
+    "options": [
+      { "text": "Article 250", "isCorrect": true },
+      { "text": "Article 251", "isCorrect": false },
+      { "text": "Article 252", "isCorrect": false },
+      { "text": "Article 253", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with full faith and credit to public records and judicial proceedings?",
+    "article": "",
+    "options": [
+      { "text": "Article 261", "isCorrect": true },
+      { "text": "Article 260", "isCorrect": false },
+      { "text": "Article 262", "isCorrect": false },
+      { "text": "Article 263", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article empowers the Union to control the construction and maintenance of means of communication?",
+    "article": "",
+    "options": [
+      { "text": "Article 257", "isCorrect": true },
+      { "text": "Article 258", "isCorrect": false },
+      { "text": "Article 259", "isCorrect": false },
+      { "text": "Article 256", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article mentions the power of the Union to confer functions upon states?",
+    "article": "",
+    "options": [
+      { "text": "Article 258", "isCorrect": true },
+      { "text": "Article 257", "isCorrect": false },
+      { "text": "Article 256", "isCorrect": false },
+      { "text": "Article 259", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article describes the distribution of executive power between the Union and the States?",
+    "article": "",
+    "options": [
+      { "text": "Article 258", "isCorrect": true },
+      { "text": "Article 257", "isCorrect": false },
+      { "text": "Article 259", "isCorrect": false },
+      { "text": "Article 256", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article gives provisions for the financial emergency?",
+    "article": "",
+    "options": [
+      { "text": "Article 360", "isCorrect": true },
+      { "text": "Article 361", "isCorrect": false },
+      { "text": "Article 352", "isCorrect": false },
+      { "text": "Article 358", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article specifies the legislative power of the Union Parliament over subjects in the Concurrent List?",
+    "article": "",
+    "options": [
+      { "text": "Article 254", "isCorrect": true },
+      { "text": "Article 255", "isCorrect": false },
+      { "text": "Article 253", "isCorrect": false },
+      { "text": "Article 256", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for cooperation between the Union and States on specific subjects?",
+    "article": "",
+    "options": [
+      { "text": "Article 262", "isCorrect": true },
+      { "text": "Article 261", "isCorrect": false },
+      { "text": "Article 263", "isCorrect": false },
+      { "text": "Article 264", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article gives the power to regulate inter-state trade and commerce?",
+    "article": "",
+    "options": [
+      { "text": "Article 302", "isCorrect": true },
+      { "text": "Article 301", "isCorrect": false },
+      { "text": "Article 303", "isCorrect": false },
+      { "text": "Article 304", "isCorrect": false }
+    ]
+  }
+]
