@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'create_account_page.dart'; // Import the CreateAccountPage
 
+
+
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600; // Adjust threshold as needed
+
+
+
+
 
     return Scaffold(
       backgroundColor: Colors.white, // Set the background color of the Scaffold
@@ -63,6 +70,10 @@ class LoginPage extends StatelessWidget {
   }
 }
 
+
+
+
+
 class _Header extends StatelessWidget {
   final bool isSmallScreen;
 
@@ -103,6 +114,9 @@ class _Header extends StatelessWidget {
     );
   }
 }
+
+
+
 
 class _InputWrapper extends StatelessWidget {
   final bool isSmallScreen;

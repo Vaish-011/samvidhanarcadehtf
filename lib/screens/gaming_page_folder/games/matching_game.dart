@@ -33,9 +33,9 @@ class _MatchingGameState extends State<MatchingGame> {
     setState(() {
       if (isCorrect) {
         if (buttonIndex == 0) {
-          buttonAColor = Color(0xFFB39DDB); // Light purple
+          buttonAColor = Colors.green; // Green for correct
         } else {
-          buttonBColor = Color(0xFFB39DDB); // Light purple
+          buttonBColor = Colors.green; // Green for correct
         }
       } else {
         if (buttonIndex == 0) {
@@ -117,7 +117,7 @@ class _MatchingGameState extends State<MatchingGame> {
                 Text(
                   currentQuestion['question'],
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 20, // Decreased font size
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF7B1FA2), // Darker purple for question text
                   ),
@@ -127,7 +127,7 @@ class _MatchingGameState extends State<MatchingGame> {
                 Text(
                   currentQuestion['article'],
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 14, // Decreased font size
                     color: Colors.grey[800], // Dark grey for article text
                   ),
                   textAlign: TextAlign.center,
@@ -174,6 +174,7 @@ class _MatchingGameState extends State<MatchingGame> {
     required int buttonIndex,
   }) {
     Color buttonColor = (buttonIndex == 0 ? buttonAColor : buttonBColor) ?? Colors.white; // Default to white if no color
+    double fontSize = buttonColor == Colors.green ? 16 : 14; // Decrease font size for incorrect answers
 
     return ElevatedButton(
       onPressed: () => checkAnswer(isCorrect, buttonIndex),
@@ -187,7 +188,7 @@ class _MatchingGameState extends State<MatchingGame> {
       ),
       child: Text(
         text,
-        style: TextStyle(fontSize: 18, color: Colors.black), // Black text for readability
+        style: TextStyle(fontSize: fontSize, color: Colors.black), // Adjust font size based on answer correctness
       ),
     );
   }

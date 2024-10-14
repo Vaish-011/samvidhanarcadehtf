@@ -66,40 +66,81 @@ class _HistoricalDecisionGameState extends State<HistoricalDecisionGame> {
     final scenario = _scenarios[_currentScenarioIndex];
 
     return Scaffold(
-      appBar: AppBar(title: Text("Historical Decision-Making Game")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              scenario.title,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 20),
-            Text(
-              scenario.description,
-              style: TextStyle(fontSize: 18),
-            ),
-            SizedBox(height: 20),
-            ...scenario.choices.asMap().entries.map((entry) {
-              int index = entry.key;
-              Choice choice = entry.value;
-              return ElevatedButton(
-                onPressed: () => _makeChoice(index),
-                child: Text(choice.text),
-              );
-            }).toList(),
-            SizedBox(height: 20),
-            Text(
-              _resultMessage,
-              style: TextStyle(fontSize: 18, color: Colors.green),
-            ),
-            Text(
-              _feedbackMessage,
-              style: TextStyle(fontSize: 18, color: Colors.red),
-            ),
-          ],
+      appBar: AppBar(
+        title: Text("Historical Decision-Making Game"),
+        backgroundColor: Color(0xFFB39DDB), // Light purple color for AppBar
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.white.withOpacity(0.9), // Soft white
+              Color(0xFFE1BEE7).withOpacity(0.8), // Lighter purple
+            ],
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Scenario title
+              Text(
+                scenario.title,
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xFF7B1FA2)),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              // Scenario description
+              Text(
+                scenario.description,
+                style: TextStyle(fontSize: 16, color: Colors.grey[800]),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              // Choices buttons
+              Expanded(
+                child: ListView.builder(
+                  itemCount: scenario.choices.length,
+                  itemBuilder: (context, index) {
+                    Choice choice = scenario.choices[index];
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: ElevatedButton(
+                        onPressed: () => _makeChoice(index),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFFB39DDB), // Light purple for buttons
+                          minimumSize: Size(double.infinity, 50),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                        child: Text(
+                          choice.text,
+                          style: TextStyle(fontSize: 16, color: Colors.black),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(height: 20),
+              // Result and feedback messages
+              Text(
+                _resultMessage,
+                style: TextStyle(fontSize: 18, color: Colors.green),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 10),
+              Text(
+                _feedbackMessage,
+                style: TextStyle(fontSize: 18, color: Colors.red),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );
