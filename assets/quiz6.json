@@ -46,4 +46,7 @@
       { "text": "Article 170", "isCorrect": true },
       { "text": "Article 171", "isCorrect": false },
       { "text": "Article 172", "isCorrect": false },
-      { "text": "Article 173",
+      { "text": "Article 173", "isCorrect": false}
+    ]
+  }
+  ]

@@ -88,12 +88,5 @@
       { "text": "Article 340", "isCorrect": false },
       { "text": "Article 341", "isCorrect": false }
     ]
-  },
-  {
-    "question": "Which Article provides for the establishment of a National Commission for Scheduled Tribes?",
-    "article": "",
-    "options": [
-      { "text": "Article 338A", "isCorrect": true },
-      { "text": "Article 339", "isCorrect": false },
-      { "text": "Article 340", "isCorrect": false },
-      { "text
+  }
+]
