@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'preamble_page.dart'; // Import the PreamblePage
+import 'amendment_sreen.dart';
 
 class AboutConstitutionPage extends StatelessWidget {
   @override
@@ -33,7 +34,7 @@ class AboutConstitutionPage extends StatelessWidget {
             _buildCard(context, 'Preamble', PreamblePage()), // Pass the PreamblePage to the card
             _buildCard(context, 'Articles'),
             _buildCard(context, 'Schedules'),
-            _buildCard(context, 'Amendments'),
+            _buildCard(context, 'Amendments',AmendmentsScreen()),
           ],
         ),
       ),
