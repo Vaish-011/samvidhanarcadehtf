@@ -31,28 +31,39 @@ class _AmendmentsScreenState extends State<AmendmentsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('List of Amendments'),
+        backgroundColor: Colors.purple[200], // Lighter purple for AppBar
       ),
-      body: amendments.isEmpty
-          ? Center(child: CircularProgressIndicator())
-          : ListView.builder(
-        itemCount: amendments.length,
-        itemBuilder: (context, index) {
-          final amendment = amendments[index];
-          return ListTile(
-            title: Text(amendment['title']),
-            subtitle: Text("Amendment ${amendment['number']}"),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AmendmentDetailScreen(
-                    amendment: amendment,
-                  ),
+      body: Container(
+        color: Colors.purple[50], // Light purple background for the entire body
+        child: amendments.isEmpty
+            ? Center(child: CircularProgressIndicator())
+            : ListView.builder(
+          itemCount: amendments.length,
+          itemBuilder: (context, index) {
+            final amendment = amendments[index];
+            return Card(
+              color: Colors.white, // White card for the amendment
+              margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              child: ListTile(
+                title: Text(
+                  amendment['title'],
+                  style: TextStyle(color: Colors.purple[800]), // Dark purple text
                 ),
-              );
-            },
-          );
-        },
+                subtitle: Text("Amendment ${amendment['number']}"),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AmendmentDetailScreen(
+                        amendment: amendment,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            );
+          },
+        ),
       ),
     );
   }
