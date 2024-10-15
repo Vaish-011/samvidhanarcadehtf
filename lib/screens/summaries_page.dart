@@ -141,24 +141,41 @@ Widget _buildDetailsPage({required String title, required String content}) {
           ],
         ),
       ),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 20),
-            Text(
-              content,
-              style: TextStyle(fontSize: 16),
-              textAlign: TextAlign.justify,
+      child: Center( // Center the content vertically and horizontally
+        child: Container(
+          padding: EdgeInsets.all(20.0), // Add padding around the box
+          decoration: BoxDecoration(
+            color: Colors.white, // Box color
+            borderRadius: BorderRadius.circular(10.0), // Rounded corners
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 6.0,
+                offset: Offset(0, 3),
+              ),
+            ],
+          ),
+          child: SingleChildScrollView( // Enable scrolling if content overflows
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center, // Center align the column
+              children: [
+                SizedBox(height: 20),
+                Text(
+                  content,
+                  style: TextStyle(fontSize: 16),
+                  textAlign: TextAlign.justify,
+                ),
+                SizedBox(height: 20),
+              ],
             ),
-            SizedBox(height: 20),
-          ],
+          ),
         ),
       ),
     ),
   );
 }
 
+// Individual Part Details Pages
 class PartIDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
