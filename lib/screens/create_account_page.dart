@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'home_page.dart';
+import 'login_page.dart';
 
 class CreateAccountPage extends StatefulWidget {
   @override
@@ -24,7 +24,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
       );
       // Navigate to HomePage upon successful registration
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => HomePage()));
+          MaterialPageRoute(builder: (context) => LoginPage()));
     } on FirebaseAuthException catch (e) {
       // Handle error appropriately
       ScaffoldMessenger.of(context).showSnackBar(
