@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'home_page.dart';
 
 class CreateAccountPage extends StatefulWidget {
@@ -7,6 +8,31 @@ class CreateAccountPage extends StatefulWidget {
 }
 
 class _CreateAccountPageState extends State<CreateAccountPage> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _dobController = TextEditingController();
+
+  String? _selectedGender;
+
+  Future<void> _createAccount() async {
+    try {
+      UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text.trim(),
+      );
+      // Navigate to HomePage upon successful registration
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => HomePage()));
+    } on FirebaseAuthException catch (e) {
+      // Handle error appropriately
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.message ?? 'Error occurred')),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +44,11 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xFF26A69A), // Bright Teal
-                Color(0xFF4DB6AC), // Mid Bright Teal
-                Color(0xFF80CBC4), // Light Teal
-                Color(0xFFB2DFDB), // Very Light Teal
-                Color(0xFFE0F2F1), // Softest Teal
+                Color(0xFF26A69A),
+                Color(0xFF4DB6AC),
+                Color(0xFF80CBC4),
+                Color(0xFFB2DFDB),
+                Color(0xFFE0F2F1),
               ],
             ),
           ),
@@ -41,14 +67,12 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                     ),
                   ),
                   SizedBox(height: 20),
-
-                  // Rounded card for input fields
                   Card(
                     elevation: 8,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(0),
-                        topRight: Radius.circular(60), // Custom corner radii
+                        topRight: Radius.circular(60),
                         bottomLeft: Radius.circular(60),
                         bottomRight: Radius.circular(0),
                       ),
@@ -57,8 +81,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                       padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
-                          // Full Name Field
                           TextField(
+                            controller: _nameController,
                             decoration: InputDecoration(
                               labelText: 'Full Name',
                               border: InputBorder.none,
@@ -66,8 +90,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             ),
                           ),
                           Divider(),
-                          // Email Field
                           TextField(
+                            controller: _emailController,
                             decoration: InputDecoration(
                               labelText: 'Email',
                               border: InputBorder.none,
@@ -76,8 +100,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             keyboardType: TextInputType.emailAddress,
                           ),
                           Divider(),
-                          // Password Field
                           TextField(
+                            controller: _passwordController,
                             decoration: InputDecoration(
                               labelText: 'Password',
                               border: InputBorder.none,
@@ -86,7 +110,6 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             obscureText: true,
                           ),
                           Divider(),
-                          // Gender Dropdown
                           DropdownButtonFormField<String>(
                             decoration: InputDecoration(
                               labelText: 'Gender',
@@ -100,11 +123,15 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                                 child: Text(value),
                               );
                             }).toList(),
-                            onChanged: (String? newValue) {},
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                _selectedGender = newValue;
+                              });
+                            },
                           ),
                           Divider(),
-                          // Date of Birth Field
                           TextField(
+                            controller: _dobController,
                             decoration: InputDecoration(
                               labelText: 'Date of birth',
                               border: InputBorder.none,
@@ -117,19 +144,14 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                     ),
                   ),
                   SizedBox(height: 30),
-
-                  // Submit Button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) => HomePage()));
-                      },
+                      onPressed: _createAccount,
                       child: Text(
                         'Create Account',
                         style: TextStyle(
-                          color: Colors.white, // Set font color to white
+                          color: Colors.white,
                           fontSize: 16,
                         ),
                       ),
@@ -137,15 +159,12 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                         padding: EdgeInsets.symmetric(vertical: 16),
                         backgroundColor: Colors.teal.shade800,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12), // Rounded button
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                     ),
                   ),
-
                   SizedBox(height: 20),
-
-                  // Already have an account? Sign In text
                   GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
