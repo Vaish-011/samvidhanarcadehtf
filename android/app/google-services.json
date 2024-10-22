@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "467570290959",
+    "project_id": "userauthlogin-51f8f",
+    "storage_bucket": "userauthlogin-51f8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467570290959:android:25b6378dcc969eb1880e7a",
+        "android_client_info": {
+          "package_name": "com.example.samvidhan_arcade"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUEjqrI_tGpwmKshqn8hfD54rC42HUR6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

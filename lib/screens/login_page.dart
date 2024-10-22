@@ -1,38 +1,63 @@
 import 'package:flutter/material.dart';
-import 'create_account_page.dart'; // Import the CreateAccountPage
+import 'package:firebase_auth/firebase_auth.dart';
+import 'create_account_page.dart';
+import 'home_page.dart';
 
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
 
+class _LoginPageState extends State<LoginPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  Future<void> _signIn() async {
+    try {
+      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      );
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage()),
+      );
+    } on FirebaseAuthException catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login failed: ${e.message}')),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('An error occurred: ${e.toString()}')),
+      );
+    }
+  }
 
-class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    final isSmallScreen = screenSize.width < 600; // Adjust threshold as needed
-
-
-
-
+    final isSmallScreen = screenSize.width < 600;
 
     return Scaffold(
-      backgroundColor: Colors.white, // Set the background color of the Scaffold
-      body: SingleChildScrollView( // Wrap the content with SingleChildScrollView
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
         child: Stack(
           children: [
             // Gradient Background
             Container(
               width: double.infinity,
-              height: screenSize.height, // Set to full height
+              height: screenSize.height,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color(0xFF26A69A), // Bright Teal
-                    Color(0xFF4DB6AC), // Mid Bright Teal
-                    Color(0xFF80CBC4), // Light Teal
-                    Color(0xFFB2DFDB), // Very Light Teal
-                    Color(0xFFE0F2F1), // Softest Teal
+                    Color(0xFF26A69A),
+                    Color(0xFF4DB6AC),
+                    Color(0xFF80CBC4),
+                    Color(0xFFB2DFDB),
+                    Color(0xFFE0F2F1),
                   ],
                   stops: [0.0, 0.25, 0.5, 0.75, 1.0],
                 ),
@@ -43,21 +68,17 @@ class LoginPage extends StatelessWidget {
               padding: EdgeInsets.only(top: 60, bottom: 20),
               child: Column(
                 children: [
-                  SizedBox(height: isSmallScreen ? 80 : 110), // Space above header
-                  _Header(isSmallScreen: isSmallScreen), // Pass size flag
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(0),
-                        topRight: Radius.circular(60),
-                      ),
-                    ),
-                    child: _InputWrapper(isSmallScreen: isSmallScreen), // Pass size flag
+                  SizedBox(height: isSmallScreen ? 80 : 110),
+                  _Header(isSmallScreen: isSmallScreen),
+                  _InputWrapper(
+                    isSmallScreen: isSmallScreen,
+                    emailController: _emailController,
+                    passwordController: _passwordController,
+                    onSignIn: _signIn,
                   ),
-                  // White background at the bottom
+                  // Add white bottom space as background
                   Container(
-                    height: 200, // Height of the white area
+                    height: 150,
                     color: Colors.white,
                   ),
                 ],
@@ -69,10 +90,6 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-
-
-
 
 class _Header extends StatelessWidget {
   final bool isSmallScreen;
@@ -115,57 +132,71 @@ class _Header extends StatelessWidget {
   }
 }
 
-
-
-
 class _InputWrapper extends StatelessWidget {
   final bool isSmallScreen;
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final VoidCallback onSignIn;
 
-  const _InputWrapper({required this.isSmallScreen});
+  const _InputWrapper({
+    required this.isSmallScreen,
+    required this.emailController,
+    required this.passwordController,
+    required this.onSignIn,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.all(20.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
+        ),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _InputField(
+            controller: emailController,
             label: 'Email',
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(0.0),
-              topRight: Radius.circular(30.0),
-              bottomLeft: Radius.circular(30.0),
-              bottomRight: Radius.circular(0.0),
-            ),
             isSmallScreen: isSmallScreen,
           ),
           const SizedBox(height: 16),
           _InputField(
+            controller: passwordController,
             label: 'Password',
             obscureText: true,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(0.0),
-              topRight: Radius.circular(30.0),
-              bottomLeft: Radius.circular(30.0),
-              bottomRight: Radius.circular(0.0),
-            ),
             isSmallScreen: isSmallScreen,
           ),
           const SizedBox(height: 24),
+          ElevatedButton(
+            onPressed: onSignIn,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFF004D40),
+              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+            ),
+            child: Text(
+              'SIGN IN',
+              style: TextStyle(fontSize: isSmallScreen ? 16 : 18, color: Colors.white),
+            ),
+          ),
+          const SizedBox(height: 12),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextButton(
                 onPressed: () {
-                  // Add forgot password logic here
+                  // Forgot Password action
                 },
                 child: Text(
                   'Forgot Password?',
-                  style: TextStyle(
-                    color: Color(0xFF004D40),
-                    fontSize: isSmallScreen ? 14 : 16,
-                  ),
+                  style: TextStyle(color: Color(0xFF004D40)),
                 ),
               ),
               TextButton(
@@ -177,93 +208,46 @@ class _InputWrapper extends StatelessWidget {
                 },
                 child: Text(
                   'Create Account',
-                  style: TextStyle(
-                    color: Color(0xFF004D40),
-                    fontSize: isSmallScreen ? 14 : 16,
-                  ),
+                  style: TextStyle(color: Color(0xFF004D40)),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 24),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFF004D40),
-              foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 12),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(0.0),
-                  topRight: Radius.circular(30.0),
-                  bottomLeft: Radius.circular(30.0),
-                  bottomRight: Radius.circular(0.0),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Expanded(child: Divider(color: Color(0xFF004D40), thickness: 1)),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Text(
+                  'or',
+                  style: TextStyle(color: Color(0xFF004D40)),
                 ),
               ),
-            ),
-            onPressed: () {
-              // Add your login logic here
-            },
-            child: Text(
-              'SIGN IN',
-              style: TextStyle(
-                fontSize: isSmallScreen ? 16 : 18,
-              ),
-            ),
+              Expanded(child: Divider(color: Color(0xFF004D40), thickness: 1)),
+            ],
           ),
           const SizedBox(height: 20),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 16),
-            width: double.infinity,
-            height: 1,
-            color: Color(0xFF004D40),
-          ),
-          const SizedBox(height: 16),
-          Text(
-            'or',
-            style: TextStyle(
-              color: Color(0xFF004D40),
-              fontSize: isSmallScreen ? 14 : 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 16),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(30.0),
-              border: Border.all(color: Color(0xFF004D40), width: 2),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(30.0),
-              child: Material(
-                color: Colors.white,
-                child: InkWell(
-                  onTap: () {
-                    // Add your Google login logic here
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image.asset(
-                          'assets/google_icon.jpg',
-                          height: 30,
-                          width: 30,
-                        ),
-                        const SizedBox(width: 10),
-                        Text(
-                          'Sign in with Google',
-                          style: TextStyle(
-                            color: Color(0xFF004D40),
-                            fontSize: isSmallScreen ? 14 : 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
+          GestureDetector(
+            onTap: () {
+              // Google sign-in logic here
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              decoration: BoxDecoration(
+                border: Border.all(color: Color(0xFF004D40), width: 2),
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset('assets/google_icon.jpg', width: 24, height: 24),
+                  const SizedBox(width: 10),
+                  Text(
+                    'Sign in with Google',
+                    style: TextStyle(color: Color(0xFF004D40), fontSize: 16),
                   ),
-                ),
+                ],
               ),
             ),
           ),
@@ -275,14 +259,14 @@ class _InputWrapper extends StatelessWidget {
 
 class _InputField extends StatelessWidget {
   final String label;
+  final TextEditingController controller;
   final bool obscureText;
-  final BorderRadius borderRadius;
   final bool isSmallScreen;
 
   const _InputField({
     required this.label,
+    required this.controller,
     this.obscureText = false,
-    this.borderRadius = const BorderRadius.all(Radius.circular(30.0)),
     required this.isSmallScreen,
   });
 
@@ -291,7 +275,7 @@ class _InputField extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Color(0xFFE0F2F1),
-        borderRadius: borderRadius,
+        borderRadius: BorderRadius.circular(30.0),
         boxShadow: [
           BoxShadow(
             color: Colors.black26,
@@ -301,20 +285,21 @@ class _InputField extends StatelessWidget {
         ],
       ),
       child: TextFormField(
+        controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
           labelText: label,
           labelStyle: TextStyle(color: Color(0xFF004D40)),
           border: OutlineInputBorder(
-            borderRadius: borderRadius,
+            borderRadius: BorderRadius.circular(30.0),
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF80CBC4)),
-            borderRadius: borderRadius,
+            borderRadius: BorderRadius.circular(30.0),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xFF004D40)),
-            borderRadius: borderRadius,
+            borderRadius: BorderRadius.circular(30.0),
           ),
           contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         ),
