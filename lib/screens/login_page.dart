@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             // Main Content
             Container(
-              padding: EdgeInsets.only(top: 60, bottom: 20),
+              padding: EdgeInsets.only(top: 80, bottom: 20),
               child: Column(
                 children: [
                   SizedBox(height: isSmallScreen ? 80 : 110),
@@ -164,27 +164,17 @@ class _InputWrapper extends StatelessWidget {
             label: 'Email',
             isSmallScreen: isSmallScreen,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           _InputField(
             controller: passwordController,
             label: 'Password',
             obscureText: true,
             isSmallScreen: isSmallScreen,
           ),
-          const SizedBox(height: 24),
-          ElevatedButton(
-            onPressed: onSignIn,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFF004D40),
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 12),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-            ),
-            child: Text(
-              'SIGN IN',
-              style: TextStyle(fontSize: isSmallScreen ? 16 : 18, color: Colors.white),
-            ),
+          const SizedBox(height: 20),
+          _SignInButton(
+            onSignIn: onSignIn,
+            isSmallScreen: isSmallScreen,
           ),
           const SizedBox(height: 12),
           Row(
@@ -233,7 +223,7 @@ class _InputWrapper extends StatelessWidget {
               // Google sign-in logic here
             },
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
               decoration: BoxDecoration(
                 border: Border.all(color: Color(0xFF004D40), width: 2),
                 borderRadius: BorderRadius.circular(30),
@@ -257,6 +247,42 @@ class _InputWrapper extends StatelessWidget {
   }
 }
 
+class _SignInButton extends StatelessWidget {
+  final VoidCallback onSignIn;
+  final bool isSmallScreen;
+
+  const _SignInButton({
+    required this.onSignIn,
+    required this.isSmallScreen,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onSignIn,
+      child: Container(
+        width: isSmallScreen ? 180 : 200,
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: Color(0xFF004D40),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(0.0),
+            topRight: Radius.circular(30.0),
+            bottomLeft: Radius.circular(30.0),
+            bottomRight: Radius.circular(0.0),
+          ),
+        ),
+        child: Center(
+          child: Text(
+            'SIGN IN',
+            style: TextStyle(fontSize: isSmallScreen ? 16 : 18, color: Colors.white),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _InputField extends StatelessWidget {
   final String label;
   final TextEditingController controller;
@@ -275,7 +301,13 @@ class _InputField extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Color(0xFFE0F2F1),
-        borderRadius: BorderRadius.circular(30.0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(0.0),
+          topRight: Radius.circular(30.0),
+          bottomLeft: Radius.circular(30.0),
+          bottomRight: Radius.circular(0.0),
+        ),
+        border: Border.all(color: Colors.black, width: 1.5),
         boxShadow: [
           BoxShadow(
             color: Colors.black26,
@@ -290,18 +322,8 @@ class _InputField extends StatelessWidget {
         decoration: InputDecoration(
           labelText: label,
           labelStyle: TextStyle(color: Color(0xFF004D40)),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Color(0xFF80CBC4)),
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Color(0xFF004D40)),
-            borderRadius: BorderRadius.circular(30.0),
-          ),
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          border: InputBorder.none,
+          contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
         ),
       ),
     );
