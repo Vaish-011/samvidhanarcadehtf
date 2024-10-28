@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'firestore_service.dart';  // Import your Firestore service
+import 'package:firebase_auth/firebase_auth.dart'; // Import Firebase Auth
 
 class CrosswordGame extends StatefulWidget {
   const CrosswordGame({Key? key}) : super(key: key);
@@ -19,10 +21,14 @@ class _CrosswordGameState extends State<CrosswordGame> {
   List<Map<String, dynamic>> levels = [];
   bool showInstructions = true;
 
+  final FirestoreService _firestoreService = FirestoreService();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   @override
   void initState() {
     super.initState();
     loadLevels();
+    fetchCompletedLevels(); // Fetch completed levels
   }
 
   Future<void> loadLevels() async {
@@ -83,7 +89,7 @@ class _CrosswordGameState extends State<CrosswordGame> {
     }
   }
 
-  void moveToNextLevel() {
+  void moveToNextLevel() async {
     setState(() {
       if (currentLevel < levels.length - 1) {
         currentLevel++;
@@ -92,7 +98,18 @@ class _CrosswordGameState extends State<CrosswordGame> {
       }
       shuffleLetters();
       resetGame();
-      saveCurrentLevel();
+    });
+
+    // Update completed levels in Firestore
+    String userId = _auth.currentUser?.uid ?? "YOUR_USER_ID"; // Use the current user's ID
+    await _firestoreService.updateCompletedLevels(userId, currentLevel + 1);
+  }
+
+  Future<void> fetchCompletedLevels() async {
+    String userId = _auth.currentUser?.uid ?? "YOUR_USER_ID"; // Use the current user's ID
+    int completedLevels = await _firestoreService.getCompletedLevels(userId);
+    setState(() {
+      currentLevel = completedLevels; // Set the current level based on completed levels
     });
   }
 
@@ -232,17 +249,17 @@ class _CrosswordGameState extends State<CrosswordGame> {
           _buildInstructionSlide(
             title: 'Welcome to the Crossword Game',
             description: 'This game will help you learn about the Constitution while having fun!',
-            showArrow: true, // Arrow shown
+            showArrow: true,
           ),
           _buildInstructionSlide(
             title: 'How to Play',
             description: 'Select letters to form words based on the hints provided.',
-            showArrow: true, // Arrow shown
+            showArrow: true,
           ),
           _buildInstructionSlide(
             title: 'Levels',
             description: 'You can select different levels by tapping on the menu icon in the top right corner.',
-            showArrow: true, // Arrow shown
+            showArrow: true,
           ),
           _buildInstructionSlide(
             title: 'Have Fun!',
@@ -252,23 +269,17 @@ class _CrosswordGameState extends State<CrosswordGame> {
                 showInstructions = false;
               });
             },
-            showArrow: false, // No arrow for last slide
           ),
         ],
       ),
     );
   }
 
-  Widget _buildInstructionSlide({
-    required String title,
-    required String description,
-    VoidCallback? onNext,
-    bool showArrow = false,
-  }) {
+  Widget _buildInstructionSlide({required String title, required String description, VoidCallback? onNext, bool showArrow = false}) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.green[100]!, Colors.green[300]!],
+          colors: [Colors.blue[100]!, Colors.blue[300]!],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -281,16 +292,14 @@ class _CrosswordGameState extends State<CrosswordGame> {
           const SizedBox(height: 20),
           Text(description, textAlign: TextAlign.center, style: const TextStyle(fontSize: 18)),
           const SizedBox(height: 20),
-          if (onNext != null) ...[
+          if (showArrow)
+            Icon(Icons.arrow_forward, size: 48, color: Colors.blue),
+          if (onNext != null)
             ElevatedButton(
               onPressed: onNext,
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
               child: const Text('Start Playing'),
             ),
-            const SizedBox(height: 20),
-          ],
-          if (showArrow)
-            Icon(Icons.arrow_forward, size: 40, color: Colors.blue), // Arrow added for each applicable slide
         ],
       ),
     );
