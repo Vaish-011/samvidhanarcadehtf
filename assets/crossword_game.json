@@ -1,0 +1,542 @@
+[
+  {
+    "letters": ["R", "I", "G", "H", "T", "S"],
+    "correctWord": "RIGHTS",
+    "hint": "A fundamental legal entitlement that every citizen has.",
+    "explanation": "Rights are legal, social, or ethical principles of freedom or entitlement."
+  },
+  {
+    "letters": ["A", "M", "E", "N", "D"],
+    "correctWord": "AMEND",
+    "hint": "To formally change a legal document like the constitution.",
+    "explanation": "To amend is to formally change or add to a legal document such as the constitution."
+  },
+  {
+    "letters": ["L", "I", "B", "E", "R", "T", "Y"],
+    "correctWord": "LIBERTY",
+    "hint": "The state of being free from oppressive restrictions.",
+    "explanation": "Liberty refers to the state of being free within society from oppressive restrictions."
+  },
+  {
+    "letters": ["C", "I", "T", "I", "Z", "E", "N"],
+    "correctWord": "CITIZEN",
+    "hint": "A person who is a legal member of a state.",
+    "explanation": "Citizenship defines the rights and duties of citizens in the nation."
+  },
+  {
+    "letters": ["S", "T", "A", "T", "E", "S"],
+    "correctWord": "STATES",
+    "hint": "Political entities that make up the Union of India.",
+    "explanation": "India is a Union of States, each with its own government."
+  },
+  {
+    "letters": ["P", "A", "R", "L", "I", "A", "M", "E", "N", "T"],
+    "correctWord": "PARLIAMENT",
+    "hint": "The supreme legislative body in India.",
+    "explanation": "The Parliament of India is responsible for making laws."
+  },
+  {
+    "letters": ["F", "E", "D", "E", "R", "A", "L", "I", "S", "M"],
+    "correctWord": "FEDERALISM",
+    "hint": "The system of government where power is divided between central and state governments.",
+    "explanation": "Federalism allows different levels of government to share control over the same geographic area."
+  },
+  {
+    "letters": ["A", "C", "T"],
+    "correctWord": "ACT",
+    "hint": "A law passed by the legislature.",
+    "explanation": "Acts are formal written laws enacted by Parliament."
+  },
+  {
+    "letters": ["C", "O", "N", "S", "T", "I", "T", "U", "T", "I", "O", "N"],
+    "correctWord": "CONSTITUTION",
+    "hint": "The supreme law of India.",
+    "explanation": "The Constitution defines the fundamental principles and framework of the government."
+  },
+  {
+    "letters": ["B", "O", "U", "N", "D", "A", "R", "I", "E", "S"],
+    "correctWord": "BOUNDARIES",
+    "hint": "The limits that define the area of a state.",
+    "explanation": "Boundaries determine the territorial limits of states within the Union."
+  },
+  {
+    "letters": ["D", "I", "S", "C", "R", "I", "M", "I", "N", "A", "T", "I", "O", "N"],
+    "correctWord": "DISCRIMINATION",
+    "hint": "Unjust treatment based on characteristics like race or gender.",
+    "explanation": "Discrimination refers to unequal treatment of individuals based on attributes like religion, race, or gender."
+  },
+  {
+    "letters": ["E", "Q", "U", "A", "L", "I", "T", "Y"],
+    "correctWord": "EQUALITY",
+    "hint": "The state of being equal, especially in status and rights.",
+    "explanation": "Equality ensures that every individual has the same legal rights and protections."
+  },
+  {
+    "letters": ["S", "P", "E", "C", "I", "A", "L"],
+    "correctWord": "SPECIAL",
+    "hint": "Referring to provisions made for specific groups.",
+    "explanation": "Special provisions can be made by the state for the advancement of certain classes of citizens."
+  },
+  {
+    "letters": ["P", "E", "R", "M", "I", "T"],
+    "correctWord": "PERMIT",
+    "hint": "An official document allowing someone to do something.",
+    "explanation": "Permits are often required for resettlement or legal residency."
+  },
+  {
+    "letters": ["E", "C", "O", "N", "O", "M", "I", "C", "A", "L", "Y"],
+    "correctWord": "ECONOMICALLY",
+    "hint": "Pertaining to the economy or financial conditions.",
+    "explanation": "This term is often used to describe the status of groups or individuals based on financial resources."
+  },
+  {
+    "letters": ["O", "P", "P", "O", "R", "T", "U", "N", "I", "T", "Y"],
+    "correctWord": "OPPORTUNITY",
+    "hint": "A favorable situation for progress or advancement.",
+    "explanation": "Equality of opportunity means that every citizen has the chance to compete for jobs and positions."
+  },
+  {
+    "letters": ["U", "N", "T", "O", "U", "C", "H", "A", "B", "I", "L", "I", "T", "Y"],
+    "correctWord": "UNTOUCHABILITY",
+    "hint": "A social practice that discriminates against certain groups.",
+    "explanation": "Untouchability is abolished in India, reflecting a commitment to equality and social justice."
+  },
+  {
+    "letters": ["F", "R", "E", "E"],
+    "correctWord": "FREE",
+    "hint": "Without cost; not restricted.",
+    "explanation": "Free education is mandated for children in India, emphasizing the right to education."
+  },
+  {
+    "letters": ["L", "I", "B", "E", "R", "T", "I", "E", "S"],
+    "correctWord": "LIBERTIES",
+    "hint": "The state of being free within society from oppressive restrictions.",
+    "explanation": "Fundamental liberties refer to the essential freedoms guaranteed to individuals."
+  },
+  {
+    "letters": ["A", "R", "R", "E", "S", "T"],
+    "correctWord": "ARREST",
+    "hint": "The act of detaining someone legally.",
+    "explanation": "Arrest refers to the legal detention of a person by authorities."
+  },
+  {
+    "letters": ["C", "U", "L", "T", "U", "R", "A", "L"],
+    "correctWord": "CULTURAL",
+    "hint": "Related to the ideas, customs, and social behavior of a particular people.",
+    "explanation": "Cultural rights protect the identity and heritage of minority groups."
+  },
+  {
+    "letters": ["E", "D", "U", "C", "A", "T", "I", "O", "N"],
+    "correctWord": "EDUCATION",
+    "hint": "The process of receiving or giving systematic instruction.",
+    "explanation": "Education is a fundamental right that empowers individuals and communities."
+  },
+  {
+    "letters": ["M", "I", "N", "O", "R", "I", "T", "Y"],
+    "correctWord": "MINORITY",
+    "hint": "A group that is different from the larger population.",
+    "explanation": "Minorities have specific rights to preserve their language and culture."
+  },
+  {
+    "letters": ["A", "C", "Q", "U", "I", "S", "I", "T", "I", "O", "N"],
+    "correctWord": "ACQUISITION",
+    "hint": "The act of obtaining or acquiring something.",
+    "explanation": "Acquisition of property can involve legal processes governed by state laws."
+  },
+  {
+    "letters": ["P", "R", "O", "V", "I", "S", "I", "O", "N"],
+    "correctWord": "PROVISION",
+    "hint": "A measure or condition in a legal document.",
+    "explanation": "Provisions in the Constitution ensure certain rights and duties."
+  },
+  {
+    "letters": ["S", "O", "C", "I", "A", "L"],
+    "correctWord": "SOCIAL",
+    "hint": "Relating to society or its organization.",
+    "explanation": "Social justice is a key principle in the governance of India."
+  },
+  {
+    "letters": ["R", "E", "S", "P", "O", "N", "S", "I", "B", "I", "L", "I", "T", "Y"],
+    "correctWord": "RESPONSIBILITY",
+    "hint": "The state or fact of having a duty to deal with something.",
+    "explanation": "Citizens have responsibilities towards their country as per the Constitution."
+  },
+  {
+    "letters": ["J", "U", "S", "T", "I", "C", "E"],
+    "correctWord": "JUSTICE",
+    "hint": "The principle of fairness in law.",
+    "explanation": "Justice is one of the foundational values enshrined in the Constitution."
+  },
+  {
+    "letters": ["E", "N", "F", "O", "R", "C", "E"],
+    "correctWord": "ENFORCE",
+    "hint": "To compel observance of or obedience to.",
+    "explanation": "Laws must be enforced to maintain order in society."
+  },
+  {
+    "letters": ["P", "A", "R", "T", "Y"],
+    "correctWord": "PARTY",
+    "hint": "An organized group of people with similar political aims.",
+    "explanation": "Political parties play a crucial role in the democratic process."
+  },
+  {
+    "letters": ["D", "E", "M", "O", "C", "R", "A", "C", "Y"],
+    "correctWord": "DEMOCRACY",
+    "hint": "A system of government by the whole population, usually through elected representatives.",
+    "explanation": "Democracy is a foundational principle in the Indian political system."
+  },
+  {
+    "letters": ["A", "S", "S", "E", "M", "B", "L", "Y"],
+    "correctWord": "ASSEMBLY",
+    "hint": "A group of representatives who come together for a legislative purpose.",
+    "explanation": "The state assembly is responsible for making laws at the state level."
+  },
+  {
+    "letters": ["E", "L", "E", "C", "T", "I", "O", "N"],
+    "correctWord": "ELECTION",
+    "hint": "A formal decision-making process by which a population chooses an individual.",
+    "explanation": "Elections are a key feature of democracy, allowing citizens to choose their leaders."
+  },
+  {
+    "letters": ["A", "P", "P", "O", "I", "N", "T"],
+    "correctWord": "APPOINT",
+    "hint": "To assign a role or position to someone.",
+    "explanation": "The President appoints the Prime Minister and other officials."
+  },
+  {
+    "letters": ["R", "E", "F", "E", "R", "E", "N", "D", "U", "M"],
+    "correctWord": "REFERENDUM",
+    "hint": "A direct vote in which an entire electorate is invited to vote.",
+    "explanation": "Referendums allow citizens to decide on specific issues."
+  },
+  {
+    "letters": ["J", "U", "R", "I", "S", "D", "I", "C", "T", "I", "O", "N"],
+    "correctWord": "JURISDICTION",
+    "hint": "The official power to make legal decisions and judgments.",
+    "explanation": "Jurisdiction determines which court has authority over a case."
+  },
+  {
+    "letters": ["R", "E", "V", "I", "E", "W"],
+    "correctWord": "REVIEW",
+    "hint": "To examine or assess something formally.",
+    "explanation": "Judicial review allows courts to examine the constitutionality of legislative acts."
+  },
+  {
+    "letters": ["A", "U", "T", "H", "O", "R", "I", "T", "Y"],
+    "correctWord": "AUTHORITY",
+    "hint": "The power or right to give orders, make decisions, and enforce obedience.",
+    "explanation": "Authority is vested in various branches of government."
+  },
+  {
+    "letters": ["S", "U", "B", "J", "E", "C", "T", "I", "O", "N"],
+    "correctWord": "SUBJECTION",
+    "hint": "The state of being under the control of another.",
+    "explanation": "Subjection is contrary to the principles of liberty and equality."
+  },
+  {
+    "letters": ["C", "O", "N", "F", "L", "I", "C", "T"],
+    "correctWord": "CONFLICT",
+    "hint": "A serious disagreement or argument.",
+    "explanation": "Conflicts can arise between laws, requiring judicial interpretation."
+  },
+  {
+    "letters": ["A", "D", "J", "U", "D", "I", "C", "I", "A", "R", "Y"],
+    "correctWord": "JUDICIARY",
+    "hint": "The judicial system of a country.",
+    "explanation": "The judiciary interprets the law and ensures justice."
+  },
+  {
+    "letters": ["S", "T", "A", "T", "E"],
+    "correctWord": "STATE",
+    "hint": "A political entity with its own government.",
+    "explanation": "India is a federal state composed of various states and union territories."
+  },
+  {
+    "letters": ["S", "U", "P", "R", "E", "M", "E", "C", "O", "U", "R", "T"],
+    "correctWord": "SUPREMECOURT",
+    "hint": "The highest judicial forum and final court of appeal.",
+    "explanation": "The Supreme Court is the guardian of the Constitution."
+  },
+  {
+    "letters": ["C", "O", "N", "T", "R", "A", "C", "T"],
+    "correctWord": "CONTRACT",
+    "hint": "A written or spoken agreement.",
+    "explanation": "Contracts are legally binding agreements enforceable by law."
+  },
+  {
+    "letters": ["A", "P", "P", "E", "A", "L"],
+    "correctWord": "APPEAL",
+    "hint": "To make a serious or urgent request.",
+    "explanation": "An appeal is a legal process for seeking a different outcome in a case."
+  },
+  {
+    "letters": ["L", "E", "G", "I", "S", "L", "A", "T", "I", "O", "N"],
+    "correctWord": "LEGISLATION",
+    "hint": "Laws made by a governing body.",
+    "explanation": "Legislation is the process of making laws, essential in governance."
+  },
+  {
+    "letters": ["E", "N", "A", "C", "T"],
+    "correctWord": "ENACT",
+    "hint": "To make into law.",
+    "explanation": "Parliament enacts laws to govern the country."
+  },
+  {
+    "letters": ["S", "U", "S", "P", "E", "N", "D"],
+    "correctWord": "SUSPEND",
+    "hint": "To temporarily prevent from continuing or being in force.",
+    "explanation": "Rights can be suspended during a state of emergency."
+  },
+  {
+    "letters": ["A", "B", "O", "L", "I", "T", "I", "O", "N"],
+    "correctWord": "ABOLITION",
+    "hint": "The act of formally putting an end to a system.",
+    "explanation": "The abolition of practices like untouchability is a constitutional mandate."
+  },
+  {
+    "letters": ["E", "X", "E", "C", "U", "T", "I", "O", "N"],
+    "correctWord": "EXECUTION",
+    "hint": "The carrying out of a sentence or order.",
+    "explanation": "The execution of laws is essential for maintaining order."
+  },
+  {
+    "letters": ["C", "O", "N", "F", "E", "R", "R", "E", "N", "C", "E"],
+    "correctWord": "CONFERRENCE",
+    "hint": "A formal meeting for discussion.",
+    "explanation": "Conferences are often held to discuss constitutional matters."
+  },
+  {
+    "letters": ["E", "N", "S", "U", "R", "E"],
+    "correctWord": "ENSURE",
+    "hint": "To make certain that something will occur.",
+    "explanation": "The Constitution aims to ensure justice and equality."
+  },
+  {
+    "letters": ["I", "N", "T", "E", "R", "E", "S", "T"],
+    "correctWord": "INTEREST",
+    "hint": "A legal right to a property or benefit.",
+    "explanation": "Interest can refer to rights over property as defined by law."
+  },
+  {
+    "letters": ["C", "O", "N", "S", "E", "N", "T"],
+    "correctWord": "CONSENT",
+    "hint": "Permission for something to happen.",
+    "explanation": "Consent is essential for the legitimacy of agreements and laws."
+  },
+  {
+    "letters": ["C", "O", "N", "F", "E", "R", "R", "E", "N", "C", "E"],
+    "correctWord": "CONFERENCE",
+    "hint": "A formal meeting for discussion.",
+    "explanation": "Conferences can help resolve issues related to governance."
+  },
+  {
+    "letters": ["T", "R", "A", "N", "S", "F", "E", "R"],
+    "correctWord": "TRANSFER",
+    "hint": "To move something from one place to another.",
+    "explanation": "Transfer of rights can occur under certain legal conditions."
+  },
+  {
+    "letters": ["R", "E", "C", "O", "G", "N", "I", "Z", "E"],
+    "correctWord": "RECOGNIZE",
+    "hint": "To acknowledge something as valid or important.",
+    "explanation": "Recognition of rights is fundamental to individual dignity."
+  },
+  {
+    "letters": ["P", "E", "T", "I", "T", "I", "O", "N"],
+    "correctWord": "PETITION",
+    "hint": "A formal written request.",
+    "explanation": "Citizens can file petitions to seek justice or change."
+  },
+  {
+    "letters": ["V", "O", "T", "E"],
+    "correctWord": "VOTE",
+    "hint": "To express a choice in an election.",
+    "explanation": "Voting is a fundamental democratic right of citizens."
+  },
+  {
+    "letters": ["A", "R", "B", "I", "T", "R", "A", "T", "I", "O", "N"],
+    "correctWord": "ARBITRATION",
+    "hint": "The process of settling a dispute by an impartial party.",
+    "explanation": "Arbitration is a method of resolving disputes outside the courts."
+  },
+  {
+    "letters": ["C", "R", "I", "T", "E", "R", "I", "A"],
+    "correctWord": "CRITERIA",
+    "hint": "Standards by which something is judged or decided.",
+    "explanation": "Criteria are essential in evaluating applications for rights."
+  },
+  {
+    "letters": ["A", "U", "T", "O", "R", "I", "Z", "E"],
+    "correctWord": "AUTHORIZE",
+    "hint": "To give official permission.",
+    "explanation": "Only designated authorities can authorize certain actions."
+  },
+  {
+    "letters": ["I", "N", "V", "E", "S", "T", "I", "G", "A", "T", "E"],
+    "correctWord": "INVESTIGATE",
+    "hint": "To carry out a systematic inquiry.",
+    "explanation": "Investigations ensure accountability in governance."
+  },
+  {
+    "letters": ["C", "A", "P", "A", "C", "I", "T", "Y"],
+    "correctWord": "CAPACITY",
+    "hint": "The maximum amount that something can contain.",
+    "explanation": "Capacity refers to the ability to hold or manage responsibilities."
+  },
+  {
+    "letters": ["C", "O", "N", "C", "E", "R", "N"],
+    "correctWord": "CONCERN",
+    "hint": "A matter of interest or importance.",
+    "explanation": "Concerns of citizens are addressed through various constitutional provisions."
+  },
+  {
+    "letters": ["P", "R", "O", "T", "E", "C", "T"],
+    "correctWord": "PROTECT",
+    "hint": "To keep safe from harm or injury.",
+    "explanation": "The Constitution protects the rights of individuals and minorities."
+  },
+  {
+    "letters": ["F", "A", "C", "I", "L", "I", "T", "A", "T", "E"],
+    "correctWord": "FACILITATE",
+    "hint": "To make an action or process easier.",
+    "explanation": "The state must facilitate access to justice for all citizens."
+  },
+  {
+    "letters": ["A", "D", "V", "O", "C", "A", "C", "Y"],
+    "correctWord": "ADVOCACY",
+    "hint": "Public support for a particular cause.",
+    "explanation": "Advocacy plays a key role in promoting rights and freedoms."
+  },
+  {
+    "letters": ["M", "A", "N", "D", "A", "T", "E"],
+    "correctWord": "MANDATE",
+    "hint": "An official order or commission to do something.",
+    "explanation": "The mandate of the government is defined by the Constitution."
+  },
+  {
+    "letters": ["A", "S", "S", "E", "R", "T"],
+    "correctWord": "ASSERT",
+    "hint": "To state a fact or belief confidently.",
+    "explanation": "Citizens can assert their rights as guaranteed by the Constitution."
+  },
+  {
+    "letters": ["C", "O", "N", "F", "L", "I", "C", "T"],
+    "correctWord": "CONFLICT",
+    "hint": "A serious disagreement or argument.",
+    "explanation": "Conflicts can arise between rights and responsibilities."
+  },
+  {
+    "letters": ["C", "A", "N", "C", "E", "L"],
+    "correctWord": "CANCEL",
+    "hint": "To revoke or annul a decision.",
+    "explanation": "The state can cancel permits under certain circumstances."
+  },
+  {
+    "letters": ["R", "E", "S", "O", "L", "U", "T", "I", "O", "N"],
+    "correctWord": "RESOLUTION",
+    "hint": "A firm decision to do or not do something.",
+    "explanation": "Resolutions can express the will of the legislature."
+  },
+  {
+    "letters": ["E", "L", "I", "G", "I", "B", "I", "L", "I", "T", "Y"],
+    "correctWord": "ELIGIBILITY",
+    "hint": "The quality of being suitable or qualified.",
+    "explanation": "Eligibility criteria determine who can access certain rights."
+  },
+  {
+    "letters": ["T", "E", "R", "M", "I", "N", "A", "T", "E"],
+    "correctWord": "TERMINATE",
+    "hint": "To bring to an end.",
+    "explanation": "The state can terminate contracts under specified conditions."
+  },
+  {
+    "letters": ["C", "O", "N", "C", "E", "I", "V", "E"],
+    "correctWord": "CONCEIVE",
+    "hint": "To form or devise a plan or idea.",
+    "explanation": "The Constitution allows for the conception of new rights as society evolves."
+  },
+  {
+    "letters": ["I", "N", "T", "E", "R", "V", "E", "N", "E"],
+    "correctWord": "INTERVENE",
+    "hint": "To come between so as to prevent or alter.",
+    "explanation": "The government can intervene in disputes to ensure justice."
+  },
+  {
+    "letters": ["C", "O", "N", "S", "U", "L", "T"],
+    "correctWord": "CONSULT",
+    "hint": "To seek information or advice from someone.",
+    "explanation": "Consultation is vital in drafting laws and policies."
+  },
+  {
+    "letters": ["E", "X", "E", "C", "U", "T", "I", "V", "E"],
+    "correctWord": "EXECUTIVE",
+    "hint": "The branch of government responsible for enforcing laws.",
+    "explanation": "The executive branch implements and enforces the laws made by the legislature."
+  },
+  {
+    "letters": ["J", "U", "R", "Y"],
+    "correctWord": "JURY",
+    "hint": "A body of people sworn to give a verdict in a legal case.",
+    "explanation": "Juries are integral to the judicial process in ensuring fair trials."
+  },
+  {
+    "letters": ["T", "A", "X"],
+    "correctWord": "TAX",
+    "hint": "A compulsory financial charge imposed by a government.",
+    "explanation": "Taxes fund various government initiatives and public services."
+  },
+  {
+    "letters": ["P", "R", "O", "C", "E", "D", "U", "R", "E"],
+    "correctWord": "PROCEDURE",
+    "hint": "An established or official way of doing something.",
+    "explanation": "Legal procedures must be followed in the administration of justice."
+  },
+  {
+    "letters": ["C", "A", "L", "L"],
+    "correctWord": "CALL",
+    "hint": "To communicate with someone.",
+    "explanation": "Calls for action are common in advocacy for rights."
+  },
+  {
+    "letters": ["S", "U", "P", "P", "O", "R", "T"],
+    "correctWord": "SUPPORT",
+    "hint": "To bear all or part of the weight of something.",
+    "explanation": "Support from the community is essential for successful governance."
+  },
+  {
+    "letters": ["P", "E", "R", "M", "I", "T"],
+    "correctWord": "PERMIT",
+    "hint": "To allow something to happen.",
+    "explanation": "Permits are required for various legal and administrative actions."
+  },
+  {
+    "letters": ["R", "E", "S", "T", "R", "A", "I", "N"],
+    "correctWord": "RESTRAIN",
+    "hint": "To hold back from action.",
+    "explanation": "Restraint can be necessary to maintain order in society."
+  },
+  {
+    "letters": ["R", "E", "P", "R", "E", "S", "E", "N", "T"],
+    "correctWord": "REPRESENT",
+    "hint": "To act or speak on behalf of someone.",
+    "explanation": "Representatives in government advocate for the interests of their constituents."
+  },
+  {
+    "letters": ["C", "O", "N", "T", "R", "O", "L"],
+    "correctWord": "CONTROL",
+    "hint": "The power to influence or direct behavior.",
+    "ex":"Control measures are often necessary in governance to ensure public safety."
+  },
+  {
+    "letters": ["O", "R", "D", "E", "R"],
+    "correctWord": "ORDER",
+    "hint": "A command or directive.",
+    "explanation": "Maintaining order is a key function of the government."
+  },
+  {
+    "letters": ["L", "E", "A", "D", "E", "R"],
+    "correctWord": "LEADER",
+    "hint": "A person who leads or commands a group.",
+    "explanation": "Leaders are crucial in guiding public policy and governance."
+  }
+]
