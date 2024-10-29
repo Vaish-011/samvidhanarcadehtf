@@ -12,7 +12,20 @@
           "package_name": "com.example.samvidhan_arcade"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "467570290959-n8ik55lbuq9imlv20qnmbvfrnkil9g2n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.samvidhan_arcade",
+            "certificate_hash": "fb3b759c95b6a455a5e34737260f7a3027180871"
+          }
+        },
+        {
+          "client_id": "467570290959-eu7t4p0b3l6pj9s3ioavo3dbesfv3fpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCUEjqrI_tGpwmKshqn8hfD54rC42HUR6c"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467570290959-eu7t4p0b3l6pj9s3ioavo3dbesfv3fpr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467570290959-vqoeku5au35nd8p011940egone3hfslh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.samvidhanArcade"
+              }
+            }
+          ]
         }
       }
     }

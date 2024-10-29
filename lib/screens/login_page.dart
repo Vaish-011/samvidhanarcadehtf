@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'create_account_page.dart';
 import 'home_page.dart';
-
+import '../services/forgot_pass.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -12,25 +13,96 @@ class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  bool isLoading = false;
 
-  Future<void> _signIn() async {
+  // Navigate to the sign-up screen
+  void goToSignup(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => CreateAccountPage()), // Removed const
+    );
+  }
+
+  // Handle login with email and password
+  Future<void> _login() async {
+    setState(() {
+      isLoading = true;
+    });
+
     try {
       UserCredential userCredential = await _auth.signInWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomePage()),
-      );
-    } on FirebaseAuthException catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Login failed: ${e.message}')),
-      );
+
+      // Check if the user is logged in successfully
+      if (userCredential.user != null) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()), // Removed const
+        );
+      } else {
+        // User account not found, show an error message
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("User account not found. Please sign up.")),
+        );
+      }
     } catch (e) {
+      print("Error: $e"); // Logging error for debugging
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('An error occurred: ${e.toString()}')),
+        SnackBar(content: Text("An error occurred. Please try again.")),
       );
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  // Handle login with Google
+  Future<void> _loginWithGoogle() async {
+    setState(() {
+      isLoading = true;
+    });
+
+    try {
+      // Start the Google Sign-In process
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+
+      // Obtain the auth details from the request
+      final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      // Sign in the user with the credential
+      UserCredential userCredential = await _auth.signInWithCredential(credential);
+
+      // Navigate to home if user is logged in
+      if (userCredential.user != null) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()), // Removed const
+        );
+      } else {
+        // Show error message if Google account isn't found
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("An error occurred during Google sign-in. Please try again.")),
+        );
+      }
+    } catch (e) {
+      print("Error during Google login: $e"); // Logging error for debugging
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("An error occurred during Google sign-in. Please try again.")),
+      );
+    } finally {
+      setState(() {
+        isLoading = false;
+      });
     }
   }
 
@@ -74,7 +146,10 @@ class _LoginPageState extends State<LoginPage> {
                     isSmallScreen: isSmallScreen,
                     emailController: _emailController,
                     passwordController: _passwordController,
-                    onSignIn: _signIn,
+                    onSignIn: _login,
+                    isLoading: isLoading,
+                    onGoogleSignIn: _loginWithGoogle,
+                    goToSignup: goToSignup,
                   ),
                   // Add white bottom space as background
                   Container(
@@ -137,12 +212,18 @@ class _InputWrapper extends StatelessWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final VoidCallback onSignIn;
+  final VoidCallback onGoogleSignIn;
+  final Function(BuildContext) goToSignup;
+  final bool isLoading;
 
   const _InputWrapper({
     required this.isSmallScreen,
     required this.emailController,
     required this.passwordController,
     required this.onSignIn,
+    required this.onGoogleSignIn,
+    required this.goToSignup,
+    required this.isLoading,
   });
 
   @override
@@ -173,7 +254,7 @@ class _InputWrapper extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           _SignInButton(
-            onSignIn: onSignIn,
+            onSignIn: isLoading ? null : onSignIn,
             isSmallScreen: isSmallScreen,
           ),
           const SizedBox(height: 12),
@@ -182,7 +263,10 @@ class _InputWrapper extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  // Forgot Password action
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ForgotPassword()),
+                  );// Forgot Password action
                 },
                 child: Text(
                   'Forgot Password?',
@@ -190,12 +274,7 @@ class _InputWrapper extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CreateAccountPage()),
-                  );
-                },
+                onPressed: () => goToSignup(context),
                 child: Text(
                   'Create Account',
                   style: TextStyle(color: Color(0xFF004D40)),
@@ -208,34 +287,33 @@ class _InputWrapper extends StatelessWidget {
             children: [
               Expanded(child: Divider(color: Color(0xFF004D40), thickness: 1)),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: Text(
-                  'or',
-                  style: TextStyle(color: Color(0xFF004D40)),
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Text("OR"),
               ),
               Expanded(child: Divider(color: Color(0xFF004D40), thickness: 1)),
             ],
           ),
           const SizedBox(height: 20),
           GestureDetector(
-            onTap: () {
-              // Google sign-in logic here
-            },
+            onTap: isLoading ? null : onGoogleSignIn,
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              padding: const EdgeInsets.symmetric(vertical: 15),
               decoration: BoxDecoration(
-                border: Border.all(color: Color(0xFF004D40), width: 2),
+                color: Colors.white,
+                border: Border.all(color: Color(0xFF004D40)),
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Row(
-                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('assets/google_icon.jpg', width: 24, height: 24),
+                  Image.asset('assets/google_icon.jpg', height: 20), // Ensure the asset exists
                   const SizedBox(width: 10),
                   Text(
                     'Sign in with Google',
-                    style: TextStyle(color: Color(0xFF004D40), fontSize: 16),
+                    style: TextStyle(
+                      color: Color(0xFF004D40),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ],
               ),
@@ -247,8 +325,35 @@ class _InputWrapper extends StatelessWidget {
   }
 }
 
+class _InputField extends StatelessWidget {
+  final TextEditingController controller;
+  final String label;
+  final bool obscureText;
+  final bool isSmallScreen;
+
+  const _InputField({
+    required this.controller,
+    required this.label,
+    this.obscureText = false,
+    required this.isSmallScreen,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller,
+      obscureText: obscureText,
+      decoration: InputDecoration(
+        labelText: label,
+        border: OutlineInputBorder(),
+      ),
+      style: TextStyle(fontSize: isSmallScreen ? 16 : 20),
+    );
+  }
+}
+
 class _SignInButton extends StatelessWidget {
-  final VoidCallback onSignIn;
+  final VoidCallback? onSignIn;
   final bool isSmallScreen;
 
   const _SignInButton({
@@ -258,79 +363,23 @@ class _SignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onSignIn,
-      child: Container(
-        width: isSmallScreen ? 180 : 200,
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        decoration: BoxDecoration(
-          color: Color(0xFF004D40),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(0.0),
-            topRight: Radius.circular(30.0),
-            bottomLeft: Radius.circular(30.0),
-            bottomRight: Radius.circular(0.0),
-          ),
+    return ElevatedButton(
+      onPressed: onSignIn,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+        child: Text(
+          'Sign In',
+          style: TextStyle(fontSize: isSmallScreen ? 16 : 20),
         ),
-        child: Center(
-          child: Text(
-            'SIGN IN',
-            style: TextStyle(fontSize: isSmallScreen ? 16 : 18, color: Colors.white),
+      ),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Color(0xFF004D40)),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
           ),
         ),
       ),
     );
   }
 }
-
-class _InputField extends StatelessWidget {
-  final String label;
-  final TextEditingController controller;
-  final bool obscureText;
-  final bool isSmallScreen;
-
-  const _InputField({
-    required this.label,
-    required this.controller,
-    this.obscureText = false,
-    required this.isSmallScreen,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Color(0xFFE0F2F1),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(0.0),
-          topRight: Radius.circular(30.0),
-          bottomLeft: Radius.circular(30.0),
-          bottomRight: Radius.circular(0.0),
-        ),
-        border: Border.all(color: Colors.black, width: 1.5),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black26,
-            blurRadius: 8.0,
-            offset: Offset(0, 4),
-          ),
-        ],
-      ),
-      child: TextFormField(
-        controller: controller,
-        obscureText: obscureText,
-        decoration: InputDecoration(
-          labelText: label,
-          labelStyle: TextStyle(color: Color(0xFF004D40)),
-          border: InputBorder.none,
-          contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
-        ),
-      ),
-    );
-  }
-}
-
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-  home: LoginPage(),
-));
