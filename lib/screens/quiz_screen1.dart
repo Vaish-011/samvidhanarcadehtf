@@ -15,215 +15,280 @@ class _QuizScreenState extends State<QuizScreen> {
   int? _selectedAnswerIndex;
   bool _isAnswered = false;
   bool _isCorrect = false;
-  int _score = 0; // Variable to track the score
+  int _totalPoints = 0; // Track total points
+
+  void _checkAnswer() {
+    setState(() {
+      _isAnswered = true;
+      _isCorrect = widget.questions[_currentQuestionIndex].correctAnswer == _selectedAnswerIndex;
+
+      // Update points
+      if (_isCorrect) {
+        _totalPoints += 1; // Earn 1 point for correct answer
+        _showCorrectAnswerDialog();
+      } else {
+        _totalPoints -= 1; // Deduct 1 point for incorrect answer
+        _showIncorrectAnswerDialog();
+      }
+    });
+  }
+
+  void _showCorrectAnswerDialog() {
+    showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      backgroundColor: Colors.green.shade100,
+      builder: (context) {
+        return _buildFeedbackDialog(
+          icon: Icons.check_circle,
+          iconColor: Colors.green,
+          title: "Nice job!",
+          buttonText: "Continue",
+          onButtonPressed: () {
+            Navigator.of(context).pop();
+            _nextQuestion();
+          },
+        );
+      },
+    );
+  }
+
+  void _showIncorrectAnswerDialog() {
+    final correctAnswerText = widget.questions[_currentQuestionIndex]
+        .options[widget.questions[_currentQuestionIndex].correctAnswer];
+
+    showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      backgroundColor: Colors.red.shade100,
+      builder: (context) {
+        return _buildFeedbackDialog(
+          icon: Icons.close,
+          iconColor: Colors.red,
+          title: "Incorrect",
+          subtitle: "Correct Answer: $correctAnswerText",
+          buttonText: "Got It",
+          onButtonPressed: () {
+            Navigator.of(context).pop();
+            _nextQuestion();
+          },
+        );
+      },
+    );
+  }
+
+  Widget _buildFeedbackDialog({
+    required IconData icon,
+    required Color iconColor,
+    required String title,
+    String? subtitle,
+    required String buttonText,
+    required VoidCallback onButtonPressed,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, color: iconColor, size: 60),
+          SizedBox(height: 10),
+          Text(
+            title,
+            style: TextStyle(color: iconColor, fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          if (subtitle != null) ...[
+            SizedBox(height: 10),
+            Text(
+              subtitle,
+              style: TextStyle(color: Colors.black, fontSize: 20),
+            ),
+          ],
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: onButtonPressed,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: iconColor,
+              foregroundColor: Colors.white,
+              minimumSize: Size(double.infinity, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+            ),
+            child: Text(buttonText),
+          ),
+        ],
+      ),
+    );
+  }
 
   void _nextQuestion() {
     setState(() {
-      _currentQuestionIndex++;
+      if (_currentQuestionIndex < widget.questions.length - 1) {
+        _currentQuestionIndex++;
+      } else {
+        // Show quiz completed dialog when finished
+        _showCompletionDialog();
+      }
       _selectedAnswerIndex = null;
       _isAnswered = false;
       _isCorrect = false;
     });
   }
 
+  void _showCompletionDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Quiz Completed!"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "Great! You've earned $_totalPoints coins!",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              Image.asset(
+                'assets/coin.png',
+                height: 50,
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                setState(() {
+                  _currentQuestionIndex = 0;
+                  _totalPoints = 0;
+                });
+              },
+              child: Text("Restart"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Color _getOptionBackgroundColor(int index) {
     if (_isAnswered && index == _selectedAnswerIndex) {
-      return _isCorrect ? Colors.green : Colors.red;
+      return _isCorrect ? Colors.green.shade100 : Colors.red.shade100;
+    } else if (!_isAnswered && index == _selectedAnswerIndex) {
+      return Colors.blue.shade100;
     }
     return Colors.white;
   }
 
-  Widget _showCorrectAnswer(Question question) {
-    if (_isAnswered && !_isCorrect) {
-      return Padding(
-        padding: const EdgeInsets.only(top: 20.0),
-        child: Text(
-          "Correct Answer: ${question.options[question.correctAnswer]}",
-          style: TextStyle(color: Colors.green, fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-      );
+  Color _getOptionBorderColor(int index) {
+    if (_isAnswered && index == _selectedAnswerIndex) {
+      return _isCorrect ? Colors.green : Colors.red;
+    } else if (!_isAnswered && index == _selectedAnswerIndex) {
+      return Colors.blue;
     }
-    return SizedBox.shrink();
-  }
-
-  void _checkAnswer(int index) {
-    setState(() {
-      _selectedAnswerIndex = index;
-      _isAnswered = true;
-      _isCorrect = widget.questions[_currentQuestionIndex].correctAnswer == index;
-      if (_isCorrect) {
-        _score++; // Increment score if the answer is correct
-      }
-    });
+    return Colors.grey.shade300;
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_currentQuestionIndex >= widget.questions.length) {
-      // Display score if all questions are answered
-      return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.teal,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pop(context); // Navigate back to the previous screen
-            },
-          ),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Circular score display
-              Container(
-                width: 150, // Reduced circle size
-                height: 150, // Reduced circle size
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.teal,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        '$_score',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(width: 5), // Space between score and total
-                      Text(
-                        '/${widget.questions.length}',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              // Show congratulations message if the user has answered all questions correctly
-              if (_score == widget.questions.length)
-                Text(
-                  "Congratulations!!",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.teal),
-                ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  // Navigate back or restart the quiz
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Back to Levels',
-                  style: TextStyle(color: Colors.white), // Set the text color to white
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.teal,
-                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
     final currentQuestion = widget.questions[_currentQuestionIndex];
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context); // Navigate back to the previous screen
-          },
-        ),
         elevation: 0,
+        automaticallyImplyLeading: false,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              currentQuestion.question,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 20),
-            ...List.generate(currentQuestion.options.length, (index) {
-              final option = currentQuestion.options[index];
-
-              return GestureDetector(
-                onTap: _isAnswered ? null : () => _checkAnswer(index),
-                child: Container(
-                  padding: EdgeInsets.all(16.0),
-                  margin: EdgeInsets.symmetric(vertical: 8.0),
-                  decoration: BoxDecoration(
-                    color: _getOptionBackgroundColor(index),
-                    borderRadius: BorderRadius.circular(12.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 3,
-                        blurRadius: 7,
-                        offset: Offset(0, 3),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+                    Container(
+                      padding: EdgeInsets.all(16.0),
+                      margin: EdgeInsets.only(bottom: 20.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.grey.shade300, width: 1.5),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      Text(
-                        '${String.fromCharCode(65 + index)}. ',
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      child: Text(
+                        currentQuestion.question,
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                       ),
-                      Expanded(
-                        child: Text(
-                          option,
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              );
-            }),
-            SizedBox(height: 20),
-            _showCorrectAnswer(currentQuestion),
-            SizedBox(height: 20),
-            if (_isAnswered)
-              Center(
-                child: ElevatedButton(
-                  onPressed: _nextQuestion,
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
                     ),
-                    backgroundColor: Colors.teal,
-                    foregroundColor: Colors.white,
-                    textStyle: TextStyle(fontSize: 18),
-                  ),
-                  child: Text('Next Question'),
+                    SizedBox(height: 10),
+                    ...List.generate(currentQuestion.options.length, (index) {
+                      final option = currentQuestion.options[index];
+                      return GestureDetector(
+                        onTap: _isAnswered
+                            ? null
+                            : () {
+                          setState(() {
+                            _selectedAnswerIndex = index;
+                          });
+                        },
+                        child: Container(
+                          padding: EdgeInsets.all(16.0),
+                          margin: EdgeInsets.symmetric(vertical: 8.0),
+                          decoration: BoxDecoration(
+                            color: _getOptionBackgroundColor(index),
+                            border: Border.all(
+                              color: _getOptionBorderColor(index),
+                              width: 1.5,
+                            ),
+                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                '${String.fromCharCode(65 + index)}. ',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              Expanded(
+                                child: Text(
+                                  option,
+                                  style: TextStyle(fontSize: 18, color: Colors.black),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    }),
+                    SizedBox(height: 20),
+                  ],
                 ),
               ),
+            ),
+            Center(
+              child: ElevatedButton(
+                onPressed: !_isAnswered && _selectedAnswerIndex != null
+                    ? _checkAnswer
+                    : null,
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  backgroundColor: Colors.green,
+                  foregroundColor: Colors.white,
+                ),
+                child: Text("Check"),
+              ),
+            ),
           ],
         ),
       ),
