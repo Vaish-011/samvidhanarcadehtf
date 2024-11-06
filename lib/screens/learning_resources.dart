@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'podcast_list_screen.dart';
 
 class LearningResourcesPage extends StatelessWidget {
   @override
@@ -43,7 +44,15 @@ class LearningResourcesPage extends StatelessWidget {
   Widget _buildCard(BuildContext context, String title) {
     return GestureDetector(
       onTap: () {
-        // Add respective navigation logic here
+        if (title == 'Podcast Links') {
+          // Navigate to PodcastListScreen when Podcast Links card is tapped
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PodcastListScreen()),
+          );
+        } else {
+          // Add other navigation logic if needed for different titles
+        }
       },
       child: Card(
         elevation: 4, // Add elevation for visual interest
