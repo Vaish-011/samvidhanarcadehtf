@@ -1,0 +1,51 @@
+{
+  "quiz1": [
+    {
+      "question": "Who is considered a citizen of India at the commencement of the Constitution under Article 5?",
+      "article": "Article 5: Citizenship at the commencement of the Constitution",
+      "options": [
+        { "text": "Only those born in the territory of India", "isCorrect": false },
+        { "text": "Every person domiciled in India who was born in the territory of India, or either of whose parents was born in India, or has been an ordinary resident for 5 years", "isCorrect": true },
+        { "text": "Any person living in India", "isCorrect": false },
+        { "text": "People of Indian origin only", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Which group of people is addressed in Article 6?",
+      "article": "Article 6: Rights of citizenship of persons who migrated from Pakistan",
+      "options": [
+        { "text": "Citizens born in India", "isCorrect": false },
+        { "text": "People who migrated to India from Pakistan", "isCorrect": true },
+        { "text": "Foreign nationals", "isCorrect": false },
+        { "text": "None of the above", "isCorrect": false }
+      ]
+    }
+
+  ],
+  "quiz2": [
+    {
+      "question": "Which group of people is addressed in Article 7?",
+      "article": "Article 7: Rights of citizenship of certain migrants to Pakistan",
+      "options": [
+        { "text": "They automatically retain Indian citizenship", "isCorrect": false },
+        { "text": "They are not considered citizens of India", "isCorrect": true },
+        { "text": "They are considered dual citizens", "isCorrect": false },
+        { "text": "They can return and regain citizenship anytime", "isCorrect": false }
+      ]
+    }
+
+  ],
+  "quiz3": [
+    {
+      "question": "Who can be considered a citizen of India under Article 8?",
+      "article": "Article 8: Rights of citizenship of persons of Indian origin residing outside India",
+      "options": [
+        { "text": "Any foreign national", "isCorrect": false },
+        { "text": "Persons of Indian origin residing outside India, whose parents or grandparents were born in India", "isCorrect": true },
+        { "text": "Only Indian citizens living abroad", "isCorrect": false },
+        { "text": "Only those born in India but living abroad", "isCorrect": false }
+      ]
+    }
+
+  ]
+}
