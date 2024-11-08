@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'login_page.dart';
+import 'package:flutter/material.dart';
+import 'login_page.dart'; // Assuming you have a LoginPage for login
 
 class CreateAccountPage extends StatefulWidget {
   @override
@@ -16,17 +17,36 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
 
   String? _selectedGender;
 
+  // This method handles creating the account and storing the user's info in Firestore
   Future<void> _createAccount() async {
     try {
+      // Create user with Firebase Authentication (email and password)
       UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
-      // Navigate to HomePage upon successful registration
-      Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => LoginPage()));
+
+      // Get the current user after registration
+      User? user = userCredential.user;
+
+      if (user != null) {
+        // Store user additional data (name, gender, dob) in Firestore
+        CollectionReference users = FirebaseFirestore.instance.collection('userinfo');
+
+        // Store the additional user info along with the authentication UID
+        await users.doc(user.uid).set({
+          'name': _nameController.text.trim(),
+          'email': _emailController.text.trim(),
+          'gender': _selectedGender,
+          'dob': _dobController.text.trim(),
+          'createdAt': FieldValue.serverTimestamp(), // Automatically set a timestamp
+        });
+
+        // Navigate to the login page after successful account creation
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
+      }
     } on FirebaseAuthException catch (e) {
-      // Handle error appropriately
+      // Show an error message if something goes wrong
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(e.message ?? 'Error occurred')),
       );
