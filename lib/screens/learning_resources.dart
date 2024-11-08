@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'podcast_list_screen.dart';
+import 'youtube_links_page.dart';  // Import the LearningResourcesPage
+import 'podcast_list_screen.dart';  // Import the PodcastListScreen
 
 class LearningResourcesPage extends StatelessWidget {
   @override
@@ -44,14 +45,20 @@ class LearningResourcesPage extends StatelessWidget {
   Widget _buildCard(BuildContext context, String title) {
     return GestureDetector(
       onTap: () {
-        if (title == 'Podcast Links') {
+        if (title == 'YouTube Links') {
+          // Navigate to LearningResourcesPage when YouTube Links card is tapped
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => YoutubeLinksPage()),
+          );
+        } else if (title == 'Podcast Links') {
           // Navigate to PodcastListScreen when Podcast Links card is tapped
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => PodcastListScreen()),
           );
         } else {
-          // Add other navigation logic if needed for different titles
+          // Add other navigation logic for 'Case Studies' or other cards if needed
         }
       },
       child: Card(
