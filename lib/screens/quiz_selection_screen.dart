@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'quiz_question_navigate.dart';
+import 'quiz_question_navigate.dart'; // Assuming this is where MatchingGame is defined
 
 class QuizSelectionScreen1 extends StatelessWidget {
-  // Create a list of quiz file names for easy management
-  final List<String> quizFileNames = List.generate(25, (index) => 'quiz${index + 1}.json');
+  // Create a list of quiz numbers (no need for .json)
+  final List<String> quizNumbers = List.generate(25, (index) => 'quiz${index + 1}');
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class QuizSelectionScreen1 extends StatelessWidget {
         ),
         child: ListView.builder(
           padding: const EdgeInsets.all(16.0),
-          itemCount: quizFileNames.length,
+          itemCount: quizNumbers.length,
           itemBuilder: (context, index) {
             return Card(
               elevation: 4, // Add shadow effect to the card
@@ -41,10 +41,11 @@ class QuizSelectionScreen1 extends StatelessWidget {
                 ),
                 tileColor: Colors.white, // Background color for the tile
                 onTap: () {
+                  // Navigate to MatchingGame with the appropriate quiz number (not file name)
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MatchingGame(quizFileName: quizFileNames[index]), // Pass quiz file name
+                      builder: (context) => MatchingGame(quizNumber: quizNumbers[index]), // Pass quiz number
                     ),
                   );
                 },
