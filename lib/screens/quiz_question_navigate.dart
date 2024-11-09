@@ -1,6 +1,9 @@
-import 'dart:convert'; // For JSON decoding
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // For rootBundle to load the JSON file
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart';
+import '../services/firestore_service.dart';  // Import FirestoreService
 
 class MatchingGame extends StatefulWidget {
   final String quizNumber; // Pass the quiz number (quiz1, quiz2, quiz3)
@@ -19,6 +22,8 @@ class _MatchingGameState extends State<MatchingGame> {
   Color? buttonCColor;
   Color? buttonDColor;
 
+  final FirestoreService _firestoreService = FirestoreService();
+
   @override
   void initState() {
     super.initState();
@@ -31,21 +36,23 @@ class _MatchingGameState extends State<MatchingGame> {
       final String response = await rootBundle.loadString('assets/all_quizzes.json');
       final data = json.decode(response); // Decode the whole JSON
 
-      // Debugging: Print the loaded JSON data
-      print('Loaded JSON data: $data');
-
-      // Check if the quiz number exists in the JSON structure
       if (data[widget.quizNumber] != null) {
         setState(() {
           questions = data[widget.quizNumber];
         });
-        print('Questions loaded: ${questions.length} questions available.');
       } else {
         print('Quiz not found: ${widget.quizNumber}');
-        // Optionally, show an error dialog or notification
       }
     } catch (e) {
       print('Error loading questions: $e');
+    }
+  }
+
+  // Function to update the quiz attempts in Firestore
+  void updateQuizAttempts() async {
+    User? user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      await _firestoreService.updateQuizAttempts(user.uid);
     }
   }
 
@@ -53,7 +60,6 @@ class _MatchingGameState extends State<MatchingGame> {
   void checkAnswer(bool isCorrect, int buttonIndex) {
     setState(() {
       if (isCorrect) {
-        // Set color to green if answer is correct
         if (buttonIndex == 0) {
           buttonAColor = Colors.green;
         } else if (buttonIndex == 1) {
@@ -64,7 +70,6 @@ class _MatchingGameState extends State<MatchingGame> {
           buttonDColor = Colors.green;
         }
       } else {
-        // Set color to red if answer is incorrect
         if (buttonIndex == 0) {
           buttonAColor = Colors.red;
         } else if (buttonIndex == 1) {
@@ -78,7 +83,7 @@ class _MatchingGameState extends State<MatchingGame> {
     });
   }
 
-  // Go to the next question
+  // Go to the next question or finish the quiz
   void nextQuestion() {
     setState(() {
       buttonAColor = null;
@@ -99,10 +104,9 @@ class _MatchingGameState extends State<MatchingGame> {
               actions: [
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context)
-                        .pop(); // Close the dialog first
-                    Navigator.of(context)
-                        .pop(); // Go back to the QuizSelectionScreen1
+                    Navigator.of(context).pop(); // Close the dialog
+                    updateQuizAttempts(); // Update quiz attempts in Firestore
+                    Navigator.of(context).pop(); // Go back to quiz selection screen
                   },
                   child: const Text('Back to Quiz Selection'),
                 ),
@@ -114,7 +118,6 @@ class _MatchingGameState extends State<MatchingGame> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     if (questions.isEmpty) {
@@ -122,16 +125,15 @@ class _MatchingGameState extends State<MatchingGame> {
         body: Center(
           child: CircularProgressIndicator(),
         ),
-      ); // Show a loading indicator while questions are being loaded
+      ); // Show loading indicator while questions are being loaded
     }
 
-    // Get the current question
-    var currentQuestion = questions[currentQuestionIndex];
+    var currentQuestion = questions[currentQuestionIndex];  // Get the current question
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('QUIZ'),
-        backgroundColor: Color(0xFFB39DDB), // Light purple for AppBar
+        backgroundColor: Color(0xFFB39DDB), // Light purple AppBar
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -175,7 +177,7 @@ class _MatchingGameState extends State<MatchingGame> {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Loop through the options dynamically to reduce repetitive code
+                // Loop through options dynamically
                 for (int i = 0; i < currentQuestion['options'].length; i++)
                   ElevatedButton(
                     onPressed: () =>
@@ -187,8 +189,7 @@ class _MatchingGameState extends State<MatchingGame> {
                           ? buttonBColor
                           : i == 2
                           ? buttonCColor
-                          : buttonDColor ??
-                          Colors.white, // Default to white
+                          : buttonDColor ?? Colors.white,
                       minimumSize: Size(double.infinity, 35),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -202,16 +203,12 @@ class _MatchingGameState extends State<MatchingGame> {
                 SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: nextQuestion,
+                  child: const Text('Next Question'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFB39DDB),
-                    minimumSize: Size(double.infinity, 35),
+                    minimumSize: Size(double.infinity, 45),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                  ),
-                  child: const Text(
-                    'Next Question',
-                    style: TextStyle(fontSize: 14, color: Colors.white),
                   ),
                 ),
               ],

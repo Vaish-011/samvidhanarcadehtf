@@ -139,4 +139,29 @@ class FirestoreService {
       return {};
     }
   }
+
+  // Update the number of quizzes the user has attempted
+  Future<void> updateQuizAttempts(String userId) async {
+    try {
+      DocumentReference userRef = _firestore.collection('Quiz').doc(userId);
+      DocumentSnapshot userDoc = await userRef.get();
+
+      if (userDoc.exists) {
+        final data = userDoc.data() as Map<String, dynamic>?;
+        int attemptedQuizzes = data?['attempted_quizzes'] ?? 0;
+
+        // Increment the number of quizzes attempted
+        await userRef.update({
+          'attempted_quizzes': attemptedQuizzes + 1,
+        });
+      } else {
+        // If no user data, initialize with attempted_quizzes = 1
+        await userRef.set({
+          'attempted_quizzes': 1,
+        });
+      }
+    } catch (e) {
+      print("Error updating quiz attempts: $e");
+    }
+  }
 }
