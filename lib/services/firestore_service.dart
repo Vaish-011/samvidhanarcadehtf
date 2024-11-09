@@ -164,4 +164,43 @@ class FirestoreService {
       print("Error updating quiz attempts: $e");
     }
   }
+
+  // Function to update the score and completed tests count for a user
+  Future<void> updateUserScoreAndCompletedTests(String userId, int score, String testName) async {
+    try {
+      DocumentReference userRef = _firestore.collection('Test').doc(userId);
+
+      // Fetch the user's data to update score and completed tests count
+      DocumentSnapshot userDoc = await userRef.get();
+
+      if (userDoc.exists) {
+        // Retrieve the current values for the user's score and completed tests count
+        int currentScore = userDoc['total_score'] ?? 0;
+        int completedTests = userDoc['completed_tests'] ?? 0;
+
+        // Calculate the new total score
+        int newScore = currentScore + score;
+
+        // Update the user's score and increment the number of completed tests
+        await userRef.update({
+          'total_score': newScore,
+          'completed_tests': completedTests + 1,  // Increment completed tests count
+          'last_completed_test': testName, // Optionally store the last completed test
+        });
+
+        print("User's score and completed tests updated successfully!");
+      } else {
+        // If the document does not exist, create a new document with the initial values
+        await userRef.set({
+          'total_score': score,
+          'completed_tests': 1,  // This is the first test
+          'last_completed_test': testName,
+        });
+
+        print("New user data created with score and completed tests!");
+      }
+    } catch (e) {
+      print("Error updating user score and completed tests: $e");
+    }
+  }
 }

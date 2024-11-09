@@ -1,7 +1,9 @@
 import 'dart:convert'; // For JSON decoding
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // For rootBundle to load the JSON file
+import 'package:firebase_auth/firebase_auth.dart';
 import 'result_screen.dart'; // Import the ResultScreen
+import '../services/firestore_service.dart'; // Import the FirestoreService
 
 class MatchingGame extends StatefulWidget {
   final String testName; // Receive the test name as a parameter
@@ -20,6 +22,7 @@ class _MatchingGameState extends State<MatchingGame> {
   Color? buttonBColor;
   Color? buttonCColor;
   Color? buttonDColor;
+  final FirestoreService _firestoreService = FirestoreService(); // Create FirestoreService instance
 
   @override
   void initState() {
@@ -67,13 +70,19 @@ class _MatchingGameState extends State<MatchingGame> {
     });
   }
 
-  // Go to the next question
+  // Go to the next question or navigate to the ResultScreen when finished
   void nextQuestion() {
     setState(() {
       // Check if there's a next question
       if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
       } else {
+        // Save the score and completed tests to Firestore before navigating to ResultScreen
+        User? user = FirebaseAuth.instance.currentUser;
+        if (user != null) {
+          _firestoreService.updateUserScoreAndCompletedTests(user.uid, score, widget.testName);
+        }
+
         // Navigate to the ResultScreen when all questions have been answered
         Navigator.pushReplacement(
           context,
