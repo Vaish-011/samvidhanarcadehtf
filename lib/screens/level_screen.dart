@@ -4,6 +4,8 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'quiz_screen1.dart';
 import '../models/section_model.dart';
 import '../models/question_model.dart';
+import '../services/firestore_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 // Load sections from sections.json
 Future<List<SectionModel>> loadSections() async {
@@ -15,7 +17,7 @@ Future<List<SectionModel>> loadSections() async {
 // Load questions from corresponding section-level JSON files
 Future<List<Question>> loadQuestions(String sectionFileName, int levelNumber) async {
   try {
-    String jsonString = await rootBundle.loadString('assets/section1.json'); // Dynamically load the correct section file
+    String jsonString = await rootBundle.loadString('assets/$sectionFileName');
     List<dynamic> jsonResponse = json.decode(jsonString);
 
     // Find the questions for the specified level number
@@ -40,6 +42,7 @@ class LevelScreen extends StatefulWidget {
 
 class _LevelScreenState extends State<LevelScreen> {
   late Future<List<SectionModel>> sections;
+  String userId = FirebaseAuth.instance.currentUser?.uid ?? "YOUR_USER_ID"; // Get userId (uid)
 
   final List<Color> sectionColors = [
     Colors.green[400]!,
@@ -126,16 +129,35 @@ class _LevelScreenState extends State<LevelScreen> {
                               top: section.imagePosition['y']!.toDouble(),
                               child: Image.asset(section.imagePath, height: 150, fit: BoxFit.cover),
                             ),
-                            ...section.levels.map((level) {
+                            // Preventing level repetition using toSet
+                            ...section.levels.toSet().map((level) {
                               return Positioned(
                                 left: level.position['x']!.toDouble(),
                                 top: level.position['y']!.toDouble(),
                                 child: LevelIcon(
                                   icon: _getIconData(level.icon),
                                   onTap: () async {
-                                    // Load questions from corresponding section JSON file
-                                    final questions = await loadQuestions(
-                                        'section${index + 1}.json', level.levelNumber);
+                                    // Ensure that the user does not earn coins multiple times for the same level
+                                    final questions = await loadQuestions('section${index + 1}.json', level.levelNumber);
+                                    final coinsEarned = await Navigator.push<int>(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => QuizScreen(questions: questions),
+                                      ),
+                                    );
+
+                                    print("Coins earned in LevelScreen: $coinsEarned");
+
+                                    int totalCoins = coinsEarned ?? 0;
+                                    await FirestoreService().saveLevelProgress(userId, level.levelNumber, true, totalCoins);
+
+                                    // Replace with actual logic for coins
+                                    bool completed = true; // Mark as completed for this example
+
+                                    // Load questions for the specific level
+
+
+                                    // Navigate to quiz screen with questions
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -205,3 +227,4 @@ class LevelIcon extends StatelessWidget {
     );
   }
 }
+

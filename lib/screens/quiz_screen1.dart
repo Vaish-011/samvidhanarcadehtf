@@ -162,13 +162,10 @@ class _QuizScreenState extends State<QuizScreen> {
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop();
-                setState(() {
-                  _currentQuestionIndex = 0;
-                  _totalPoints = 0;
-                });
+                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(_totalPoints); // Return the total points to the previous screen
               },
-              child: Text("Restart"),
+              child: Text("Finish"),
             ),
           ],
         );

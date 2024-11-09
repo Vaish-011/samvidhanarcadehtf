@@ -1,4 +1,3 @@
-// services/firestore_service.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirestoreService {
@@ -11,22 +10,6 @@ class FirestoreService {
       return userDoc.data() as Map<String, dynamic>?;
     } catch (e) {
       print("Error fetching user info: $e");
-      return null;
-    }
-  }
-
-  Future<int?> getPuzzleGameProgress(String userId) async {
-    try {
-      DocumentSnapshot puzzleDoc = await _firestore.collection('puzzlegame').doc(userId).get();
-      if (puzzleDoc.exists) {
-        final data = puzzleDoc.data() as Map<String, dynamic>?;
-        return data?['completed_levels'] as int? ?? 0; // Default to 0 if null or missing
-      } else {
-        print("Puzzle game data not found for userId: $userId");
-        return 0; // Returning 0 if no data found for the user
-      }
-    } catch (e) {
-      print("Error fetching puzzle game progress: $e");
       return null;
     }
   }
@@ -46,28 +29,78 @@ class FirestoreService {
     });
   }
 
-  // Fetch both user information and puzzle game progress together
-  Future<Map<String, dynamic>> getUserData(String userId) async {
+  // Save progress for a particular level, including coins earned
+  Future<void> saveLevelProgress(String userId, int levelNumber, bool completed, int coins) async {
     try {
-      final userInfoSnapshot = await _firestore.collection('userinfo').doc(userId).get();
-      final puzzleGameSnapshot = await _firestore.collection('puzzlegame-completed_levels').doc(userId).get();
+      DocumentReference userRef = _firestore.collection('constitutionquest').doc(userId);
 
-      final userInfoData = userInfoSnapshot.data() as Map<String, dynamic>?;
-      final puzzleGameData = puzzleGameSnapshot.data() as Map<String, dynamic>?;
+      // Update level completion and coins for the specific level
+      await userRef.collection('levels').doc('level$levelNumber').set({
+        'completed': completed,
+        'coins': coins,
+      }, SetOptions(merge: true));
 
-      return {
-        'name': userInfoData?['name'],
-        'email': userInfoData?['email'],
-        'dob': userInfoData?['dob'],
-        'gender': userInfoData?['gender'],
-        'puzzlegame_completed_levels': puzzleGameData?['completed_levels'] ?? 0,
-      };
+      // Optionally, update total coins for the user
+      await _updateTotalCoins(userId);
     } catch (e) {
-      print("Error fetching combined user data: $e");
+      print("Error saving level progress: $e");
+    }
+  }
+
+  // Update the total coins for the user based on the levels they completed
+  Future<void> _updateTotalCoins(String userId) async {
+    try {
+      final userRef = _firestore.collection('constitutionquest').doc(userId);
+      final levelsSnapshot = await userRef.collection('levels').get();
+
+      int totalCoins = 0;
+      for (var levelDoc in levelsSnapshot.docs) {
+        totalCoins += (levelDoc['coins'] as num).toInt();
+      }
+
+      // Update total coins for the user
+      await userRef.update({'total_coins': totalCoins});
+    } catch (e) {
+      print("Error updating total coins: $e");
+    }
+  }
+
+  // Fetch the level progress and coins for a user
+  Future<Map<String, dynamic>> getLevelProgress(String userId) async {
+    try {
+      DocumentSnapshot userDoc = await _firestore.collection('constitutionquest').doc(userId).get();
+      if (userDoc.exists) {
+        final levelsSnapshot = await userDoc.reference.collection('levels').get();
+        Map<String, dynamic> levels = {};
+
+        for (var levelDoc in levelsSnapshot.docs) {
+          levels[levelDoc.id] = {
+            'completed': levelDoc['completed'],
+            'coins': levelDoc['coins'],
+          };
+        }
+        return levels;
+      }
+      return {};
+    } catch (e) {
+      print("Error fetching level progress: $e");
       return {};
     }
   }
 
-
-
+  // Fetch the user's total coins
+  Future<int> getTotalCoins(String userId) async {
+    try {
+      DocumentSnapshot userDoc = await _firestore.collection('constitutionquest').doc(userId).get();
+      if (userDoc.exists) {
+        final totalCoins = userDoc['total_coins'] ?? 0;
+        return totalCoins;
+      } else {
+        return 0;
+      }
+    } catch (e) {
+      print("Error fetching total coins: $e");
+      return 0;
+    }
+  }
 }
