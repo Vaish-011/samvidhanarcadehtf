@@ -1,45 +1,29 @@
-// states_screen.dart
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'andhra_pradesh_screen.dart'; // Import the Andhra Pradesh screen
-import 'assam_screen.dart'; // Import the Assam screen
-import 'Bihar.dart'; // Import the Bihar screen
-import 'gujarat_screen.dart'; // Import the Gujarat screen
-import 'kerala_screen.dart'; // Import the Kerala screen
-import 'madhya_pradesh_screen.dart'; // Import the Madhya Pradesh screen
-import 'tamilnadu_screen.dart'; // Import the Tamil Nadu screen
-import 'maharashtra_screen.dart'; // Import the Maharashtra screen
+import 'package:flutter/services.dart' show rootBundle;
+import 'StateDetailScreen.dart';
 
-class StatesScreen extends StatelessWidget {
-  final List<String> states = [
-    'Andhra Pradesh',
-    'Assam',
-    'Bihar',
-    'Gujarat',
-    'Kerala',
-    'Madhya Pradesh', // Added Madhya Pradesh to the list
-    'Tamil Nadu',    // Added Tamil Nadu to the list
-    'Maharashtra',   // Added Maharashtra to the list
-    'Karnataka',
-    'Odisha',
-    'Punjab',
-    'Rajasthan',
-    'Uttar Pradesh',
-    'West Bengal',
-    'Nagaland',
-    'Haryana',
-    'Himachal Pradesh',
-    'Manipur',
-    'Tripura',
-    'Meghalaya',
-    'Sikkim',
-    'Mizoram',
-    'Arunachal Pradesh',
-    'Goa',
-    'Chhattisgarh',
-    'Uttarakhand',
-    'Jharkhand',
-    'Telangana',
-  ];
+class StatesScreen extends StatefulWidget {
+  @override
+  _StatesScreenState createState() => _StatesScreenState();
+}
+
+class _StatesScreenState extends State<StatesScreen> {
+  List<dynamic> statesData = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadStatesData();
+  }
+
+  Future<void> loadStatesData() async {
+    final String response = await rootBundle.loadString('assets/states.json');
+    final data = json.decode(response);
+    setState(() {
+      statesData = data;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,61 +34,26 @@ class StatesScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.black),
       ),
       body: ListView.builder(
-        itemCount: states.length,
+        itemCount: statesData.length,
         itemBuilder: (context, index) {
-          final state = states[index];
-
+          final state = statesData[index];
           return GestureDetector(
             onTap: () {
-              if (state == 'Andhra Pradesh') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AndhraPradeshScreen()),
-                );
-              } else if (state == 'Assam') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AssamScreen()),
-                );
-              } else if (state == 'Bihar') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BiharScreen()),
-                );
-              } else if (state == 'Gujarat') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GujaratScreen()),
-                );
-              } else if (state == 'Kerala') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => KeralaScreen()),
-                );
-              } else if (state == 'Madhya Pradesh') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MadhyaPradeshScreen()),
-                );
-              } else if (state == 'Tamil Nadu') {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TamilNaduScreen()),
-                );
-              } else if (state == 'Maharashtra') { // Added Maharashtra case
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MaharashtraScreen()),
-                );
-              } else {
-                // Add more state-specific screens here
-              }
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StateDetailScreen(
+                    stateName: state['name'],
+                    schedule: state['schedule'],
+                  ),
+                ),
+              );
             },
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(0xFF6CC4A1), // Updated color
+                  color: Color(0xFF6CC4A1),
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
@@ -117,7 +66,7 @@ class StatesScreen extends StatelessWidget {
                 ),
                 padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                 child: Text(
-                  state,
+                  state['name'],
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -132,3 +81,5 @@ class StatesScreen extends StatelessWidget {
     );
   }
 }
+
+
