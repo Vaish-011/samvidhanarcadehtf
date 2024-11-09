@@ -65,20 +65,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/google_icon.jpg
-    - assets/questions.json
-    - assets/chess/wpawn.png
-    - assets/chess/wrook.png
-    - assets/chess/wknight.png
-    - assets/chess/wbishop.png
-    - assets/chess/wqueen.png
-    - assets/chess/wking.png
-    - assets/chess/pawn.png
-    - assets/chess/rook.png
-    - assets/chess/knight.png
-    - assets/chess/bishop.png
-    - assets/chess/queen.png
-    - assets/chess/king.png
     - assets/
 
   # To add assets to your application, add an assets section, like this:

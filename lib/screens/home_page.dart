@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/sidebar_menu.dart';
 import 'about_constitution.dart';
-import 'learning_resources.dart';
-import 'gaming_page.dart';
-import 'test_your_knowledge.dart';
-import 'summaries_page.dart';
-import 'daily_news_page.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -76,11 +72,11 @@ class HomePage extends StatelessWidget {
               mainAxisSpacing: 16,
               children: [
                 _buildCard(context, 'About Constitution', AboutConstitutionPage()),
-                _buildCard(context, 'Learning Resources', LearningResourcesPage()),
-                _buildCard(context, 'Gaming Page', GamingPage()),
-                _buildCard(context, 'Test Your Knowledge', TestYourKnowledgePage()),
-                _buildCard(context, 'Summaries', SummariesPage()),
-                _buildCard(context, 'Daily News', DailyNewsPage()),
+                _buildCard(context, 'Learning Resources', null), // No navigation
+                _buildCard(context, 'Gaming Page', null), // No navigation
+                _buildCard(context, 'Test Your Knowledge', null), // No navigation
+                _buildCard(context, 'Summaries', null), // No navigation
+                _buildCard(context, 'Daily News', null), // No navigation
               ],
             ),
           ),
@@ -89,10 +85,14 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildCard(BuildContext context, String title, Widget page) {
+  // Modified _buildCard method: Only navigates if the page is not null
+  Widget _buildCard(BuildContext context, String title, Widget? page) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+        // Only navigate if the page is not null (i.e., About Constitution page)
+        if (page != null) {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+        }
       },
       child: Card(
         elevation: 6,
