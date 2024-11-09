@@ -1,0 +1,62 @@
+[
+  {
+    "title": "First Schedule",
+    "details": ["States", "Union Territories"]
+  },
+  {
+    "title": "Second Schedule",
+    "details": ["Provisions relating to the President and Governors", "Salaries of MPs"]
+  },
+  {
+    "title": "Third Schedule",
+    "details": ["Forms of Oaths and Affirmations for Constitutional Posts"]
+  },
+  {
+    "title": "Fourth Schedule",
+    "details": ["Allocation of Seats in the Rajya Sabha (Council of States)"]
+  },
+  {
+    "title": "Fifth Schedule",
+    "details": ["Provisions for the Administration and Control of Scheduled Areas and Scheduled Tribes"]
+  },
+  {
+    "title": "Sixth Schedule",
+    "details": ["Provisions for the Administration of Tribal Areas in the states of Assam, Meghalaya, Tripura, and Mizoram"]
+  },
+  {
+    "title": "Seventh Schedule",
+    "details": ["Division of Powers between Union and State - Union List, State List, and Concurrent List"]
+  },
+  {
+    "title": "Eighth Schedule",
+    "details": ["Official Languages recognized by the Constitution"]
+  },
+  {
+    "title": "Ninth Schedule",
+    "details": ["Validation of certain Acts and Regulations, including land reform laws, despite judicial review"]
+  },
+  {
+    "title": "Tenth Schedule",
+    "details": ["Provisions relating to Disqualification of Members on Ground of Defection (Anti-Defection Law)"]
+  },
+  {
+    "title": "Eleventh Schedule",
+    "details": ["Powers, Authority, and Responsibilities of Panchayats"]
+  },
+  {
+    "title": "Twelfth Schedule",
+    "details": ["Powers, Authority, and Responsibilities of Municipalities"]
+  },
+  {
+    "title": "Thirteenth Schedule",
+    "details": ["Provisions related to certain Union Territories and Special Regions"]
+  },
+  {
+    "title": "Fourteenth Schedule",
+    "details": ["Miscellaneous Provisions for Special Governance in certain Regions"]
+  },
+  {
+    "title": "Fifteenth Schedule",
+    "details": ["Amendments to Provisions of the Constitution and Transitional Provisions"]
+  }
+]
