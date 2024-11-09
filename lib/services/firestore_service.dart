@@ -13,6 +13,21 @@ class FirestoreService {
       return null;
     }
   }
+  Future<int?> getPuzzleGameProgress(String userId) async {
+    try {
+      DocumentSnapshot puzzleDoc = await _firestore.collection('puzzlegame').doc(userId).get();
+      if (puzzleDoc.exists) {
+        final data = puzzleDoc.data() as Map<String, dynamic>?;
+        return data?['completed_levels'] as int? ?? 0; // Default to 0 if null or missing
+      } else {
+        print("Puzzle game data not found for userId: $userId");
+        return 0; // Returning 0 if no data found for the user
+      }
+    } catch (e) {
+      print("Error fetching puzzle game progress: $e");
+      return null;
+    }
+  }
 
   // Fetch real-time puzzle game progress using a stream
   Stream<int?> getPuzzleGameProgressStream(String userId) {
@@ -101,6 +116,27 @@ class FirestoreService {
     } catch (e) {
       print("Error fetching total coins: $e");
       return 0;
+    }
+  }
+  // Fetch both user information and puzzle game progress together
+  Future<Map<String, dynamic>> getUserData(String userId) async {
+    try {
+      final userInfoSnapshot = await _firestore.collection('userinfo').doc(userId).get();
+      final puzzleGameSnapshot = await _firestore.collection('puzzlegame-completed_levels').doc(userId).get();
+
+      final userInfoData = userInfoSnapshot.data() as Map<String, dynamic>?;
+      final puzzleGameData = puzzleGameSnapshot.data() as Map<String, dynamic>?;
+
+      return {
+        'name': userInfoData?['name'],
+        'email': userInfoData?['email'],
+        'dob': userInfoData?['dob'],
+        'gender': userInfoData?['gender'],
+        'puzzlegame_completed_levels': puzzleGameData?['completed_levels'] ?? 0,
+      };
+    } catch (e) {
+      print("Error fetching combined user data: $e");
+      return {};
     }
   }
 }
