@@ -65,7 +65,21 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/chess/bishop.png
+    - assets/chess/king.png
+    - assets/chess/knight.png
+    - assets/chess/pawn.png
+    - assets/chess/queen.png
+    - assets/chess/rook.png
+    - assets/chess/wbishop.png
+    - assets/chess/wking.png
+    - assets/chess/wknight.png
+    - assets/chess/wpawn.png
+    - assets/chess/wqueen.png
+    - assets/chess/wrook.png
     - assets/
+
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
