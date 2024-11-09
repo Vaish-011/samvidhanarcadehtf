@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Which Article provides for the administration of Scheduled Areas?",
+    "article": "",
+    "options": [
+      { "text": "Article 244", "isCorrect": true },
+      { "text": "Article 243", "isCorrect": false },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 246", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the powers of the Governor in Scheduled Areas?",
+    "article": "",
+    "options": [
+      { "text": "Article 244", "isCorrect": true },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 246", "isCorrect": false },
+      { "text": "Article 243", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the administration of Scheduled Tribes?",
+    "article": "",
+    "options": [
+      { "text": "Article 244", "isCorrect": true },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 246", "isCorrect": false },
+      { "text": "Article 243", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article empowers Parliament to make laws for Scheduled Areas?",
+    "article": "",
+    "options": [
+      { "text": "Article 244", "isCorrect": true },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 246", "isCorrect": false },
+      { "text": "Article 243", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the administration of the Fifth Schedule?",
+    "article": "",
+    "options": [
+      { "text": "Article 244", "isCorrect": true },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 246", "isCorrect": false },
+      { "text": "Article 243", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of a Tribes Advisory Council?",
+    "article": "",
+    "options": [
+      { "text": "Article 339", "isCorrect": true },
+      { "text": "Article 340", "isCorrect": false },
+      { "text": "Article 341", "isCorrect": false },
+      { "text": "Article 342", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the appointment of a Commissioner for Scheduled Castes?",
+    "article": "",
+    "options": [
+      { "text": "Article 338", "isCorrect": true },
+      { "text": "Article 339", "isCorrect": false },
+      { "text": "Article 340", "isCorrect": false },
+      { "text": "Article 341", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the appointment of a Commissioner for Scheduled Tribes?",
+    "article": "",
+    "options": [
+      { "text": "Article 338A", "isCorrect": true },
+      { "text": "Article 338", "isCorrect": false },
+      { "text": "Article 339", "isCorrect": false },
+      { "text": "Article 340", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of a National Commission for Scheduled Castes?",
+    "article": "",
+    "options": [
+      { "text": "Article 338", "isCorrect": true },
+      { "text": "Article 339", "isCorrect": false },
+      { "text": "Article 340", "isCorrect": false },
+      { "text": "Article 341", "isCorrect": false }
+    ]
+  }
+]

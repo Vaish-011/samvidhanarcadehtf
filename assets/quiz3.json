@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What are the six fundamental rights guaranteed by the Constitution of India under Part III?",
+    "article": "General: Part III of the Constitution",
+    "options": [
+      { "text": "Right to equality, right to freedom, right against exploitation, right to property, right to constitutional remedies, and right to religion", "isCorrect": false },
+      { "text": "Right to equality, right to freedom, right against exploitation, right to freedom of religion, cultural and educational rights, and right to constitutional remedies", "isCorrect": true },
+      { "text": "Right to freedom, right to property, right against exploitation, right to equality, and right to religion", "isCorrect": false },
+      { "text": "Right to life, right to education, right to freedom, right to property, right to speech, and right to equality", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 14 of the Constitution guarantee?",
+    "article": "Article 14: Right to Equality",
+    "options": [
+      { "text": "Equality before the law and equal protection of the laws", "isCorrect": true },
+      { "text": "Right to education", "isCorrect": false },
+      { "text": "Freedom of speech", "isCorrect": false },
+      { "text": "Protection against discrimination", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees the right to freedom of speech and expression?",
+    "article": "Article 19(1)(a): Right to Freedom",
+    "options": [
+      { "text": "Article 16", "isCorrect": false },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 19(1)(a)", "isCorrect": true },
+      { "text": "Article 17", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article of the Constitution abolishes untouchability?",
+    "article": "Article 17: Abolition of Untouchability",
+    "options": [
+      { "text": "Article 19", "isCorrect": false },
+      { "text": "Article 17", "isCorrect": true },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 15", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees protection against discrimination on the grounds of religion, race, caste, sex, or place of birth?",
+    "article": "Article 15: Prohibition of Discrimination",
+    "options": [
+      { "text": "Article 14", "isCorrect": false },
+      { "text": "Article 15", "isCorrect": true },
+      { "text": "Article 16", "isCorrect": false },
+      { "text": "Article 19", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Under which Article are citizens guaranteed the right to life and personal liberty?",
+    "article": "Article 21: Protection of Life and Personal Liberty",
+    "options": [
+      { "text": "Article 22", "isCorrect": false },
+      { "text": "Article 21", "isCorrect": true },
+      { "text": "Article 23", "isCorrect": false },
+      { "text": "Article 24", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees the right to constitutional remedies?",
+    "article": "Article 32: Right to Constitutional Remedies",
+    "options": [
+      { "text": "Article 30", "isCorrect": false },
+      { "text": "Article 19", "isCorrect": false },
+      { "text": "Article 32", "isCorrect": true },
+      { "text": "Article 24", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 23 prohibit?",
+    "article": "Article 23: Prohibition of Traffic in Human Beings and Forced Labour",
+    "options": [
+      { "text": "Untouchability", "isCorrect": false },
+      { "text": "Traffic in human beings, begar, and forced labour", "isCorrect": true },
+      { "text": "Censorship", "isCorrect": false },
+      { "text": "Discrimination", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article protects the cultural and educational rights of minorities?",
+    "article": "Article 29: Protection of Interests of Minorities",
+    "options": [
+      { "text": "Article 19", "isCorrect": false },
+      { "text": "Article 29", "isCorrect": true },
+      { "text": "Article 25", "isCorrect": false },
+      { "text": "Article 31", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees the right to freedom of religion?",
+    "article": "Article 25: Freedom of Conscience and Free Profession, Practice, and Propagation of Religion",
+    "options": [
+      { "text": "Article 24", "isCorrect": false },
+      { "text": "Article 25", "isCorrect": true },
+      { "text": "Article 26", "isCorrect": false },
+      { "text": "Article 30", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides the right against exploitation, specifically prohibiting child labor in hazardous conditions?",
+    "article": "Article 24: Prohibition of Employment of Children in Factories, etc.",
+    "options": [
+      { "text": "Article 23", "isCorrect": false },
+      { "text": "Article 24", "isCorrect": true },
+      { "text": "Article 19", "isCorrect": false },
+      { "text": "Article 26", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees equality of opportunity in matters of public employment?",
+    "article": "Article 16: Equality of Opportunity in Matters of Public Employment",
+    "options": [
+      { "text": "Article 14", "isCorrect": false },
+      { "text": "Article 15", "isCorrect": false },
+      { "text": "Article 16", "isCorrect": true },
+      { "text": "Article 18", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 18 abolish?",
+    "article": "Article 18: Abolition of Titles",
+    "options": [
+      { "text": "Untouchability", "isCorrect": false },
+      { "text": "Titles except for military and academic distinctions", "isCorrect": true },
+      { "text": "Religious practices", "isCorrect": false },
+      { "text": "Privileges of Parliament members", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees the right to education for all children?",
+    "article": "Article 21A: Right to Education",
+    "options": [
+      { "text": "Article 24", "isCorrect": false },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 21A", "isCorrect": true },
+      { "text": "Article 25", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the freedom to manage religious affairs?",
+    "article": "Article 26: Freedom to Manage Religious Affairs",
+    "options": [
+      { "text": "Article 19", "isCorrect": false },
+      { "text": "Article 25", "isCorrect": false },
+      { "text": "Article 26", "isCorrect": true },
+      { "text": "Article 27", "isCorrect": false }
+    ]
+  }
+]

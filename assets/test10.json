@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which Article provides for the right to free legal aid?",
+    "article": "",
+    "options": [
+      { "text": "Article 39A", "isCorrect": true },
+      { "text": "Article 40", "isCorrect": false },
+      { "text": "Article 41", "isCorrect": false },
+      { "text": "Article 42", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 244 provide for?",
+    "article": "",
+    "options": [
+      { "text": "Administration of Scheduled Areas", "isCorrect": true },
+      { "text": "Special provisions for Assam", "isCorrect": false },
+      { "text": "Constitutional provisions for Scheduled Tribes", "isCorrect": false },
+      { "text": "Rights of minorities", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article relates to the protection of the right to property?",
+    "article": "",
+    "options": [
+      { "text": "Article 300A", "isCorrect": true },
+      { "text": "Article 300", "isCorrect": false },
+      { "text": "Article 301", "isCorrect": false },
+      { "text": "Article 302", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 217 pertain to?",
+    "article": "",
+    "options": [
+      { "text": "Appointment and conditions of service of High Court judges", "isCorrect": true },
+      { "text": "Appointment of Supreme Court judges", "isCorrect": false },
+      { "text": "Tenure of High Court judges", "isCorrect": false },
+      { "text": "Jurisdiction of High Courts", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article defines the term 'Citizen of India'?",
+    "article": "",
+    "options": [
+      { "text": "Article 5", "isCorrect": true },
+      { "text": "Article 6", "isCorrect": false },
+      { "text": "Article 7", "isCorrect": false },
+      { "text": "Article 8", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 23 prohibit?",
+    "article": "",
+    "options": [
+      { "text": "Traffic in human beings", "isCorrect": true },
+      { "text": "Discrimination on grounds of religion", "isCorrect": false },
+      { "text": "Untouchability", "isCorrect": false },
+      { "text": "Child marriage", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of a National Commission for Scheduled Tribes?",
+    "article": "",
+    "options": [
+      { "text": "Article 338A", "isCorrect": true },
+      { "text": "Article 338B", "isCorrect": false },
+      { "text": "Article 337", "isCorrect": false },
+      { "text": "Article 339", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the powers of the President to grant pardons?",
+    "article": "",
+    "options": [
+      { "text": "Article 72", "isCorrect": true },
+      { "text": "Article 71", "isCorrect": false },
+      { "text": "Article 73", "isCorrect": false },
+      { "text": "Article 74", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 131 pertain to?",
+    "article": "",
+    "options": [
+      { "text": "Original jurisdiction of the Supreme Court", "isCorrect": true },
+      { "text": "Appellate jurisdiction of the Supreme Court", "isCorrect": false },
+      { "text": "Writ jurisdiction of the Supreme Court", "isCorrect": false },
+      { "text": "Advisory jurisdiction of the Supreme Court", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the right to form unions?",
+    "article": "",
+    "options": [
+      { "text": "Article 19(1)(c)", "isCorrect": true },
+      { "text": "Article 20", "isCorrect": false },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 22", "isCorrect": false }
+    ]
+  }
+]

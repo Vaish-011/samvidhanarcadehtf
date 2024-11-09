@@ -1,0 +1,341 @@
+[
+  {
+    "levelNumber": 1,
+    "questions": [
+      {
+        "question": "India is a Union of _____.",
+        "options": ["Continents", "States", "Countries", "Cities"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which schedule of the Constitution specifies the States and territories of India?",
+        "options": ["First Schedule", "Second Schedule", "Third Schedule", "Fourth Schedule"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Who has the power to admit new States into the Union of India?",
+        "options": ["The President", "Parliament", "The Prime Minister", "Supreme Court"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which part of the Constitution talks about the Union and its territory?",
+        "options": ["Part I", "Part II", "Part III", "Part IV"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What can Parliament do under Article 3?",
+        "options": ["Form a new State", "Alter the name of a State", "Alter the boundaries of a State", "All of the above"],
+        "correctAnswer": 3
+      }
+
+
+    ]
+  },
+  {
+    "levelNumber": 2,
+    "questions": [
+      {
+        "question": "The First Schedule of the Constitution relates to ",
+        "options": ["Distribution of powers", "Union and State territories", "Fundamental Rights", "National emergencies"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Can Parliament change the boundaries of existing States?",
+        "options": ["Yes, by law", "No, it is fixed", "Only after 20 years", "Only after 10 years"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Can Parliament change the boundaries of existing States?",
+        "options": ["Yes, by law", "No, it is fixed", "Only after 20 years", "Only after 10 years"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the official name of India as mentioned in the Constitution?",
+        "options": ["Bharat", "Hindustan", "India", "All of the above"],
+        "correctAnswer": 3
+      },
+      {
+        "question": "India is a Union of what?",
+        "options": ["Cities", "States", "Countries", "Towns"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+
+  {
+    "levelNumber": 3,
+    "questions": [
+      {
+        "question": "Which of the following is a type of territory in India?",
+        "options": ["State", "Union Territory", "Both A and B", "None of the above"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "When was Sikkim associated with the Union according to the Constitution?",
+        "options": ["1972", "1975", "1980", "1985"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which amendment allowed for changes in the First and Fourth Schedules?",
+        "options": [" Fifth Amendment", "Sixth Amendment", "Seventh Amendment" , "Eighth Amendment"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which article discusses the admission or establishment of new States?",
+        "options": ["Article 1", "Article 2", "Article 3", "Article 4"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which clause allows for the alteration of a State's name?",
+        "options": ["Clause (a)", "Clause (b)", "Clause (c)", "Clause (e)"],
+        "correctAnswer": 3
+      }
+    ]
+  },
+  {
+    "levelNumber": 4,
+    "questions": [
+      {
+        "question": "What does India consist of?",
+        "options": ["Only cities", "Only villages", "A Union of States", "Islands"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which territory became part of India in 1975?",
+        "options": ["Sikkim", "Jammu and Kashmir", "Goa", "Andaman and Nicobar Islands"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What does the term “Union” mean in the context of India?",
+        "options": ["A group of different countries", "A partnership of States", "A separate nation" , "A large city"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What can Parliament do regarding the boundaries of States?",
+        "options": ["Increase or decrease them", "Leave them as they are", "Ignore them", "Change their colors"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "How many schedules are mentioned for amending laws related to States and territories?",
+        "options": ["One", "Two", "Three", "Four"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "levelNumber": 5,
+    "questions": [
+      {
+        "question": "How many years must someone have lived in India to be a citizen at the commencement of the Constitution?",
+        "options": ["3 years", "5 years", "10 years", "1 year"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which article talks about the rights of citizenship for certain persons who migrated to India from Pakistan?",
+        "options": ["Article 5", "Article 6", "Article 7", "Article 8"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "According to Article 5, which of the following can make a person a citizen of India?",
+        "options": ["Being born in India", "Living in India for one year", "Being a student in India" , "Having a friend in India"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the purpose of Article 10?",
+        "options": ["To explain how to travel", "To state that citizens can continue to be citizens", "To list the requirements for tourists", "To talk about Indian culture"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What does domicile mean?",
+        "options": ["A type of food", "A place where someone lives permanently", " A kind of job", "A school"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+
+  {
+    "levelNumber": 6,
+    "questions": [
+      {
+        "question": "If someone’s parents were born in India, what are they considered?",
+        "options": ["A foreigner", "A tourist", "An Indian citizen", "A visitor"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is needed for a person who migrated to India after July 19, 1948, to be a citizen?",
+        "options": ["A job", "A special permit", "Registration as a citizen", "A home in India"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "If someone is living outside India, who can help them become an Indian citizen?",
+        "options": ["Their friends", "The Indian embassy", "Their family" , "Local police"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which of these is NOT a requirement to be an Indian citizen?",
+        "options": ["Being born in India", "Having Indian parents", "Visiting India once", "Living in India for five years"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Who has the power to change citizenship laws in India?",
+        "options": ["The President", "Parliament", "The Supreme Court", "The Prime Minister"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "levelNumber": 7,
+    "questions": [
+      {
+        "question": "If someone moved from India to Pakistan after March 1, 1947, they are",
+        "options": ["Still Indian citizens", "Not Indian citizens anymore", "Registered as an Indian citizen automatically", "Allowed to be both Indian and Pakistani citizens"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "A person can become an Indian citizen even if they were born outside India if",
+        "options": ["They love India", "Their parents or grandparents were born in India", "They speak Hindi", "They move to India"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What can the Parliament do related to citizenship?",
+        "options": ["Create laws to change who can be a citizen", "Stop people from traveling", "Tell people where to live" , "Decide who can vote"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "According to Article 6, a person who migrated to India from Pakistan can be a citizen if:",
+        "options": ["They were born in India", "Their grandparents were born in India", "They migrated before July 19, 1948", "All of the above"],
+        "correctAnswer": 3
+      },
+      {
+        "question": "What does Article 10 state about a citizen’s rights?",
+        "options": ["Citizens can lose their rights anytime", " Citizens will continue to have their rights unless Parliament changes the law", "Citizens must reapply for rights every year", "Citizens must reapply for rights every year"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+
+  {
+    "levelNumber": 8,
+    "questions": [
+      {
+        "question": "Which article addresses the citizenship rights of certain Indian-origin persons residing outside India?",
+        "options": ["Article 5", "Article 6", "Article 8", "Article 10"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which part of the Constitution deals with citizenship?",
+        "options": ["Part I", "Part II", "Part III", "Part IV"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which article specifies the rights of citizenship for migrants from Pakistan?",
+        "options": ["Article 5", "Article 6", "Article 7" , "Article 8"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What does Article 8 focus on?",
+        "options": ["Citizens born in India",  "Migrants to India", "Persons of Indian origin abroad", "Citizenship for refugees"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is the main theme of Article 9?",
+        "options": ["Citizenship acquisition", "Loss of citizenship", "Rights of citizens", "Registration process"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+
+  {
+    "levelNumber": 9,
+    "questions": [
+      {
+        "question": "Which article allows for the termination of citizenship?",
+        "options": ["Article 5", "Article 10", "Article 11", "Article 6"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is the primary requirement for citizenship under Article 5?",
+        "options": ["Indian passport", "Domicile in India", "Indian heritage", "Birth in India"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which article mentions that rights of citizenship are subject to parliamentary law?",
+        "options": ["Article 10", "Article 5", "Article 9" , "Article 8"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the minimum residency period for registration under Article 6?",
+        "options": ["3 months",  "6 months", "1 year", "2 years"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What does Article 10 state?",
+        "options": ["Rights are permanent", "Rights are subject to law", "Rights cannot be changed", "Rights are for all"],
+        "correctAnswer": 1
+      }
+    ]
+  },
+  {
+    "levelNumber": 10,
+    "questions": [
+      {
+        "question": "Who is NOT eligible for citizenship under Article 5?",
+        "options": ["Born in India", "Domiciled in India", "Visitor in India", "Parent born in India"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is the criterion for citizenship under Article 6?",
+        "options": ["Voting rights", "Residency", "Birth in India", "Education"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Citizenship under Article 8 requires:",
+        "options": ["Indian passport", "Registration", "Citizenship test" , "Employment proof"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Under Article 8, who can register as a citizen?",
+        "options": ["Tourists",  "Indian origin persons abroad", "Foreigners", "Refugees"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What must a person do to register under Article 8?",
+        "options": ["Fill out a form", "Pay a fee", "Attend an interview", "Submit a birth certificate"],
+        "correctAnswer": 0
+      }
+    ]
+  },
+  {
+    "levelNumber": 11,
+    "questions": [
+      {
+        "question": "Who is NOT eligible for citizenship under Article 5?",
+        "options": ["Born in India", "Domiciled in India", "Visitor in India", "Parent born in India"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "What is the criterion for citizenship under Article 6?",
+        "options": ["Voting rights", "Residency", "Birth in India", "Education"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Citizenship under Article 8 requires:",
+        "options": ["Indian passport", "Registration", "Citizenship test" , "Employment proof"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Under Article 8, who can register as a citizen?",
+        "options": ["Tourists",  "Indian origin persons abroad", "Foreigners", "Refugees"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What must a person do to register under Article 8?",
+        "options": ["Fill out a form", "Pay a fee", "Attend an interview", "Submit a birth certificate"],
+        "correctAnswer": 0
+      }
+
+    ]
+  }
+
+
+]

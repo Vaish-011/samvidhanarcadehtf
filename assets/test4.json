@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is the minimum age to become a member of the Rajya Sabha?",
+    "article": "",
+    "options": [
+      { "text": "25 years", "isCorrect": false },
+      { "text": "30 years", "isCorrect": true },
+      { "text": "35 years", "isCorrect": false },
+      { "text": "21 years", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article grants the right to equality?",
+    "article": "",
+    "options": [
+      { "text": "Article 14", "isCorrect": true },
+      { "text": "Article 15", "isCorrect": false },
+      { "text": "Article 16", "isCorrect": false },
+      { "text": "Article 17", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Who is responsible for the administration of the Union Territories?",
+    "article": "",
+    "options": [
+      { "text": "The President", "isCorrect": true },
+      { "text": "The Prime Minister", "isCorrect": false },
+      { "text": "The Chief Minister", "isCorrect": false },
+      { "text": "The Governor", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article mentions the duties of the Prime Minister?",
+    "article": "",
+    "options": [
+      { "text": "Article 75", "isCorrect": false },
+      { "text": "Article 74", "isCorrect": true },
+      { "text": "Article 76", "isCorrect": false },
+      { "text": "Article 77", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 24 prohibit?",
+    "article": "",
+    "options": [
+      { "text": "Child labor", "isCorrect": true },
+      { "text": "Discrimination", "isCorrect": false },
+      { "text": "Untouchability", "isCorrect": false },
+      { "text": "Dowry", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article guarantees protection against arrest and detention?",
+    "article": "",
+    "options": [
+      { "text": "Article 22", "isCorrect": true },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 23", "isCorrect": false },
+      { "text": "Article 24", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Who can initiate the impeachment process of the President?",
+    "article": "",
+    "options": [
+      { "text": "The Parliament", "isCorrect": true },
+      { "text": "The Supreme Court", "isCorrect": false },
+      { "text": "The Governor", "isCorrect": false },
+      { "text": "The Prime Minister", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the right to freedom of religion?",
+    "article": "",
+    "options": [
+      { "text": "Article 25", "isCorrect": true },
+      { "text": "Article 26", "isCorrect": false },
+      { "text": "Article 27", "isCorrect": false },
+      { "text": "Article 28", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 32 allow individuals to do?",
+    "article": "",
+    "options": [
+      { "text": "Approach the Supreme Court for enforcement of rights", "isCorrect": true },
+      { "text": "Appeal to the High Court", "isCorrect": false },
+      { "text": "File a case in the district court", "isCorrect": false },
+      { "text": "Seek review from the President", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the amendment of the Constitution?",
+    "article": "",
+    "options": [
+      { "text": "Article 368", "isCorrect": true },
+      { "text": "Article 367", "isCorrect": false },
+      { "text": "Article 366", "isCorrect": false },
+      { "text": "Article 365", "isCorrect": false }
+    ]
+  }
+]

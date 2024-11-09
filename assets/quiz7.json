@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Which Article mentions the distribution of legislative powers between the Union and States?",
+    "article": "",
+    "options": [
+      { "text": "Article 246", "isCorrect": true },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 248", "isCorrect": false },
+      { "text": "Article 244", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the Concurrent List?",
+    "article": "",
+    "options": [
+      { "text": "Article 246", "isCorrect": true },
+      { "text": "Article 247", "isCorrect": false },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 248", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article specifies the procedure for amending the Constitution?",
+    "article": "",
+    "options": [
+      { "text": "Article 368", "isCorrect": true },
+      { "text": "Article 367", "isCorrect": false },
+      { "text": "Article 369", "isCorrect": false },
+      { "text": "Article 370", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of a Finance Commission?",
+    "article": "",
+    "options": [
+      { "text": "Article 280", "isCorrect": true },
+      { "text": "Article 281", "isCorrect": false },
+      { "text": "Article 282", "isCorrect": false },
+      { "text": "Article 283", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the distribution of taxes between the Union and States?",
+    "article": "",
+    "options": [
+      { "text": "Article 270", "isCorrect": true },
+      { "text": "Article 271", "isCorrect": false },
+      { "text": "Article 272", "isCorrect": false },
+      { "text": "Article 273", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the appointment of a Finance Commission?",
+    "article": "",
+    "options": [
+      { "text": "Article 280", "isCorrect": true },
+      { "text": "Article 281", "isCorrect": false },
+      { "text": "Article 282", "isCorrect": false },
+      { "text": "Article 283", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article mentions the powers of Parliament to make laws for the territories in India?",
+    "article": "",
+    "options": [
+      { "text": "Article 246", "isCorrect": true },
+      { "text": "Article 247", "isCorrect": false },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 244", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of a State Finance Commission?",
+    "article": "",
+    "options": [
+      { "text": "Article 243-I", "isCorrect": true },
+      { "text": "Article 243-J", "isCorrect": false },
+      { "text": "Article 243-K", "isCorrect": false },
+      { "text": "Article 243-L", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the appointment of the Comptroller and Auditor General?",
+    "article": "",
+    "options": [
+      { "text": "Article 148", "isCorrect": true },
+      { "text": "Article 149", "isCorrect": false },
+      { "text": "Article 150", "isCorrect": false },
+      { "text": "Article 151", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article empowers the Union to legislate on matters in the State List during emergencies?",
+    "article": "",
+    "options": [
+      { "text": "Article 250", "isCorrect": true },
+      { "text": "Article 251", "isCorrect": false },
+      { "text": "Article 249", "isCorrect": false },
+      { "text": "Article 248", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the distribution of revenue between the Union and States?",
+    "article": "",
+    "options": [
+      { "text": "Article 270", "isCorrect": true },
+      { "text": "Article 271", "isCorrect": false },
+      { "text": "Article 272", "isCorrect": false },
+      { "text": "Article 273", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article specifies the procedure for the transfer of territory from one State to another?",
+    "article": "",
+    "options": [
+      { "text": "Article 3", "isCorrect": true },
+      { "text": "Article 4", "isCorrect": false },
+      { "text": "Article 5", "isCorrect": false },
+      { "text": "Article 6", "isCorrect": false }
+    ]
+  }
+]

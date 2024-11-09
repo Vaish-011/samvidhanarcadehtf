@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Which Article prohibits untouchability?",
+    "article": "",
+    "options": [
+      { "text": "Article 17", "isCorrect": true },
+      { "text": "Article 16", "isCorrect": false },
+      { "text": "Article 15", "isCorrect": false },
+      { "text": "Article 18", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 73 deal with?",
+    "article": "",
+    "options": [
+      { "text": "Extent of executive power", "isCorrect": true },
+      { "text": "Powers of the Prime Minister", "isCorrect": false },
+      { "text": "Duties of the President", "isCorrect": false },
+      { "text": "Powers of the Chief Justice", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article relates to the right to education?",
+    "article": "",
+    "options": [
+      { "text": "Article 21A", "isCorrect": true },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 20", "isCorrect": false },
+      { "text": "Article 19", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 269 pertain to?",
+    "article": "",
+    "options": [
+      { "text": "Taxes on the sale of goods", "isCorrect": true },
+      { "text": "Taxes on income", "isCorrect": false },
+      { "text": "Taxes on property", "isCorrect": false },
+      { "text": "Taxes on services", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article allows for the appointment of the Comptroller and Auditor General?",
+    "article": "",
+    "options": [
+      { "text": "Article 148", "isCorrect": true },
+      { "text": "Article 147", "isCorrect": false },
+      { "text": "Article 146", "isCorrect": false },
+      { "text": "Article 145", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 36 define?",
+    "article": "",
+    "options": [
+      { "text": "The term 'State'", "isCorrect": true },
+      { "text": "The term 'Constitution'", "isCorrect": false },
+      { "text": "The term 'Government'", "isCorrect": false },
+      { "text": "The term 'Law'", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the right to seek judicial review?",
+    "article": "",
+    "options": [
+      { "text": "Article 32", "isCorrect": true },
+      { "text": "Article 34", "isCorrect": false },
+      { "text": "Article 36", "isCorrect": false },
+      { "text": "Article 38", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 123 allow the President to do?",
+    "article": "",
+    "options": [
+      { "text": "Promulgate ordinances", "isCorrect": true },
+      { "text": "Dismiss the government", "isCorrect": false },
+      { "text": "Appoint judges", "isCorrect": false },
+      { "text": "Appoint Governors", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the administration of Scheduled Areas?",
+    "article": "",
+    "options": [
+      { "text": "Article 244", "isCorrect": true },
+      { "text": "Article 243", "isCorrect": false },
+      { "text": "Article 245", "isCorrect": false },
+      { "text": "Article 246", "isCorrect": false }
+    ]
+  }
+]

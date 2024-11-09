@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "question": "What is the supreme law of the land?",
+      "options": ["The Constitution", "The Declaration of Independence", "The Bill of Rights", "The Federalist Papers"],
+      "correctAnswer": "The Constitution"
+    },
+    {
+      "question": "What do we call the first ten amendments to the Constitution?",
+      "options": ["The Preamble", "The Articles of Confederation", "The Bill of Rights", "The Federalist Papers"],
+      "correctAnswer": "The Bill of Rights"
+    },
+    {
+      "question": "Who is known as the 'Father of the Constitution'?",
+      "options": ["George Washington", "Thomas Jefferson", "James Madison", "Benjamin Franklin"],
+      "correctAnswer": "James Madison"
+    },
+    {
+      "question": "How many amendments does the Constitution have?",
+      "options": ["10", "27", "33", "50"],
+      "correctAnswer": "27"
+    },
+    {
+      "question": "Which amendment abolished slavery in the United States?",
+      "options": ["1st Amendment", "13th Amendment", "19th Amendment", "22nd Amendment"],
+      "correctAnswer": "13th Amendment"
+    },
+    {
+      "question": "Which amendment granted women the right to vote?",
+      "options": ["15th Amendment", "19th Amendment", "24th Amendment", "26th Amendment"],
+      "correctAnswer": "19th Amendment"
+    },
+    {
+      "question": "Who has the power to declare war according to the Constitution?",
+      "options": ["The President", "Congress", "The Supreme Court", "The Secretary of Defense"],
+      "correctAnswer": "Congress"
+    },
+    {
+      "question": "What is the main purpose of the Constitution?",
+      "options": ["To establish a government", "To protect individual rights", "To create laws", "All of the above"],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "Which branch of government is responsible for making federal laws?",
+      "options": ["Legislative", "Executive", "Judicial", "Military"],
+      "correctAnswer": "Legislative"
+    },
+    {
+      "question": "What does the Fifth Amendment protect against?",
+      "options": ["Double jeopardy", "Self-incrimination", "Unreasonable searches", "All of the above"],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "What are the first three words of the Constitution?",
+      "options": ["We the People", "In Order to", "Establish Justice", "To Form a"],
+      "correctAnswer": "We the People"
+    },
+    {
+      "question": "How many justices are on the Supreme Court?",
+      "options": ["7", "9", "11", "13"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Which amendment established the income tax?",
+      "options": ["16th Amendment", "17th Amendment", "18th Amendment", "19th Amendment"],
+      "correctAnswer": "16th Amendment"
+    },
+    {
+      "question": "What is the veto power?",
+      "options": ["The President's power to reject a bill", "The Congress's power to amend laws", "The Supreme Court's power to interpret laws", "The power of the states to nullify federal laws"],
+      "correctAnswer": "The President's power to reject a bill"
+    },
+    {
+      "question": "What does the term 'due process' refer to?",
+      "options": ["Fair treatment through the normal judicial system", "The right to a speedy trial", "The right to a public trial", "The right to legal counsel"],
+      "correctAnswer": "Fair treatment through the normal judicial system"
+    },
+    {
+      "question": "Which amendment prohibits cruel and unusual punishment?",
+      "options": ["8th Amendment", "7th Amendment", "6th Amendment", "5th Amendment"],
+      "correctAnswer": "8th Amendment"
+    }
+  ]
+}

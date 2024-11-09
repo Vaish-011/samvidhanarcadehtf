@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What does Article 1 of the Indian Constitution state?",
+    "article": "Article 1: Name and territory of the Union",
+    "options": [
+      { "text": "India shall be known as Hindustan", "isCorrect": false },
+      { "text": "India, that is Bharat, shall be a Union of States", "isCorrect": true },
+      { "text": "India is a Federal State", "isCorrect": false },
+      { "text": "India, that is Bharat, is a Union of Territories", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which schedule specifies the States and Union territories in the Constitution?",
+    "article": "Article 1: The States and territories thereof",
+    "options": [
+      { "text": "First Schedule", "isCorrect": true },
+      { "text": "Second Schedule", "isCorrect": false },
+      { "text": "Third Schedule", "isCorrect": false },
+      { "text": "Fourth Schedule", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is included in the territory of India according to Article 1?",
+    "article": "Article 1: Territory of India",
+    "options": [
+      { "text": "Only the territories of the States", "isCorrect": false },
+      { "text": "The territories of the States, Union territories, and acquired territories", "isCorrect": true },
+      { "text": "Only Union territories", "isCorrect": false },
+      { "text": "Acquired territories and foreign regions", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Who has the authority to admit new States into the Union of India?",
+    "article": "Article 2: Admission or establishment of new States",
+    "options": [
+      { "text": "The President", "isCorrect": false },
+      { "text": "The Supreme Court", "isCorrect": false },
+      { "text": "The Prime Minister", "isCorrect": false },
+      { "text": "Parliament", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "What was omitted by the Constitution (Thirty-sixth Amendment) Act, 1975?",
+    "article": "Article 2A: Sikkim's association with the Union",
+    "options": [
+      { "text": "Association of Sikkim with the Union", "isCorrect": true },
+      { "text": "New Union Territories", "isCorrect": false },
+      { "text": "Merger of State boundaries", "isCorrect": false },
+      { "text": "Creation of new States", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which of the following can Parliament do under Article 3?",
+    "article": "Article 3: Formation and alteration of States",
+    "options": [
+      { "text": "Only alter State names", "isCorrect": false },
+      { "text": "Form new States and alter areas or names of existing States", "isCorrect": true },
+      { "text": "Only admit new States", "isCorrect": false },
+      { "text": "Only alter State boundaries", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is required before introducing a Bill to alter the boundaries of any State?",
+    "article": "Article 3: Altering State boundaries",
+    "options": [
+      { "text": "Approval from the Supreme Court", "isCorrect": false },
+      { "text": "Recommendation of the President", "isCorrect": true },
+      { "text": "Approval by the Prime Minister", "isCorrect": false },
+      { "text": "Consent of all States", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Explanation I of Article 3 state about the term 'State'?",
+    "article": "Article 3: Definition of 'State'",
+    "options": [
+      { "text": "State includes only territories of States", "isCorrect": false },
+      { "text": "State includes Union territories", "isCorrect": true },
+      { "text": "State excludes Union territories", "isCorrect": false },
+      { "text": "State includes only central territories", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is the role of laws made under Articles 2 and 3 according to Article 4?",
+    "article": "Article 4: Laws under Articles 2 and 3",
+    "options": [
+      { "text": "They do not affect the First and Fourth Schedules", "isCorrect": false },
+      { "text": "They are considered amendments to the Constitution", "isCorrect": false },
+      { "text": "They provide for amendments of the First and Fourth Schedules", "isCorrect": true },
+      { "text": "They cannot amend the First and Fourth Schedules", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which amendment omitted the words “specified in Part A or Part B of the First Schedule”?",
+    "article": "Article 4: Omission by Seventh Amendment",
+    "options": [
+      { "text": "Constitution (Fifth Amendment) Act", "isCorrect": false },
+      { "text": "Constitution (Eighteenth Amendment) Act", "isCorrect": false },
+      { "text": "Constitution (Seventh Amendment) Act", "isCorrect": true },
+      { "text": "Constitution (Thirty-sixth Amendment) Act", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What is required before a Bill altering the name of a State is introduced in Parliament?",
+    "article": "Article 3: Alteration of State names",
+    "options": [
+      { "text": "Approval from the Supreme Court", "isCorrect": false },
+      { "text": "Approval from the Prime Minister", "isCorrect": false },
+      { "text": "The Bill must be referred by the President to the Legislature of the State", "isCorrect": true },
+      { "text": "A referendum in that State", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which power does Parliament have under clause (a) of Article 3?",
+    "article": "Article 3: Parliament’s power to form new States",
+    "options": [
+      { "text": "Form a new State by separating territory from an existing State", "isCorrect": true },
+      { "text": "Form new Union territories only", "isCorrect": false },
+      { "text": "Change the constitution to alter State names", "isCorrect": false },
+      { "text": "Merge existing Union territories", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 4 state about the effect of laws made under Articles 2 and 3?",
+    "article": "Article 4: Constitutional amendments",
+    "options": [
+      { "text": "They are not considered amendments of the Constitution", "isCorrect": true },
+      { "text": "They amend the entire Constitution", "isCorrect": false },
+      { "text": "They need approval from the Prime Minister", "isCorrect": false },
+      { "text": "They require a referendum", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the amendment of the First and Fourth Schedules?",
+    "article": "Article 4: Amendment of schedules",
+    "options": [
+      { "text": "Article 1", "isCorrect": false },
+      { "text": "Article 2", "isCorrect": false },
+      { "text": "Article 3", "isCorrect": false },
+      { "text": "Article 4", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "What must a law under Article 3 contain regarding the affected States?",
+    "article": "Article 4: Law affecting representation",
+    "options": [
+      { "text": "Provision for a change in representation in Parliament", "isCorrect": true },
+      { "text": "A referendum to approve the changes", "isCorrect": false },
+      { "text": "Approval by the Supreme Court", "isCorrect": false },
+      { "text": "Consent of the Prime Minister", "isCorrect": false }
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which Article establishes the Finance Commission?",
+    "article": "",
+    "options": [
+      { "text": "Article 280", "isCorrect": true },
+      { "text": "Article 275", "isCorrect": false },
+      { "text": "Article 276", "isCorrect": false },
+      { "text": "Article 277", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 49 promote?",
+    "article": "",
+    "options": [
+      { "text": "Protection of monuments and places of national importance", "isCorrect": true },
+      { "text": "Protection of wildlife", "isCorrect": false },
+      { "text": "Social justice", "isCorrect": false },
+      { "text": "Economic development", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Who is the guardian of the Constitution?",
+    "article": "",
+    "options": [
+      { "text": "The Supreme Court", "isCorrect": true },
+      { "text": "The Parliament", "isCorrect": false },
+      { "text": "The President", "isCorrect": false },
+      { "text": "The Prime Minister", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article gives the right to freedom of movement?",
+    "article": "",
+    "options": [
+      { "text": "Article 19(1)(d)", "isCorrect": true },
+      { "text": "Article 20", "isCorrect": false },
+      { "text": "Article 21", "isCorrect": false },
+      { "text": "Article 22", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 23 prohibit?",
+    "article": "",
+    "options": [
+      { "text": "Human trafficking", "isCorrect": true },
+      { "text": "Child marriage", "isCorrect": false },
+      { "text": "Discrimination", "isCorrect": false },
+      { "text": "Dowry", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article provides for the establishment of a National Commission for SCs?",
+    "article": "",
+    "options": [
+      { "text": "Article 338", "isCorrect": true },
+      { "text": "Article 339", "isCorrect": false },
+      { "text": "Article 340", "isCorrect": false },
+      { "text": "Article 341", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 30 guarantee?",
+    "article": "",
+    "options": [
+      { "text": "Right of minorities to establish and administer educational institutions", "isCorrect": true },
+      { "text": "Right to free education", "isCorrect": false },
+      { "text": "Right to government funding for education", "isCorrect": false },
+      { "text": "Right to choose the medium of instruction", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Who has the power to declare a national emergency?",
+    "article": "",
+    "options": [
+      { "text": "The President", "isCorrect": true },
+      { "text": "The Prime Minister", "isCorrect": false },
+      { "text": "The Parliament", "isCorrect": false },
+      { "text": "The Chief Justice", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Which Article deals with the distribution of revenues between the Union and the States?",
+    "article": "",
+    "options": [
+      { "text": "Article 268", "isCorrect": true },
+      { "text": "Article 269", "isCorrect": false },
+      { "text": "Article 270", "isCorrect": false },
+      { "text": "Article 271", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "What does Article 71 provide for?",
+    "article": "",
+    "options": [
+      { "text": "Disqualification of members of Parliament", "isCorrect": true },
+      { "text": "Election of the President", "isCorrect": false },
+      { "text": "Powers of the President", "isCorrect": false },
+      { "text": "Duties of the President", "isCorrect": false }
+    ]
+  }
+]
