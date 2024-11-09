@@ -4,9 +4,9 @@ import 'package:flutter/services.dart'; // For rootBundle to load the JSON file
 import 'result_screen.dart'; // Import the ResultScreen
 
 class MatchingGame extends StatefulWidget {
-  final String testFileName; // Receive test file name as a parameter
+  final String testName; // Receive the test name as a parameter
 
-  const MatchingGame({Key? key, required this.testFileName}) : super(key: key);
+  const MatchingGame({Key? key, required this.testName}) : super(key: key);
 
   @override
   _MatchingGameState createState() => _MatchingGameState();
@@ -27,15 +27,23 @@ class _MatchingGameState extends State<MatchingGame> {
     _loadQuestions(); // Load questions when the widget is created
   }
 
-  // Function to load the JSON file
+  // Function to load questions from the all_test.json file
   Future<void> _loadQuestions() async {
     try {
-      // Use widget.testFileName to load the specific test file
-      final String response = await rootBundle.loadString('assets/${widget.testFileName}');
+      final String response = await rootBundle.loadString('assets/all_test.json');
       final data = await json.decode(response);
-      setState(() {
-        questions = data;
-      });
+
+      // Find the test that matches the testName provided in the constructor
+      final test = data['tests'].firstWhere((test) => test['testName'] == widget.testName, orElse: () => null);
+
+      if (test != null) {
+        setState(() {
+          questions = test['questions']; // Extract questions for the selected test
+        });
+      } else {
+        // If no matching test is found, you can handle the error here
+        print('Test not found');
+      }
     } catch (e) {
       print('Error loading questions: $e');
     }
@@ -92,7 +100,7 @@ class _MatchingGameState extends State<MatchingGame> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Test '), // Change the title here
+        title: Text('TEST'), // Display test name
         backgroundColor: Color(0xFFB39DDB), // Match the AppBar color
       ),
       body: Container(

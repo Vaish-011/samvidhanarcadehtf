@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'youtube_links_page.dart';  // Import the LearningResourcesPage
 import 'podcast_list_screen.dart';  // Import the PodcastListScreen
+import 'package:samvidhan_arcade/screens/casestudy_list_screen.dart';
 
 class LearningResourcesPage extends StatelessWidget {
   @override
@@ -57,7 +58,14 @@ class LearningResourcesPage extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (context) => PodcastListScreen()),
           );
-        } else {
+        }else if (title == 'Case Studies') {
+          // Navigate to PodcastListScreen when Podcast Links card is tapped
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CasestudyListScreen()),
+          );
+        }
+        else {
           // Add other navigation logic for 'Case Studies' or other cards if needed
         }
       },

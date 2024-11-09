@@ -1,0 +1,1429 @@
+{
+  "tests": [
+    {
+      "testName": "Test 1",
+      "questions": [
+        {
+          "question": "What does Article 1 of the Indian Constitution state?",
+          "article": "Article 1: Name and territory of the Union",
+          "options": [
+            {
+              "text": "India shall be known as Hindustan",
+              "isCorrect": false
+            },
+            {
+              "text": "India, that is Bharat, shall be a Union of States",
+              "isCorrect": true
+            },
+            {
+              "text": "India is a Federal State",
+              "isCorrect": false
+            },
+            {
+              "text": "India, that is Bharat, is a Union of Territories",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Which schedule specifies the States and Union territories in the Constitution?",
+          "article": "First Schedule: The States and territories thereof",
+          "options": [
+            {
+              "text": "First Schedule",
+              "isCorrect": true
+            },
+            {
+              "text": "Second Schedule",
+              "isCorrect": false
+            },
+            {
+              "text": "Third Schedule",
+              "isCorrect": false
+            },
+            {
+              "text": "Fourth Schedule",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "What is included in the territory of India according to Article 1?",
+          "article": "Article 1: Territory of India",
+          "options": [
+            {
+              "text": "Only the territories of the States",
+              "isCorrect": false
+            },
+            {
+              "text": "The territories of the States, Union territories, and acquired territories",
+              "isCorrect": true
+            },
+            {
+              "text": "Only Union territories",
+              "isCorrect": false
+            },
+            {
+              "text": "Acquired territories and foreign regions",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Who has the authority to admit new States into the Union of India?",
+          "article": "Article 2: Admission or establishment of new States",
+          "options": [
+            {
+              "text": "The President",
+              "isCorrect": false
+            },
+            {
+              "text": "The Supreme Court",
+              "isCorrect": false
+            },
+            {
+              "text": "The Prime Minister",
+              "isCorrect": false
+            },
+            {
+              "text": "Parliament",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "What does Article 19 guarantee?",
+          "article": "Article 19: Protection of certain rights regarding freedom of speech, etc.",
+          "options": [
+            {
+              "text": "Right to education",
+              "isCorrect": false
+            },
+            {
+              "text": "Right to freedom of speech and expression",
+              "isCorrect": true
+            },
+            {
+              "text": "Right to privacy",
+              "isCorrect": false
+            },
+            {
+              "text": "Right to property",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "What is the minimum age for contesting elections to the Lok Sabha?",
+          "article": "Article 84: Qualification for membership of Parliament",
+          "options": [
+            {
+              "text": "25 years",
+              "isCorrect": true
+            },
+            {
+              "text": "30 years",
+              "isCorrect": false
+            },
+            {
+              "text": "21 years",
+              "isCorrect": false
+            },
+            {
+              "text": "18 years",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Which Article of the Constitution relates to the appointment of the Prime Minister?",
+          "article": "Article 75: Other provisions as to Ministers",
+          "options": [
+            {
+              "text": "Article 73",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 74",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 75",
+              "isCorrect": true
+            },
+            {
+              "text": "Article 76",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Which Article empowers Parliament to make provisions for the composition of the Rajya Sabha?",
+          "article": "Article 80: Composition of the Rajya Sabha",
+          "options": [
+            {
+              "text": "Article 79",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 80",
+              "isCorrect": true
+            },
+            {
+              "text": "Article 81",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 82",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "What is the term of a member of the Rajya Sabha?",
+          "article": "Article 83: Duration of Houses",
+          "options": [
+            {
+              "text": "5 years",
+              "isCorrect": false
+            },
+            {
+              "text": "6 years",
+              "isCorrect": true
+            },
+            {
+              "text": "4 years",
+              "isCorrect": false
+            },
+            {
+              "text": "3 years",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Which Article prohibits discrimination on grounds of religion, race, caste, sex or place of birth?",
+          "article": "Article 15: Prohibition of discrimination",
+          "options": [
+            {
+              "text": "Article 14",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 15",
+              "isCorrect": true
+            },
+            {
+              "text": "Article 16",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 17",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Who is known as the Father of the Indian Constitution?",
+          "article": "N/A",
+          "options": [
+            {
+              "text": "Dr. B.R. Ambedkar",
+              "isCorrect": true
+            },
+            {
+              "text": "Mahatma Gandhi",
+              "isCorrect": false
+            },
+            {
+              "text": "Jawaharlal Nehru",
+              "isCorrect": false
+            },
+            {
+              "text": "Sardar Vallabhbhai Patel",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "What does Article 30 guarantee?",
+          "article": "Article 30: Right of minorities to establish and administer educational institutions",
+          "options": [
+            {
+              "text": "Right to establish educational institutions",
+              "isCorrect": true
+            },
+            {
+              "text": "Right to free education",
+              "isCorrect": false
+            },
+            {
+              "text": "Right to government funding for education",
+              "isCorrect": false
+            },
+            {
+              "text": "Right to choose the medium of instruction",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Which Article provides for the amendment of the Constitution?",
+          "article": "Article 368: Power of Parliament to amend the Constitution",
+          "options": [
+            {
+              "text": "Article 356",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 368",
+              "isCorrect": true
+            },
+            {
+              "text": "Article 370",
+              "isCorrect": false
+            },
+            {
+              "text": "Article 371",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "testName": "Test 2",
+      "questions": [
+        {
+          "question": "Which Article deals with the right to equality?",
+          "article": "",
+          "options": [
+            { "text": "Article 12", "isCorrect": false },
+            { "text": "Article 13", "isCorrect": false },
+            { "text": "Article 14", "isCorrect": true },
+            { "text": "Article 15", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 21 guarantee?",
+          "article": "",
+          "options": [
+            { "text": "Right to education", "isCorrect": false },
+            { "text": "Right to privacy", "isCorrect": true },
+            { "text": "Right to work", "isCorrect": false },
+            { "text": "Right to property", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What is the primary function of the Directive Principles of State Policy?",
+          "article": "",
+          "options": [
+            { "text": "Ensure fundamental rights", "isCorrect": false },
+            { "text": "Guide the state in policy-making", "isCorrect": true },
+            { "text": "Establish the legal framework", "isCorrect": false },
+            { "text": "Regulate the economy", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the establishment of the Finance Commission?",
+          "article": "",
+          "options": [
+            { "text": "Article 245", "isCorrect": false },
+            { "text": "Article 280", "isCorrect": true },
+            { "text": "Article 285", "isCorrect": false },
+            { "text": "Article 286", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article prohibits traffic in human beings?",
+          "article": "",
+          "options": [
+            { "text": "Article 22", "isCorrect": false },
+            { "text": "Article 23", "isCorrect": true },
+            { "text": "Article 24", "isCorrect": false },
+            { "text": "Article 25", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 30 guarantee to minorities?",
+          "article": "",
+          "options": [
+            { "text": "Right to establish educational institutions", "isCorrect": true },
+            { "text": "Right to free education", "isCorrect": false },
+            { "text": "Right to government funding", "isCorrect": false },
+            { "text": "Right to choose teachers", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article ensures the right to form associations?",
+          "article": "",
+          "options": [
+            { "text": "Article 17", "isCorrect": false },
+            { "text": "Article 18", "isCorrect": false },
+            { "text": "Article 19(1)(c)", "isCorrect": true },
+            { "text": "Article 20", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to free legal aid?",
+          "article": "",
+          "options": [
+            { "text": "Article 38", "isCorrect": false },
+            { "text": "Article 39", "isCorrect": false },
+            { "text": "Article 39A", "isCorrect": true },
+            { "text": "Article 40", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article relates to the prohibition of employment of children?",
+          "article": "",
+          "options": [
+            { "text": "Article 23", "isCorrect": false },
+            { "text": "Article 24", "isCorrect": true },
+            { "text": "Article 25", "isCorrect": false },
+            { "text": "Article 26", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article of the Constitution provides for the right to constitutional remedies?",
+          "article": "",
+          "options": [
+            { "text": "Article 31", "isCorrect": false },
+            { "text": "Article 32", "isCorrect": true },
+            { "text": "Article 33", "isCorrect": false },
+            { "text": "Article 34", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 35 empower Parliament to do?",
+          "article": "",
+          "options": [
+            { "text": "Make laws for the protection of certain rights", "isCorrect": true },
+            { "text": "Amend the Constitution", "isCorrect": false },
+            { "text": "Regulate trade and commerce", "isCorrect": false },
+            { "text": "Establish new States", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What is the maximum strength of the Rajya Sabha as per Article 80?",
+          "article": "",
+          "options": [
+            { "text": "250", "isCorrect": true },
+            { "text": "300", "isCorrect": false },
+            { "text": "500", "isCorrect": false },
+            { "text": "200", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 15(3) allow?",
+          "article": "",
+          "options": [
+            { "text": "Special provisions for women and children", "isCorrect": true },
+            { "text": "Reservation in jobs", "isCorrect": false },
+            { "text": "Reservation in educational institutions", "isCorrect": false },
+            { "text": "Protection of minorities", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article allows for the appointment of a Deputy Speaker of the Lok Sabha?",
+          "article": "",
+          "options": [
+            { "text": "Article 91", "isCorrect": false },
+            { "text": "Article 92", "isCorrect": false },
+            { "text": "Article 93", "isCorrect": true },
+            { "text": "Article 94", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the disqualification of members of Parliament?",
+          "article": "",
+          "options": [
+            { "text": "Article 100", "isCorrect": false },
+            { "text": "Article 101", "isCorrect": false },
+            { "text": "Article 102", "isCorrect": true },
+            { "text": "Article 103", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 3",
+      "questions":[
+        {
+          "question": "Which Article provides for the right to freedom of speech?",
+          "article": "",
+          "options": [
+            { "text": "Article 19(1)(a)", "isCorrect": true },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 25", "isCorrect": false },
+            { "text": "Article 30", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 43 provide for?",
+          "article": "",
+          "options": [
+            { "text": "Right to work", "isCorrect": false },
+            { "text": "Right to a living wage", "isCorrect": true },
+            { "text": "Right to health", "isCorrect": false },
+            { "text": "Right to education", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article of the Constitution relates to the appointment of the Chief Election Commissioner?",
+          "article": "",
+          "options": [
+            { "text": "Article 324", "isCorrect": true },
+            { "text": "Article 325", "isCorrect": false },
+            { "text": "Article 326", "isCorrect": false },
+            { "text": "Article 327", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Who has the authority to dissolve the Lok Sabha?",
+          "article": "",
+          "options": [
+            { "text": "The President", "isCorrect": true },
+            { "text": "The Prime Minister", "isCorrect": false },
+            { "text": "The Speaker", "isCorrect": false },
+            { "text": "The Chief Justice", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article empowers the President to appoint Governors?",
+          "article": "",
+          "options": [
+            { "text": "Article 153", "isCorrect": true },
+            { "text": "Article 154", "isCorrect": false },
+            { "text": "Article 155", "isCorrect": false },
+            { "text": "Article 156", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 19(1)(g) guarantee?",
+          "article": "",
+          "options": [
+            { "text": "Right to practice any profession", "isCorrect": true },
+            { "text": "Right to form associations", "isCorrect": false },
+            { "text": "Right to trade", "isCorrect": false },
+            { "text": "Right to own property", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article relates to the protection against discrimination on grounds of religion?",
+          "article": "",
+          "options": [
+            { "text": "Article 15", "isCorrect": true },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 17", "isCorrect": false },
+            { "text": "Article 18", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the appointment of the Attorney General of India?",
+          "article": "",
+          "options": [
+            { "text": "Article 76", "isCorrect": true },
+            { "text": "Article 75", "isCorrect": false },
+            { "text": "Article 74", "isCorrect": false },
+            { "text": "Article 73", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article pertains to the special provisions for certain classes?",
+          "article": "",
+          "options": [
+            { "text": "Article 46", "isCorrect": true },
+            { "text": "Article 47", "isCorrect": false },
+            { "text": "Article 48", "isCorrect": false },
+            { "text": "Article 49", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 47 direct the state to improve?",
+          "article": "",
+          "options": [
+            { "text": "Public health", "isCorrect": true },
+            { "text": "National security", "isCorrect": false },
+            { "text": "Education", "isCorrect": false },
+            { "text": "Agriculture", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article allows for the creation of a new State?",
+          "article": "",
+          "options": [
+            { "text": "Article 2", "isCorrect": true },
+            { "text": "Article 3", "isCorrect": false },
+            { "text": "Article 4", "isCorrect": false },
+            { "text": "Article 5", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 51 promote?",
+          "article": "",
+          "options": [
+            { "text": "International peace and security", "isCorrect": true },
+            { "text": "Social justice", "isCorrect": false },
+            { "text": "Economic development", "isCorrect": false },
+            { "text": "Environmental protection", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the right to privacy?",
+          "article": "",
+          "options": [
+            { "text": "Article 21", "isCorrect": true },
+            { "text": "Article 22", "isCorrect": false },
+            { "text": "Article 23", "isCorrect": false },
+            { "text": "Article 24", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 70 provide for?",
+          "article": "",
+          "options": [
+            { "text": "Discharge of functions of the President", "isCorrect": true },
+            { "text": "Powers of the Vice President", "isCorrect": false },
+            { "text": "Appointment of the Prime Minister", "isCorrect": false },
+            { "text": "Emergency provisions", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article empowers the Supreme Court to enforce fundamental rights?",
+          "article": "",
+          "options": [
+            { "text": "Article 32", "isCorrect": true },
+            { "text": "Article 33", "isCorrect": false },
+            { "text": "Article 34", "isCorrect": false },
+            { "text": "Article 35", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 4",
+      "questions":[
+        {
+          "question": "What is the minimum age to become a member of the Rajya Sabha?",
+          "article": "",
+          "options": [
+            { "text": "25 years", "isCorrect": false },
+            { "text": "30 years", "isCorrect": true },
+            { "text": "35 years", "isCorrect": false },
+            { "text": "21 years", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article grants the right to equality?",
+          "article": "",
+          "options": [
+            { "text": "Article 14", "isCorrect": true },
+            { "text": "Article 15", "isCorrect": false },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 17", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Who is responsible for the administration of the Union Territories?",
+          "article": "",
+          "options": [
+            { "text": "The President", "isCorrect": true },
+            { "text": "The Prime Minister", "isCorrect": false },
+            { "text": "The Chief Minister", "isCorrect": false },
+            { "text": "The Governor", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article mentions the duties of the Prime Minister?",
+          "article": "",
+          "options": [
+            { "text": "Article 75", "isCorrect": false },
+            { "text": "Article 74", "isCorrect": true },
+            { "text": "Article 76", "isCorrect": false },
+            { "text": "Article 77", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 24 prohibit?",
+          "article": "",
+          "options": [
+            { "text": "Child labor", "isCorrect": true },
+            { "text": "Discrimination", "isCorrect": false },
+            { "text": "Untouchability", "isCorrect": false },
+            { "text": "Dowry", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article guarantees protection against arrest and detention?",
+          "article": "",
+          "options": [
+            { "text": "Article 22", "isCorrect": true },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 23", "isCorrect": false },
+            { "text": "Article 24", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Who can initiate the impeachment process of the President?",
+          "article": "",
+          "options": [
+            { "text": "The Parliament", "isCorrect": true },
+            { "text": "The Supreme Court", "isCorrect": false },
+            { "text": "The Governor", "isCorrect": false },
+            { "text": "The Prime Minister", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to freedom of religion?",
+          "article": "",
+          "options": [
+            { "text": "Article 25", "isCorrect": true },
+            { "text": "Article 26", "isCorrect": false },
+            { "text": "Article 27", "isCorrect": false },
+            { "text": "Article 28", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 32 allow individuals to do?",
+          "article": "",
+          "options": [
+            { "text": "Approach the Supreme Court for enforcement of rights", "isCorrect": true },
+            { "text": "Appeal to the High Court", "isCorrect": false },
+            { "text": "File a case in the district court", "isCorrect": false },
+            { "text": "Seek review from the President", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the amendment of the Constitution?",
+          "article": "",
+          "options": [
+            { "text": "Article 368", "isCorrect": true },
+            { "text": "Article 367", "isCorrect": false },
+            { "text": "Article 366", "isCorrect": false },
+            { "text": "Article 365", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "testName": "Test 5",
+      "questions": [
+        {
+          "question": "Which Article establishes the Finance Commission?",
+          "article": "",
+          "options": [
+            { "text": "Article 280", "isCorrect": true },
+            { "text": "Article 275", "isCorrect": false },
+            { "text": "Article 276", "isCorrect": false },
+            { "text": "Article 277", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 49 promote?",
+          "article": "",
+          "options": [
+            { "text": "Protection of monuments and places of national importance", "isCorrect": true },
+            { "text": "Protection of wildlife", "isCorrect": false },
+            { "text": "Social justice", "isCorrect": false },
+            { "text": "Economic development", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Who is the guardian of the Constitution?",
+          "article": "",
+          "options": [
+            { "text": "The Supreme Court", "isCorrect": true },
+            { "text": "The Parliament", "isCorrect": false },
+            { "text": "The President", "isCorrect": false },
+            { "text": "The Prime Minister", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article gives the right to freedom of movement?",
+          "article": "",
+          "options": [
+            { "text": "Article 19(1)(d)", "isCorrect": true },
+            { "text": "Article 20", "isCorrect": false },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 22", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 23 prohibit?",
+          "article": "",
+          "options": [
+            { "text": "Human trafficking", "isCorrect": true },
+            { "text": "Child marriage", "isCorrect": false },
+            { "text": "Discrimination", "isCorrect": false },
+            { "text": "Dowry", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the establishment of a National Commission for SCs?",
+          "article": "",
+          "options": [
+            { "text": "Article 338", "isCorrect": true },
+            { "text": "Article 339", "isCorrect": false },
+            { "text": "Article 340", "isCorrect": false },
+            { "text": "Article 341", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 30 guarantee?",
+          "article": "",
+          "options": [
+            { "text": "Right of minorities to establish and administer educational institutions", "isCorrect": true },
+            { "text": "Right to free education", "isCorrect": false },
+            { "text": "Right to government funding for education", "isCorrect": false },
+            { "text": "Right to choose the medium of instruction", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Who has the power to declare a national emergency?",
+          "article": "",
+          "options": [
+            { "text": "The President", "isCorrect": true },
+            { "text": "The Prime Minister", "isCorrect": false },
+            { "text": "The Parliament", "isCorrect": false },
+            { "text": "The Chief Justice", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the distribution of revenues between the Union and the States?",
+          "article": "",
+          "options": [
+            { "text": "Article 268", "isCorrect": true },
+            { "text": "Article 269", "isCorrect": false },
+            { "text": "Article 270", "isCorrect": false },
+            { "text": "Article 271", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 71 provide for?",
+          "article": "",
+          "options": [
+            { "text": "Disqualification of members of Parliament", "isCorrect": true },
+            { "text": "Election of the President", "isCorrect": false },
+            { "text": "Powers of the President", "isCorrect": false },
+            { "text": "Duties of the President", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "testName": "Test 6",
+      "questions": [
+        {
+          "question": "What does Article 51A promote?",
+          "article": "",
+          "options": [
+            { "text": "Fundamental duties of citizens", "isCorrect": true },
+            { "text": "Fundamental rights of citizens", "isCorrect": false },
+            { "text": "Right to education", "isCorrect": false },
+            { "text": "Right to equality", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article allows for the appointment of a Chief Minister?",
+          "article": "",
+          "options": [
+            { "text": "Article 164", "isCorrect": true },
+            { "text": "Article 163", "isCorrect": false },
+            { "text": "Article 165", "isCorrect": false },
+            { "text": "Article 166", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article protects against the arrest of a person without being informed of the grounds of arrest?",
+          "article": "",
+          "options": [
+            { "text": "Article 22", "isCorrect": true },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 20", "isCorrect": false },
+            { "text": "Article 19", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Who has the power to make laws regarding elections?",
+          "article": "",
+          "options": [
+            { "text": "The Parliament", "isCorrect": true },
+            { "text": "The President", "isCorrect": false },
+            { "text": "The Supreme Court", "isCorrect": false },
+            { "text": "The Chief Election Commissioner", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 280 establish?",
+          "article": "",
+          "options": [
+            { "text": "Finance Commission", "isCorrect": true },
+            { "text": "Planning Commission", "isCorrect": false },
+            { "text": "Election Commission", "isCorrect": false },
+            { "text": "National Commission", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article relates to the prohibition of discrimination on grounds of religion?",
+          "article": "",
+          "options": [
+            { "text": "Article 15", "isCorrect": true },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 17", "isCorrect": false },
+            { "text": "Article 18", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 27 deal with?",
+          "article": "",
+          "options": [
+            { "text": "Prohibition of taxes for the promotion of any religion", "isCorrect": true },
+            { "text": "Prohibition of discrimination", "isCorrect": false },
+            { "text": "Right to freedom of religion", "isCorrect": false },
+            { "text": "Right to free education", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article empowers the Parliament to make provisions for the composition of the Council of States?",
+          "article": "",
+          "options": [
+            { "text": "Article 80", "isCorrect": true },
+            { "text": "Article 81", "isCorrect": false },
+            { "text": "Article 82", "isCorrect": false },
+            { "text": "Article 83", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 22(1) guarantee?",
+          "article": "",
+          "options": [
+            { "text": "No person shall be detained without being informed of the grounds", "isCorrect": true },
+            { "text": "Right to be defended by a legal practitioner", "isCorrect": false },
+            { "text": "Right to a speedy trial", "isCorrect": false },
+            { "text": "Right to appeal", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 7",
+      "questions": [
+        {
+          "question": "Which Article prohibits untouchability?",
+          "article": "",
+          "options": [
+            { "text": "Article 17", "isCorrect": true },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 15", "isCorrect": false },
+            { "text": "Article 18", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 73 deal with?",
+          "article": "",
+          "options": [
+            { "text": "Extent of executive power", "isCorrect": true },
+            { "text": "Powers of the Prime Minister", "isCorrect": false },
+            { "text": "Duties of the President", "isCorrect": false },
+            { "text": "Powers of the Chief Justice", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article relates to the right to education?",
+          "article": "",
+          "options": [
+            { "text": "Article 21A", "isCorrect": true },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 20", "isCorrect": false },
+            { "text": "Article 19", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 269 pertain to?",
+          "article": "",
+          "options": [
+            { "text": "Taxes on the sale of goods", "isCorrect": true },
+            { "text": "Taxes on income", "isCorrect": false },
+            { "text": "Taxes on property", "isCorrect": false },
+            { "text": "Taxes on services", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article allows for the appointment of the Comptroller and Auditor General?",
+          "article": "",
+          "options": [
+            { "text": "Article 148", "isCorrect": true },
+            { "text": "Article 147", "isCorrect": false },
+            { "text": "Article 146", "isCorrect": false },
+            { "text": "Article 145", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 36 define?",
+          "article": "",
+          "options": [
+            { "text": "The term 'State'", "isCorrect": true },
+            { "text": "The term 'Constitution'", "isCorrect": false },
+            { "text": "The term 'Government'", "isCorrect": false },
+            { "text": "The term 'Law'", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to seek judicial review?",
+          "article": "",
+          "options": [
+            { "text": "Article 32", "isCorrect": true },
+            { "text": "Article 34", "isCorrect": false },
+            { "text": "Article 36", "isCorrect": false },
+            { "text": "Article 38", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 123 allow the President to do?",
+          "article": "",
+          "options": [
+            { "text": "Promulgate ordinances", "isCorrect": true },
+            { "text": "Dismiss the government", "isCorrect": false },
+            { "text": "Appoint judges", "isCorrect": false },
+            { "text": "Appoint Governors", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the administration of Scheduled Areas?",
+          "article": "",
+          "options": [
+            { "text": "Article 244", "isCorrect": true },
+            { "text": "Article 243", "isCorrect": false },
+            { "text": "Article 245", "isCorrect": false },
+            { "text": "Article 246", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 8",
+      "questions":[
+        {
+          "question": "Which Article prohibits untouchability?",
+          "article": "",
+          "options": [
+            { "text": "Article 17", "isCorrect": true },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 15", "isCorrect": false },
+            { "text": "Article 18", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 73 deal with?",
+          "article": "",
+          "options": [
+            { "text": "Extent of executive power", "isCorrect": true },
+            { "text": "Powers of the Prime Minister", "isCorrect": false },
+            { "text": "Duties of the President", "isCorrect": false },
+            { "text": "Powers of the Chief Justice", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article relates to the right to education?",
+          "article": "",
+          "options": [
+            { "text": "Article 21A", "isCorrect": true },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 20", "isCorrect": false },
+            { "text": "Article 19", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 269 pertain to?",
+          "article": "",
+          "options": [
+            { "text": "Taxes on the sale of goods", "isCorrect": true },
+            { "text": "Taxes on income", "isCorrect": false },
+            { "text": "Taxes on property", "isCorrect": false },
+            { "text": "Taxes on services", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article allows for the appointment of the Comptroller and Auditor General?",
+          "article": "",
+          "options": [
+            { "text": "Article 148", "isCorrect": true },
+            { "text": "Article 147", "isCorrect": false },
+            { "text": "Article 146", "isCorrect": false },
+            { "text": "Article 145", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 36 define?",
+          "article": "",
+          "options": [
+            { "text": "The term 'State'", "isCorrect": true },
+            { "text": "The term 'Constitution'", "isCorrect": false },
+            { "text": "The term 'Government'", "isCorrect": false },
+            { "text": "The term 'Law'", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to seek judicial review?",
+          "article": "",
+          "options": [
+            { "text": "Article 32", "isCorrect": true },
+            { "text": "Article 34", "isCorrect": false },
+            { "text": "Article 36", "isCorrect": false },
+            { "text": "Article 38", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 123 allow the President to do?",
+          "article": "",
+          "options": [
+            { "text": "Promulgate ordinances", "isCorrect": true },
+            { "text": "Dismiss the government", "isCorrect": false },
+            { "text": "Appoint judges", "isCorrect": false },
+            { "text": "Appoint Governors", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the administration of Scheduled Areas?",
+          "article": "",
+          "options": [
+            { "text": "Article 244", "isCorrect": true },
+            { "text": "Article 243", "isCorrect": false },
+            { "text": "Article 245", "isCorrect": false },
+            { "text": "Article 246", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 9",
+      "questions":[
+        {
+          "question": "Which Article allows for the establishment of a National Commission for Women?",
+          "article": "",
+          "options": [
+            { "text": "Article 338B", "isCorrect": true },
+            { "text": "Article 338A", "isCorrect": false },
+            { "text": "Article 337", "isCorrect": false },
+            { "text": "Article 339", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 123(1) state?",
+          "article": "",
+          "options": [
+            { "text": "The President can promulgate ordinances", "isCorrect": true },
+            { "text": "The President can dissolve the Lok Sabha", "isCorrect": false },
+            { "text": "The President can appoint judges", "isCorrect": false },
+            { "text": "The President can grant pardons", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article of the Constitution is related to the right to form associations?",
+          "article": "",
+          "options": [
+            { "text": "Article 19(1)(c)", "isCorrect": true },
+            { "text": "Article 20", "isCorrect": false },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 22", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to work?",
+          "article": "",
+          "options": [
+            { "text": "Article 41", "isCorrect": true },
+            { "text": "Article 42", "isCorrect": false },
+            { "text": "Article 43", "isCorrect": false },
+            { "text": "Article 44", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 250 enable Parliament to do?",
+          "article": "",
+          "options": [
+            { "text": "Legislate on matters in the State List during a national emergency", "isCorrect": true },
+            { "text": "Legislate on any matter", "isCorrect": false },
+            { "text": "Dissolve the State Legislature", "isCorrect": false },
+            { "text": "Extend the jurisdiction of the Supreme Court", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the appointment of Governors?",
+          "article": "",
+          "options": [
+            { "text": "Article 153", "isCorrect": true },
+            { "text": "Article 154", "isCorrect": false },
+            { "text": "Article 155", "isCorrect": false },
+            { "text": "Article 156", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 244A provide for?",
+          "article": "",
+          "options": [
+            { "text": "Creation of an Autonomous State in Assam", "isCorrect": true },
+            { "text": "Creation of a Union Territory", "isCorrect": false },
+            { "text": "Special provisions for Nagaland", "isCorrect": false },
+            { "text": "Special provisions for Mizoram", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the protection of children from exploitation?",
+          "article": "",
+          "options": [
+            { "text": "Article 39(e)", "isCorrect": true },
+            { "text": "Article 39(f)", "isCorrect": false },
+            { "text": "Article 40", "isCorrect": false },
+            { "text": "Article 41", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the appointment of the Attorney General?",
+          "article": "",
+          "options": [
+            { "text": "Article 76", "isCorrect": true },
+            { "text": "Article 77", "isCorrect": false },
+            { "text": "Article 78", "isCorrect": false },
+            { "text": "Article 79", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 40 provide for?",
+          "article": "",
+          "options": [
+            { "text": "Organisation of village panchayats", "isCorrect": true },
+            { "text": "Formation of cooperatives", "isCorrect": false },
+            { "text": "Right to property", "isCorrect": false },
+            { "text": "Right to work", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 10",
+      "questions":[
+        {
+          "question": "Which Article provides for the right to free legal aid?",
+          "article": "",
+          "options": [
+            { "text": "Article 39A", "isCorrect": true },
+            { "text": "Article 40", "isCorrect": false },
+            { "text": "Article 41", "isCorrect": false },
+            { "text": "Article 42", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 244 provide for?",
+          "article": "",
+          "options": [
+            { "text": "Administration of Scheduled Areas", "isCorrect": true },
+            { "text": "Special provisions for Assam", "isCorrect": false },
+            { "text": "Constitutional provisions for Scheduled Tribes", "isCorrect": false },
+            { "text": "Rights of minorities", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article relates to the protection of the right to property?",
+          "article": "",
+          "options": [
+            { "text": "Article 300A", "isCorrect": true },
+            { "text": "Article 300", "isCorrect": false },
+            { "text": "Article 301", "isCorrect": false },
+            { "text": "Article 302", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 217 pertain to?",
+          "article": "",
+          "options": [
+            { "text": "Appointment and conditions of service of High Court judges", "isCorrect": true },
+            { "text": "Appointment of Supreme Court judges", "isCorrect": false },
+            { "text": "Tenure of High Court judges", "isCorrect": false },
+            { "text": "Jurisdiction of High Courts", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article defines the term 'Citizen of India'?",
+          "article": "",
+          "options": [
+            { "text": "Article 5", "isCorrect": true },
+            { "text": "Article 6", "isCorrect": false },
+            { "text": "Article 7", "isCorrect": false },
+            { "text": "Article 8", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 23 prohibit?",
+          "article": "",
+          "options": [
+            { "text": "Traffic in human beings", "isCorrect": true },
+            { "text": "Discrimination on grounds of religion", "isCorrect": false },
+            { "text": "Untouchability", "isCorrect": false },
+            { "text": "Child marriage", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the establishment of a National Commission for Scheduled Tribes?",
+          "article": "",
+          "options": [
+            { "text": "Article 338A", "isCorrect": true },
+            { "text": "Article 338B", "isCorrect": false },
+            { "text": "Article 337", "isCorrect": false },
+            { "text": "Article 339", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the powers of the President to grant pardons?",
+          "article": "",
+          "options": [
+            { "text": "Article 72", "isCorrect": true },
+            { "text": "Article 71", "isCorrect": false },
+            { "text": "Article 73", "isCorrect": false },
+            { "text": "Article 74", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 131 pertain to?",
+          "article": "",
+          "options": [
+            { "text": "Original jurisdiction of the Supreme Court", "isCorrect": true },
+            { "text": "Appellate jurisdiction of the Supreme Court", "isCorrect": false },
+            { "text": "Writ jurisdiction of the Supreme Court", "isCorrect": false },
+            { "text": "Advisory jurisdiction of the Supreme Court", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to form unions?",
+          "article": "",
+          "options": [
+            { "text": "Article 19(1)(c)", "isCorrect": true },
+            { "text": "Article 20", "isCorrect": false },
+            { "text": "Article 21", "isCorrect": false },
+            { "text": "Article 22", "isCorrect": false }
+          ]
+        }
+      ]
+    },
+
+    {
+      "testName": "Test 11",
+      "questions":[
+        {
+          "question": "Which Article relates to the appointment of the Chief Election Commissioner?",
+          "article": "",
+          "options": [
+            { "text": "Article 324", "isCorrect": true },
+            { "text": "Article 325", "isCorrect": false },
+            { "text": "Article 326", "isCorrect": false },
+            { "text": "Article 327", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 370 pertain to?",
+          "article": "",
+          "options": [
+            { "text": "Special status of Jammu and Kashmir", "isCorrect": true },
+            { "text": "Rights of minorities", "isCorrect": false },
+            { "text": "Fundamental rights", "isCorrect": false },
+            { "text": "Fundamental duties", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the creation of new States?",
+          "article": "",
+          "options": [
+            { "text": "Article 3", "isCorrect": true },
+            { "text": "Article 4", "isCorrect": false },
+            { "text": "Article 5", "isCorrect": false },
+            { "text": "Article 6", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 74 pertain to?",
+          "article": "",
+          "options": [
+            { "text": "Council of Ministers", "isCorrect": true },
+            { "text": "Duties of the Prime Minister", "isCorrect": false },
+            { "text": "President's powers", "isCorrect": false },
+            { "text": "Judicial powers", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article of the Constitution ensures the right to equality before law?",
+          "article": "",
+          "options": [
+            { "text": "Article 14", "isCorrect": true },
+            { "text": "Article 15", "isCorrect": false },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 17", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 245 deal with?",
+          "article": "",
+          "options": [
+            { "text": "Extent of laws made by Parliament", "isCorrect": true },
+            { "text": "Extent of executive powers", "isCorrect": false },
+            { "text": "Extent of judicial powers", "isCorrect": false },
+            { "text": "Extent of powers of the Governor", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article provides for the right to freedom of religion?",
+          "article": "",
+          "options": [
+            { "text": "Article 25", "isCorrect": true },
+            { "text": "Article 26", "isCorrect": false },
+            { "text": "Article 27", "isCorrect": false },
+            { "text": "Article 28", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article prohibits discrimination on grounds of religion?",
+          "article": "",
+          "options": [
+            { "text": "Article 15", "isCorrect": true },
+            { "text": "Article 14", "isCorrect": false },
+            { "text": "Article 16", "isCorrect": false },
+            { "text": "Article 17", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "What does Article 30 provide for?",
+          "article": "",
+          "options": [
+            { "text": "Rights of minorities to establish and administer educational institutions", "isCorrect": true },
+            { "text": "Right to free education", "isCorrect": false },
+            { "text": "Right to cultural and educational rights", "isCorrect": false },
+            { "text": "Right to freedom of speech", "isCorrect": false }
+          ]
+        },
+        {
+          "question": "Which Article deals with the allocation of seats in the Rajya Sabha?",
+          "article": "",
+          "options": [
+            { "text": "Article 80", "isCorrect": true },
+            { "text": "Article 81", "isCorrect": false },
+            { "text": "Article 82", "isCorrect": false },
+            { "text": "Article 83", "isCorrect": false }
+          ]
+        }
+      ]
+    }
+
+  ]
+}
