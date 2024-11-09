@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import '../widgets/sidebar_menu.dart';
 import 'about_constitution.dart';
+import 'learning_resources.dart';
+import 'gaming_page.dart';
+import 'test_your_knowledge.dart';
+import 'summaries_page.dart';
+import 'daily_news_page.dart';
+
 
 
 class HomePage extends StatelessWidget {
@@ -72,11 +78,11 @@ class HomePage extends StatelessWidget {
               mainAxisSpacing: 16,
               children: [
                 _buildCard(context, 'About Constitution', AboutConstitutionPage()),
-                _buildCard(context, 'Learning Resources', null), // No navigation
-                _buildCard(context, 'Gaming Page', null), // No navigation
-                _buildCard(context, 'Test Your Knowledge', null), // No navigation
-                _buildCard(context, 'Summaries', null), // No navigation
-                _buildCard(context, 'Daily News', null), // No navigation
+                _buildCard(context, 'Learning Resources', LearningResourcesPage()), // No navigation
+                _buildCard(context, 'Gaming Page', GamingPage()), // No navigation
+                _buildCard(context, 'Test Your Knowledge', TestYourKnowledgePage()), // No navigation
+                _buildCard(context, 'Summaries', SummariesPage()), // No navigation
+                _buildCard(context, 'Daily News', DailyNewsPage()),// No navigation
               ],
             ),
           ),
