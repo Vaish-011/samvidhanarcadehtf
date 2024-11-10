@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'article_screen.dart'; // Import the Article Screen
+import 'bookmarked_articles_screen.dart'; // Import Bookmarked Articles Screen
 
 class ArticleSelectionScreen extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class ArticleSelectionScreen extends StatefulWidget {
 
 class _ArticleSelectionScreenState extends State<ArticleSelectionScreen> {
   List<dynamic> articles = [];
+  List<int> bookmarkedArticles = []; // List to store bookmarked article indices
 
   @override
   void initState() {
@@ -24,12 +26,37 @@ class _ArticleSelectionScreenState extends State<ArticleSelectionScreen> {
     });
   }
 
+  // Toggle bookmark for an article
+  void _toggleBookmark(int index) {
+    setState(() {
+      if (bookmarkedArticles.contains(index)) {
+        bookmarkedArticles.remove(index);
+      } else {
+        bookmarkedArticles.add(index);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Select an Article'),
         backgroundColor: Color(0xFFB39DDB), // Match the AppBar color
+        actions: [
+          // Bookmark icon in the AppBar to navigate to bookmarked articles
+          IconButton(
+            icon: Icon(Icons.bookmark),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BookmarkedArticlesScreen(bookmarkedArticles: bookmarkedArticles, articles: articles),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -64,6 +91,15 @@ class _ArticleSelectionScreenState extends State<ArticleSelectionScreen> {
                   ),
                 ),
                 tileColor: Colors.white, // Background color for the tile
+                trailing: IconButton(
+                  icon: Icon(
+                    bookmarkedArticles.contains(index) ? Icons.bookmark : Icons.bookmark_border,
+                    color: Colors.amber,
+                  ),
+                  onPressed: () {
+                    _toggleBookmark(index);
+                  },
+                ),
                 onTap: () {
                   Navigator.push(
                     context,

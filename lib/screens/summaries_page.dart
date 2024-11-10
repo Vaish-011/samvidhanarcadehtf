@@ -1,17 +1,37 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // for rootBundle
+import 'package:flutter/services.dart'; // For rootBundle
 import '../models/part_details.dart'; // Your part_details.dart model class
+import '../services/bookmark_manager.dart'; // Import the BookmarkManager class
+import 'part_details_page.dart'; // Import the newly created PartDetailsPage
 
 class SummariesPage extends StatelessWidget {
-  // Function to load the JSON file
-  Future<List<PartDetails>> _loadPartDetails() async {
-    // Load the JSON file
-    final String response = await rootBundle.loadString('assets/constitution.json');
-    final List<dynamic> data = json.decode(response);
+  final BookmarkManager bookmarkManager = BookmarkManager();
 
-    // Map the JSON data to PartDetails objects
-    return data.map((item) => PartDetails.fromJson(item)).toList();
+  // Function to load the JSON file with enhanced error handling
+  Future<List<PartDetails>> _loadPartDetails() async {
+    try {
+      // Load JSON data from assets
+      final String response = await rootBundle.loadString('assets/constitution.json');
+
+      // Decode the JSON
+      final List<dynamic> data = json.decode(response);
+
+      // Return a list of PartDetails objects
+      return data.map((item) => PartDetails.fromJson(item)).toList();
+    } catch (e) {
+      // Log the error in the console
+      print("Error loading JSON: $e");
+
+      // Rethrow the error to display it in the UI
+      throw Exception("Error loading data: $e");
+    }
+  }
+
+  // Function to check if a part is bookmarked
+  Future<bool> isBookmarked(int id) async {
+    final bookmarkedParts = await bookmarkManager.getBookmarkedParts();
+    return bookmarkedParts.contains(id);
   }
 
   @override
@@ -23,7 +43,10 @@ class SummariesPage extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            return Center(child: Text('Error loading data'));
+            // Display the error message if something goes wrong
+            return Center(
+              child: Text('Error loading data: ${snapshot.error}'),
+            );
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return Center(child: Text('No data available'));
           }
@@ -44,18 +67,30 @@ class SummariesPage extends StatelessWidget {
                 stops: [0.0, 0.33, 0.67, 1.0],
               ),
             ),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                childAspectRatio: 1,
+            child: SingleChildScrollView(  // Make the content scrollable
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),  // Adjust padding to avoid overflow
+                child: GridView.builder(
+                  physics: NeverScrollableScrollPhysics(), // Prevent the grid from scrolling independently
+                  shrinkWrap: true,  // Shrink the grid to fit its content
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 1,
+                  ),
+                  itemCount: partDetails.length,
+                  itemBuilder: (context, index) {
+                    return FutureBuilder<bool>(
+                      future: isBookmarked(partDetails[index].id), // Use id here
+                      builder: (context, isBookmarkedSnapshot) {
+                        bool isBookmarkedPart = isBookmarkedSnapshot.data ?? false;
+                        return _buildCard(context, partDetails[index], isBookmarkedPart);
+                      },
+                    );
+                  },
+                ),
               ),
-              padding: EdgeInsets.all(40),
-              itemCount: partDetails.length,
-              itemBuilder: (context, index) {
-                return _buildCard(context, partDetails[index], index + 1); // Pass index + 1 for "Part 1", "Part 2", etc.
-              },
             ),
           );
         },
@@ -63,7 +98,6 @@ class SummariesPage extends StatelessWidget {
     );
   }
 
-  // Convert an integer to Roman numeral
   String _toRoman(int number) {
     const romanNumerals = [
       'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
@@ -72,10 +106,10 @@ class SummariesPage extends StatelessWidget {
     if (number >= 1 && number <= 20) {
       return romanNumerals[number - 1];
     }
-    return number.toString(); // For values larger than 20, just return the number as is.
+    return number.toString();
   }
 
-  Widget _buildCard(BuildContext context, PartDetails partDetails, int partNumber) {
+  Widget _buildCard(BuildContext context, PartDetails partDetails, bool isBookmarked) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -97,74 +131,31 @@ class SummariesPage extends StatelessWidget {
             ),
           ],
         ),
-        child: Center(
-          child: Text(
-            'Part ${_toRoman(partNumber)}', // Display the part number in Roman numerals
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.black, // Set the text color to black
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class PartDetailsPage extends StatelessWidget {
-  final PartDetails partDetails;
-
-  PartDetailsPage({required this.partDetails});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text(partDetails.title)),
-        backgroundColor: Colors.teal,
-      ),
-      body: Container(
-        padding: EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.teal[50]!,
-              Colors.teal[100]!,
-            ],
-          ),
-        ),
-        child: Center(
-          child: Container(
-            padding: EdgeInsets.all(20.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10.0),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 6.0,
-                  offset: Offset(0, 3),
+        child: Stack(
+          children: [
+            Center(
+              child: Text(
+                'Part ${_toRoman(partDetails.id)}',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
-              ],
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 20),
-                  Text(
-                    partDetails.content,
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(height: 20),
-                ],
               ),
             ),
-          ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: IconButton(
+                icon: Icon(
+                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                  color: isBookmarked ? Colors.black : Colors.grey,
+                ),
+                onPressed: () async {
+                  await bookmarkManager.toggleBookmark(partDetails.id);
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
