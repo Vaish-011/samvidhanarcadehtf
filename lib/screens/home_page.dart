@@ -6,21 +6,20 @@ import 'gaming_page.dart';
 import 'test_your_knowledge.dart';
 import 'summaries_page.dart';
 import 'daily_news_page.dart';
-
-
+import 'samvidhan_bot_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80.0), // Adjust the height as needed
+        preferredSize: Size.fromHeight(80.0),
         child: Container(
           decoration: BoxDecoration(
-            color: Color(0xFFE0F2F1), // Light Teal color for the AppBar background
+            color: Color(0xFFE0F2F1),
             border: Border(
               bottom: BorderSide(
-                color: Color(0xFF004D40), // Dark Teal color for the border
+                color: Color(0xFF004D40),
                 width: 4.0, // Thickness of the border
               ),
             ),
@@ -78,11 +77,13 @@ class HomePage extends StatelessWidget {
               mainAxisSpacing: 16,
               children: [
                 _buildCard(context, 'About Constitution', AboutConstitutionPage()),
-                _buildCard(context, 'Learning Resources', LearningResourcesPage()), // No navigation
-                _buildCard(context, 'Gaming Page', GamingPage()), // No navigation
-                _buildCard(context, 'Test Your Knowledge', TestYourKnowledgePage()), // No navigation
-                _buildCard(context, 'Summaries', SummariesPage()), // No navigation
-                _buildCard(context, 'Daily News', DailyNewsPage()),// No navigation
+                _buildCard(context, 'Learning Resources', LearningResourcesPage()),
+                _buildCard(context, 'Gaming Page', GamingPage()),
+                _buildCard(context, 'Test Your Knowledge', TestYourKnowledgePage()),
+                _buildCard(context, 'Summaries', SummariesPage()),
+                _buildCard(context, 'Daily News', DailyNewsPage()),
+
+                _buildCard(context, 'SamvidhanBot', SamvidhanBotPage()),
               ],
             ),
           ),
@@ -108,7 +109,9 @@ class HomePage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            gradient: LinearGradient(
+            gradient: title == 'SamvidhanBot'
+                ? null
+                : LinearGradient(
               colors: [
                 Color(0xFF80CBC4), // Light Teal
                 Color(0xFFB2DFDB), // Very Light Teal
@@ -124,7 +127,33 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(
+          child: title == 'SamvidhanBot' // Check if it's SamvidhanBot card
+              ? Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/chatbotimage.png'), // Background image
+                fit: BoxFit.cover, // Cover the entire container
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Align(
+              alignment: Alignment.bottomCenter, // Aligning the text at the bottom
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 12), // Adjust this value as needed
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white, // Light color for text over the image
+                    fontFamily: 'Arial', // Use a default font style
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          )
+              : Center(
             child: Text(
               title,
               style: TextStyle(
@@ -141,3 +170,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+
+
