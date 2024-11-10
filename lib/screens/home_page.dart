@@ -7,6 +7,8 @@ import 'test_your_knowledge.dart';
 import 'summaries_page.dart';
 import 'daily_news_page.dart';
 import 'samvidhan_bot_page.dart';
+import 'multilingual_material_page.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -84,6 +86,7 @@ class HomePage extends StatelessWidget {
                 _buildCard(context, 'Daily News', DailyNewsPage()),
 
                 _buildCard(context, 'SamvidhanBot', SamvidhanBotPage()),
+                _buildCard(context, 'Multilingual Materials', MultilingualMaterialPage()),
               ],
             ),
           ),
