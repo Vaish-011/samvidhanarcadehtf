@@ -203,4 +203,35 @@ class FirestoreService {
       print("Error updating user score and completed tests: $e");
     }
   }
+  // Fetch crossword game progress from the 'users' collection
+  Future<int?> getCrosswordGameProgress(String userId) async {
+    try {
+      DocumentSnapshot crosswordDoc = await _firestore.collection('users').doc(userId).get();
+      if (crosswordDoc.exists) {
+        final data = crosswordDoc.data() as Map<String, dynamic>?;
+        return data?['completed_levels'] as int? ?? 0; // Default to 0 if no completed levels
+      } else {
+        print("Crossword game data not found for userId: $userId");
+        return 0; // Return 0 if no crossword game data is found for the user
+      }
+    } catch (e) {
+      print("Error fetching crossword game progress: $e");
+      return null;
+    }
+  }
+
+  // Fetch real-time crossword game progress using a stream from the 'users' collection
+  Stream<int?> getCrosswordGameProgressStream(String userId) {
+    return _firestore.collection('users')
+        .doc(userId)
+        .snapshots()
+        .map((snapshot) {
+      if (snapshot.exists) {
+        final data = snapshot.data() as Map<String, dynamic>?;
+        return data?['completed_levels'] as int? ?? 0; // Default to 0 if no completed levels
+      } else {
+        return 0; // Return 0 if no data found
+      }
+    });
+  }
 }

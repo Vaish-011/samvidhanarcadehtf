@@ -81,6 +81,7 @@ flutter:
     - assets/chess/wqueen.png
     - assets/chess/wrook.png
     - assets/multilingual_materials.json
+    - assets/images/
     - assets/
 
 
