@@ -60,42 +60,53 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  // Handle login with Google
   Future<void> _loginWithGoogle() async {
     setState(() {
       isLoading = true;
     });
 
     try {
-      // Start the Google Sign-In process
+      // Disconnect any previous Google Sign-In session to ensure the user is prompted for an account
+      await _googleSignIn.disconnect(); // Disconnect the previous session (if any)
+      await _googleSignIn.signOut();     // Sign out any previously signed-in account
+
+      // Start the Google Sign-In process (this will trigger the account picker)
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
+      // If the user cancels the sign-in process
+      if (googleUser == null) {
+        setState(() {
+          isLoading = false;
+        });
+        return; // User canceled the sign-in
+      }
+
       // Obtain the auth details from the request
-      final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
 
       // Create a new credential
       final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth?.accessToken,
-        idToken: googleAuth?.idToken,
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
       );
 
       // Sign in the user with the credential
       UserCredential userCredential = await _auth.signInWithCredential(credential);
 
-      // Navigate to home if user is logged in
+      // Navigate to home if the user is logged in
       if (userCredential.user != null) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomePage()), // Removed const
+          MaterialPageRoute(builder: (context) => HomePage()), // Navigate to HomePage
         );
       } else {
-        // Show error message if Google account isn't found
+        // If there is any issue with Google sign-in
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text("An error occurred during Google sign-in. Please try again.")),
         );
       }
     } catch (e) {
-      print("Error during Google login: $e"); // Logging error for debugging
+      print("Error during Google login: $e");
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("An error occurred during Google sign-in. Please try again.")),
       );
@@ -105,6 +116,7 @@ class _LoginPageState extends State<LoginPage> {
       });
     }
   }
+
 
   @override
   Widget build(BuildContext context) {

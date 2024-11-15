@@ -6,16 +6,24 @@ class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
 
-  // Log in using Google account with existence check
   Future<User?> loginWithGoogle() async {
     try {
+      // Ensure to sign out and disconnect to clear any cached session
+      await googleSignIn.disconnect();  // Disconnecting will clear cached accounts
+      await googleSignIn.signOut();     // Signing out to ensure no account is cached
+
+      log("User signed out, prompting for account selection");
+
+      // Now, trigger the sign-in flow to prompt the user for an account
       final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+
       if (googleUser == null) {
         log("Google Sign-In aborted");
         return null; // User aborted the sign-in
       }
 
       final userEmail = googleUser.email;
+
       // Check if the email exists in Firebase
       final existingUser = await _auth.fetchSignInMethodsForEmail(userEmail);
 
