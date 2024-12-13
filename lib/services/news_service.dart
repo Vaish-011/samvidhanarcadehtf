@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import '../models/news_article.dart';
 
 class NewsService {
-  final String apiKey = '915e44469bf74742b49fdae2710b4ac0';
+  final String apiKey = '/*Add Your API Key here*/';
   final String apiUrl =
       'https://newsapi.org/v2/everything?q=constitution%20of%20india&language=en&apiKey=';
 
