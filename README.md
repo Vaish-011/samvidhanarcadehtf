@@ -57,7 +57,7 @@ Follow these steps to set up the project locally:
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Vaish-011/samvidhan-arcade.git
+   git clone https://github.com/Vaish-011/samvidhanarcadehtf.git
    cd samvidhanarcadehtf
    ```
 2. Add Your API Keys
